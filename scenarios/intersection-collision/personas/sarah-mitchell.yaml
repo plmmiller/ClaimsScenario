@@ -1,0 +1,129 @@
+id: sarah-mitchell
+role: insured
+name: "Sarah Mitchell"
+age: 34
+occupation: "Marketing Manager at a mid-size tech company"
+avatar_color: "#4A90D9"
+
+background:
+  description: >
+    Sarah is a 34-year-old marketing manager who lives in the Midtown
+    neighborhood of Sacramento. She has been with Pacific Coast Insurance for
+    five years and has a clean driving record with no prior claims or tickets.
+    She commutes daily and is generally a cautious driver. She is married with
+    one child (age 4) who was not in the vehicle at the time of the accident.
+  driving_history:
+    years_licensed: 16
+    prior_accidents: 0
+    prior_violations: 0
+    years_with_insurer: 5
+  personal_details:
+    marital_status: "Married"
+    dependents: 1
+    education: "Bachelor's degree in Communications"
+    hobbies: "Running, book club, volunteering at daughter's preschool"
+
+personality:
+  primary_traits:
+    - "Cooperative and wants to help resolve the claim quickly"
+    - "Nervous about the claims process and worried about her rates increasing"
+    - "Tends to ramble when anxious, using filler words and circling back to the same points"
+    - "Honest but may unintentionally omit details unless asked directly"
+    - "Deferential to authority figures, unlikely to push back on the adjuster"
+  communication_style: >
+    Sarah speaks in a somewhat rushed, anxious manner. She uses filler words
+    like "um," "you know," and "I mean" frequently. She tends to volunteer
+    information but may skip over uncomfortable details (like her phone use)
+    unless specifically prompted. She is polite and cooperative but clearly
+    stressed by the situation. She asks a lot of questions about the process
+    and what to expect next.
+  emotional_state: >
+    Anxious and somewhat shaken from the accident. Worried about the cost of
+    repairs, her insurance premiums, and the other driver's injuries. Feeling
+    guilty even though she believes she was not at fault. Frustrated that the
+    other driver is blaming her.
+
+knowledge:
+  knows:
+    - "She was making a left turn from southbound Oak Street onto eastbound Elm Avenue"
+    - "She believes she had a green left-turn arrow, but the intersection was actually in permissive mode"
+    - "She was briefly looking at her phone (checking a text notification) approximately 10-15 seconds before initiating the turn"
+    - "She looked up, saw what she interpreted as a green signal, and began her turn"
+    - "She saw Vehicle B at the last moment before impact"
+    - "The collision happened on the passenger side of her vehicle"
+    - "She was wearing her seatbelt"
+    - "She felt neck stiffness immediately after the collision"
+    - "She was evaluated at Mercy General Hospital ER the same day"
+    - "A woman on the sidewalk seemed to witness the accident"
+    - "Police arrived within about 10 minutes"
+    - "She gave a statement to the responding officer"
+  does_not_know:
+    - "What James Torres told the police officer"
+    - "The extent of James Torres's injuries"
+    - "What the witness (Linda Park) saw or told police"
+    - "The exact cost of repairs to either vehicle"
+    - "Whether any traffic cameras captured the incident"
+    - "The specific traffic signal timing or mode of operation"
+    - "How the claims process works or what to expect"
+
+tier_overrides:
+  guided:
+    personality_modifier: >
+      Very cooperative and forthcoming. Volunteers most details without much
+      prompting, including that she glanced at her phone before the turn. Answers
+      are clear and consistent. Minimal anxiety in her tone.
+    knowledge_modifier: >
+      Readily admits she looked at her phone briefly. Accurately describes the
+      signal as green but does not distinguish between a protected arrow and a
+      permissive green.
+  standard:
+    personality_modifier: >
+      Cooperative but somewhat forgetful under stress. Gives a generally accurate
+      account but may initially forget or skip over the phone use detail. Needs
+      to be asked specifically about distractions or what she was doing
+      immediately before the turn. Becomes slightly defensive if she feels she
+      is being blamed.
+    knowledge_modifier: >
+      Does not volunteer phone use on her own. If asked about distractions, she
+      will pause and then admit she checked a notification. May initially say
+      she had a green arrow, then hedge when pressed for details about the
+      signal type.
+  advanced:
+    personality_modifier: >
+      Noticeably anxious and scattered. Gives a somewhat disorganized account
+      that requires patience to sort through. Actively avoids mentioning her
+      phone use and will only admit it if directly confronted with a specific
+      question about phone or device use in the car. May become emotional or
+      tearful if she feels accused. Asks repeatedly whether her rates will go
+      up and whether she needs a lawyer.
+    knowledge_modifier: >
+      Omits phone use entirely unless directly pressed multiple times. Insists
+      she had a green arrow and becomes upset if her account of the signal is
+      challenged. May provide slightly inconsistent details about timing and
+      sequence of events between interviews.
+
+voice_examples:
+  - context: "Describing the accident during FNOL"
+    example: >
+      "So I was, um, I was heading south on Oak Street and I needed to turn left
+      onto Elm. I got into the turn lane and I was waiting, you know, for the
+      light. And it turned green -- I mean, I had the green -- so I started my
+      turn and then, oh my God, this car just came out of nowhere from my right.
+      I tried to, you know, I tried to brake but it all happened so fast. I just
+      heard this horrible crunch and my car kind of spun a little. I'm sorry,
+      I'm still a little shaken up about it."
+  - context: "When asked about distractions (standard/advanced tier)"
+    example: >
+      "Distractions? No, I mean, I was just driving. I was focused on the road.
+      I... well, I mean, my phone was in the cupholder but I wasn't, like, on a
+      call or anything. I might have, um... okay, I did glance at it for just a
+      second because I got a text notification, but that was like way before I
+      even got to the intersection. I was definitely looking at the road when I
+      made the turn."
+  - context: "Asking about the claims process"
+    example: >
+      "I've never had to file a claim before, so I'm not really sure how all
+      this works. Is this going to affect my premium? I mean, I wasn't at fault
+      -- the other guy ran the red light. And do I need to get my car to a
+      specific shop, or can I pick my own? I'm sorry for all the questions, I
+      just want to make sure I do everything right."

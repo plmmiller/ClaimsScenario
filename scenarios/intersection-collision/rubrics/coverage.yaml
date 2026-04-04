@@ -1,0 +1,250 @@
+# Coverage Analysis Phase Rubric
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Evaluates the trainee's ability to analyze policy coverage and identify issues
+
+phase: coverage
+phase_name: Coverage Analysis
+description: >
+  Evaluates the trainee's ability to analyze Sarah Mitchell's Pacific Coast
+  Insurance policy, identify all applicable coverages, recognize coverage
+  issues (including the policy lapse), and make proper coverage determinations.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of policy provisions, coverage types, and California insurance law
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly identified all applicable coverages and their limits (BI 100/300, PD 50K, Collision $500 ded, Comp $250 ded, UM/UIM 100/300, Med Pay $5K, Rental $40/day 30 days)
+          - Identified the February 1-15 policy lapse and analyzed its potential impact on coverage for the March 15 loss
+          - Correctly determined that the March 15 loss occurred during the reinstated policy period and is therefore covered, but documented the lapse for the file
+          - Understood the reinstatement endorsement (PCI-RS-01) implications and whether it creates any exclusions for this loss
+          - Recognized that Med Pay coverage applies regardless of fault for Sarah's neck injury treatment
+          - Identified rental reimbursement coverage terms ($40/day, 30-day max) and when it triggers
+          - Understood California's Financial Responsibility Law requirements and the policy's compliance
+          - Recognized the lienholder interest (Sacramento Valley Credit Union) and notification requirements
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Correctly identified primary coverages (collision, liability, med pay, rental)
+          - Noted the policy lapse and confirmed coverage is in force for the March 15 loss
+          - Understood deductible amounts and their application
+          - Recognized Med Pay as no-fault coverage for Sarah
+          - Identified lienholder and notification requirements
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified collision and liability coverages but missed Med Pay or rental reimbursement
+          - Noticed the policy lapse but was unsure whether it affected coverage for this loss
+          - Made minor errors in coverage limit identification
+          - Did not fully understand the reinstatement endorsement implications
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to identify applicable coverages or confused coverage types
+          - Did not notice the policy lapse or incorrectly denied coverage based on it
+          - Made significant errors in coverage limit identification
+          - Did not understand basic policy structure or California insurance requirements
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of coverage investigation and policy file review
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Reviewed the complete policy declarations page including all endorsements
+          - Investigated the policy lapse timeline (Feb 1-15) and reinstatement terms in detail
+          - Verified the VIN, vehicle description, and named insured match the loss details
+          - Checked premium payment history and confirmed policy was in force on date of loss
+          - Reviewed the reinstatement endorsement PCI-RS-01 for any coverage restrictions
+          - Verified there are no exclusions applicable to this loss (e.g., excluded drivers, business use)
+          - Confirmed the loss location (Sacramento, CA) is within the policy territory
+          - Checked loss history for prior claims that might affect coverage or reserves
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Reviewed key policy provisions and confirmed coverage in force
+          - Verified named insured and vehicle information
+          - Checked premium payment status
+          - Reviewed the lapse and reinstatement documentation
+          - Confirmed no obvious exclusions apply
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Reviewed the declarations page but missed endorsements or policy conditions
+          - Did not thoroughly investigate the lapse and reinstatement terms
+          - Relied on surface-level review without checking for exclusions
+          - Missed verifying VIN or vehicle details
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not review the policy file or relied on assumptions about coverage
+          - Failed to investigate the policy lapse
+          - Did not verify basic policy details (named insured, vehicle, dates)
+          - Made coverage determinations without adequate policy review
+
+  - name: communication
+    weight: 0.20
+    description: Quality of coverage explanations to the insured and documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Clearly explained to Sarah which coverages apply and what they mean for her claim
+          - Explained the collision deductible ($500) and how/when it may be recovered through subrogation
+          - Communicated rental car coverage terms clearly ($40/day, 30 days max) and process to obtain a rental
+          - Explained Med Pay coverage and how Sarah can use it for her neck injury treatment
+          - If the policy lapse was raised, addressed it transparently without causing unnecessary alarm
+          - Used plain language to explain coverage concepts and avoided insurance jargon
+          - Documented all coverage communications in the claim file
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Explained primary coverages and deductible clearly
+          - Communicated rental car and Med Pay processes
+          - Addressed coverage questions professionally
+          - Documented coverage communications adequately
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Provided incomplete or confusing coverage explanations
+          - Did not proactively explain available coverages like Med Pay
+          - Used excessive jargon when explaining deductibles or subrogation
+          - Documentation of coverage communications was sparse
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to explain coverages or provided incorrect information
+          - Did not communicate deductible obligations or coverage limits
+          - Left the insured confused about what their policy covers
+          - No documentation of coverage discussions
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of coverage decisions and issue identification
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly determined that the policy lapse does not affect coverage for this March 15 loss, while properly documenting the lapse in the file
+          - Made appropriate coverage determination promptly without unnecessary delay
+          - Recognized that if Sarah is found partially at fault, her collision coverage applies subject to the deductible
+          - Identified that third-party liability exposure depends on the liability investigation outcome
+          - Properly assessed whether the reinstatement endorsement creates any coverage defense and concluded it does not for this loss
+          - Recognized subrogation potential if James Torres is found partially or fully at fault
+          - Consulted or flagged for coverage counsel review if uncertain about lapse implications
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Made correct coverage determination for the date of loss
+          - Recognized the primary coverage issues and resolved them appropriately
+          - Identified subrogation potential
+          - Made timely coverage decisions without unnecessary delay
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Reached a correct coverage determination but took excessive time or was uncertain
+          - Missed the subrogation opportunity or the Med Pay applicability
+          - Was overly conservative or liberal in coverage interpretation
+          - Did not properly document the rationale for coverage decisions
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Made an incorrect coverage determination (e.g., denied coverage due to the lapse)
+          - Failed to identify key coverage issues
+          - Did not make a timely coverage decision
+          - Showed fundamental misunderstanding of how coverages apply to this loss
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with coverage analysis procedures and regulatory timelines
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Issued written coverage determination within California's required timeframe
+          - Properly documented the coverage analysis with citations to specific policy provisions
+          - Notified the lienholder (Sacramento Valley Credit Union) of the claim as required
+          - Set up appropriate coverage reserves for each applicable line
+          - Created a coverage summary memo for the file documenting all applicable and non-applicable coverages
+          - Complied with California Insurance Code Section 790.03 fair claims settlement practices
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Issued coverage determination within required timeframe
+          - Documented coverage analysis adequately
+          - Notified lienholder
+          - Set up reserves for applicable coverages
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Coverage determination was late or incomplete
+          - Documentation lacked specific policy citations
+          - Missed lienholder notification
+          - Reserves were not properly allocated across coverage lines
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to issue timely coverage determination
+          - No documentation of coverage analysis
+          - Missed required notifications
+          - Did not set up reserves or set them incorrectly
+
+  - name: fraud_awareness
+    weight: 0.05
+    description: Awareness of coverage-related fraud indicators
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Noted the recent policy lapse and reinstatement (Feb 1-15) as something to document, while recognizing it does not constitute a fraud indicator on its own
+          - Verified that the loss date (March 15) is well after the reinstatement date (Feb 16), reducing concern about staged loss timing
+          - Checked for any pattern of lapses and reinstatements in the policy history
+          - Verified the insured's identity and policy ownership
+          - Recognized that a new-to-file claim shortly after reinstatement can sometimes be a red flag, but this 27-day gap is not highly suspicious
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Noted the lapse/reinstatement timeline and documented it
+          - Verified loss date against policy effective dates
+          - Checked basic policy ownership and insured identity
+          - Did not overreact to the lapse as a fraud indicator
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not specifically consider the lapse timeline in context of the loss
+          - Either overreacted to the lapse (treating it as strong fraud indicator) or completely ignored it
+          - Did not verify basic policy details against the loss report
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Completely missed the lapse/reinstatement issue
+          - Did not perform any verification of policy status
+          - Showed no awareness of coverage-related fraud patterns

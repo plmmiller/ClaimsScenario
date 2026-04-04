@@ -1,0 +1,263 @@
+# Resolution Phase Rubric
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Evaluates the trainee's handling of claim closure, subrogation, and final documentation
+
+phase: resolution
+phase_name: Resolution
+description: >
+  Evaluates the trainee's ability to properly close the claim, handle subrogation,
+  process final payments, ensure all documentation is complete, and identify any
+  remaining recovery opportunities or obligations.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of claim closure, subrogation, and recovery processes
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated thorough understanding of subrogation rights and procedures under California law
+          - Correctly identified subrogation potential against James Torres (and his carrier, State Farm) for the collision deductible and any paid amounts based on the liability determination
+          - If Vehicle A was less than 100% at fault, pursued subrogation for the percentage attributable to Vehicle B
+          - Understood California's made-whole doctrine and how it affects subrogation timing
+          - Recognized potential subrogation opportunity against the road maintenance authority if signal malfunction contributed to the collision (e.g., Sacramento DOT if signal timing data reveals an issue)
+          - Understood salvage procedures if either vehicle were a total loss (not applicable here, but demonstrated knowledge)
+          - Knew the requirements for closing a claim file including confirming all payments issued, releases obtained, and subrogation filed
+          - Understood how to handle Sarah's deductible recovery through subrogation and the timeline for returning it to her
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified and pursued subrogation against the third party's carrier
+          - Understood basic subrogation procedures and timing
+          - Knew the requirements for proper claim closure
+          - Recognized the deductible recovery obligation to the insured
+          - Completed closure procedures correctly
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified subrogation potential but did not pursue it promptly
+          - Had limited understanding of subrogation procedures
+          - Closure documentation was incomplete
+          - Did not fully understand deductible recovery process
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to identify subrogation opportunity
+          - Did not understand basic subrogation concepts
+          - Claim closure was improper or premature
+          - Did not address deductible recovery for the insured
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of claim resolution activities and final documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Completed a thorough file review before closure, verifying all investigation items are resolved
+          - Confirmed all payments have been issued and cleared (first-party collision, rental, Med Pay, third-party PD and BI)
+          - Verified all releases and settlement agreements are signed and in the file
+          - Filed subrogation demand with State Farm with complete supporting documentation
+          - Confirmed the lienholder (Sacramento Valley Credit Union) was notified of claim resolution
+          - Ensured all medical liens and provider obligations are satisfied
+          - Reviewed the file for any outstanding diary items or pending actions
+          - Conducted a final reserve review and zeroed out reserves on settled/closed exposures
+          - Completed a claim closure summary documenting the outcome of each exposure
+          - Investigated whether the signal timing issue warrants a subrogation claim against the municipality
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Completed file review before closure
+          - Confirmed payments and releases
+          - Filed subrogation demand
+          - Notified lienholder
+          - Zeroed out reserves on closed items
+          - Completed closure documentation
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - File review was cursory
+          - Some payments or releases were not confirmed
+          - Subrogation demand was filed but documentation was incomplete
+          - Lienholder notification was missed
+          - Reserve cleanup was incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No file review before closure
+          - Payments or releases outstanding
+          - Subrogation was not pursued
+          - No closure documentation
+          - Reserves left open on closed exposures
+
+  - name: communication
+    weight: 0.20
+    description: Quality of resolution communications with all parties
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Sent closing letters to all parties confirming the settlement terms and claim closure
+          - Communicated subrogation status and expected timeline for deductible recovery to Sarah Mitchell
+          - Notified Sarah that her deductible will be recovered through subrogation and explained the process
+          - Confirmed with James Torres (or his attorney) that the settlement has been completed and releases are mutual
+          - Notified the lienholder of the claim outcome and repair completion
+          - Provided Sarah with a summary of all coverages utilized and payments made on her behalf
+          - If subrogation was partially successful, communicated the pro-rata recovery to Sarah
+          - Ensured the insured has no outstanding questions about the claim resolution
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Sent closing communications to key parties
+          - Communicated subrogation status to the insured
+          - Confirmed settlement completion with the third party
+          - Addressed outstanding questions
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Closing communications were incomplete or delayed
+          - Did not explain subrogation to the insured
+          - Third-party closing communication was missed
+          - Left the insured with unresolved questions
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No closing communications sent
+          - Insured was not informed of claim resolution
+          - Third party was not notified of settlement completion
+          - File closed without any communication
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of resolution decisions including subrogation and closure timing
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Made appropriate decisions about when to close the claim (not premature, not unnecessarily delayed)
+          - Correctly assessed subrogation recovery potential and pursued it based on the liability determination
+          - If the liability split was (e.g.) 70/30 against Vehicle A, pursued 30% subrogation recovery from State Farm for collision payment and deductible
+          - Evaluated whether the signal timing data or road conditions warranted a subrogation claim against the City of Sacramento or CalTrans for potential signal malfunction or inadequate left-turn signal timing
+          - Made sound decisions about the cost-benefit of subrogation pursuit (is the recovery amount worth the effort?)
+          - Assessed whether any outstanding items require the file to remain open (e.g., pending surgery, subrogation recovery)
+          - Kept appropriate exposures open for subrogation tracking while closing resolved items
+          - Identified lessons learned from the claim for future reference
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Closed the claim at an appropriate time
+          - Pursued subrogation recovery appropriately
+          - Made reasonable cost-benefit decisions about recovery
+          - Kept appropriate items open pending resolution
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Closed the claim prematurely or left it open unnecessarily long
+          - Subrogation pursuit was delayed or incomplete
+          - Did not evaluate the municipal subrogation opportunity
+          - Cost-benefit analysis was not performed
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Closed the claim inappropriately (outstanding items unresolved)
+          - Failed to pursue subrogation
+          - Made poor decisions about claim resolution timing
+          - Left significant recovery money on the table
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with claim closure and subrogation procedures
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Followed company claim closure checklist and procedures
+          - Subrogation demand was filed within company timelines
+          - All file documentation requirements were met before closure
+          - Reserves were properly zeroed on closed exposures and maintained on open subrogation
+          - Financial reconciliation was completed (payments issued vs. reserves vs. recoveries)
+          - Complied with California regulatory requirements for claim closure notification
+          - Completed all required management reports and coding for the closed file
+          - Set appropriate diary for subrogation follow-up with State Farm
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Followed closure procedures with minor omissions
+          - Subrogation demand filed timely
+          - Documentation was adequate
+          - Reserves were handled correctly
+          - Regulatory requirements met
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Closure procedures were not fully followed
+          - Subrogation demand was late
+          - Documentation gaps existed
+          - Reserve cleanup was incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Closure procedures were not followed
+          - Subrogation was not filed
+          - Documentation was severely lacking
+          - Reserves were left incorrect
+          - Regulatory requirements were not met
+
+  - name: fraud_awareness
+    weight: 0.05
+    description: Final fraud assessment at claim resolution
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Conducted a final file review for any fraud indicators that may have emerged during the claim lifecycle
+          - Verified that all settlement payments went to the correct parties (no redirected payments)
+          - Confirmed that releases are properly executed and not altered after signing
+          - Assessed whether the overall claim outcome is consistent with the evidence and did not result in an unjust windfall
+          - Documented the final fraud assessment in the file, even if no fraud was found
+          - If any concerns existed, ensured SIU was consulted before closure
+          - Checked that the subrogation demand is based on actual paid amounts and not inflated
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Reviewed the file for fraud indicators before closure
+          - Verified payment recipients
+          - Confirmed release integrity
+          - Documented the assessment
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not conduct a final fraud review
+          - Payment verification was cursory
+          - Release verification was not performed
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No final fraud assessment
+          - No verification of payment recipients or releases
+          - File closed without any review for fraud indicators

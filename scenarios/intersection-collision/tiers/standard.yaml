@@ -1,0 +1,170 @@
+# Standard Tier Configuration
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Moderate difficulty with realistic complications and persona behaviors
+
+tier: standard
+tier_name: Standard
+description: >
+  Mid-level difficulty designed for adjusters with foundational knowledge who
+  need to handle realistic claim complications. No hints are provided. Personas
+  exhibit realistic behaviors including impatience, uncertainty, and typical
+  real-world friction. Evidence contains some ambiguity that requires analysis.
+
+settings:
+  hints_enabled: false
+  phase_transition_hints: false
+  explicit_prompts: false
+  time_pressure: moderate  # Diary dates and regulatory deadlines are enforced
+  max_score_multiplier: 1.0  # Standard tier allows full scoring range
+
+persona_overrides:
+  sarah_mitchell:
+    demeanor: cooperative_but_anxious
+    provides_information: readily_with_prompting
+    emotional_state: anxious
+    notes: >
+      Sarah is generally cooperative but anxious about the claim outcome. She
+      calls frequently for status updates and becomes frustrated if she feels
+      the process is taking too long. She may occasionally express concern
+      about her deductible and whether she'll get it back. She provides
+      information when asked but doesn't always volunteer details proactively.
+
+  james_torres:
+    demeanor: impatient
+    provides_information: reluctantly
+    emotional_state: frustrated_and_in_pain
+    represented_by_attorney: false
+    notes: >
+      James is impatient and frustrated. He is dealing with ongoing knee pain
+      and unable to work full duties. He wants his claim resolved quickly and
+      may express frustration with the investigation timeline. He is not
+      hostile but is clearly unhappy with the situation. He provides information
+      when requested but may need follow-up for complete documentation. He
+      occasionally mentions he is considering getting a lawyer.
+
+  linda_park:
+    demeanor: cooperative_but_uncertain
+    provides_information: with_caveats
+    credibility_issues: minor_uncertainty
+    relationship_to_torres: not_disclosed
+    notes: >
+      Linda provides her statement but is clearly uncertain about key details.
+      She qualifies her observations frequently ("I think," "I believe," "I'm
+      not 100% sure"). Her uncertainty about the signal status is genuine and
+      she may become slightly defensive if pressed too hard on what she saw.
+      Her potential connection to James Torres is not disclosed in this tier.
+
+  mike_reeves:
+    demeanor: professional_but_firm
+    estimate_accuracy: slightly_high
+    supplement_justified: mostly
+    notes: >
+      Mike's initial estimate is at market rates. The supplement request is
+      mostly justified but may include 1-2 items that are borderline (e.g.,
+      the CV axle replacement might be questioned as related to the collision
+      vs. pre-existing wear). He will push back if the adjuster challenges
+      items and will need specific technical reasons for any denials.
+
+  dr_patel:
+    treatment_approach: standard
+    billing_accuracy: standard
+    notes: >
+      Dr. Patel's treatment is medically appropriate. The physical therapy
+      prescription of 12 weeks is within clinical guidelines but on the longer
+      end of the typical range. Billing is at standard rates. No red flags but
+      the duration of treatment should be evaluated in context.
+
+complications:
+  - type: conflicting_witness_statement
+    phase: investigation
+    description: >
+      Linda Park's statement partially supports Vehicle B but her acknowledged
+      uncertainty about the signal creates ambiguity. During a follow-up call,
+      she adds a detail she didn't mention initially: she thinks she saw
+      Vehicle A "hesitate" before making the turn, as if the driver was unsure.
+      This is a new detail not in her original statement and could be genuine
+      memory recovery or confabulation.
+    impact: >
+      Adds complexity to the liability analysis. The adjuster must weigh the
+      new information against the original statement and decide how much weight
+      to give the added detail.
+
+  - type: rental_coverage_question
+    phase: coverage
+    description: >
+      Sarah's rental reimbursement coverage is $40/day with a 30-day maximum.
+      The repair estimate for her vehicle is 5-7 business days, but the shop
+      has a 2-week parts backorder delay. Sarah asks whether her rental coverage
+      extends to cover the full period her vehicle is in the shop, including
+      the parts delay.
+    impact: >
+      The adjuster must determine whether the rental coverage period includes
+      delays beyond the repair time itself, and communicate the decision to
+      Sarah clearly. The policy language typically covers the "reasonable repair
+      period" which may or may not include parts delays depending on
+      interpretation.
+
+  - type: james_threatens_attorney
+    phase: negotiation
+    description: >
+      During settlement negotiations, James expresses frustration with the
+      offer and states he is "thinking about getting a lawyer." He does not
+      actually retain counsel in this tier, but the adjuster must handle the
+      situation appropriately.
+    impact: >
+      Tests the adjuster's ability to maintain professionalism, explain the
+      offer rationale clearly, and handle the implicit threat without either
+      caving to pressure or being dismissive.
+
+evidence_presentation:
+  police_report:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Police report is complete but signal timing data is listed as "pending"
+      and is not included. The adjuster must request it separately from
+      Sacramento DOT, which takes 2-3 weeks to fulfill.
+
+  dashcam_footage:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Dashcam footage has the camera glitch as described -- cuts out 1 second
+      before impact. The footage establishes that the southbound Oak Street
+      signal was red but cannot determine whether Vehicle A had a protected
+      arrow or Vehicle B had the green. The ambiguity requires the adjuster to
+      seek additional evidence (signal timing data) to resolve.
+
+  witness_statement:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Linda's statement is honest but uncertain. She adds the "hesitation"
+      detail in a follow-up that wasn't in her original account. The adjuster
+      must assess the reliability of this added detail.
+
+  medical_records:
+    clarity: high
+    ambiguity: low
+    notes: >
+      Medical records are complete and clearly document the injury and
+      treatment. The PT duration is on the longer end but within clinical
+      guidelines. No significant red flags.
+
+  repair_estimates:
+    clarity: high
+    ambiguity: low
+    notes: >
+      Both initial estimates are at or near market rates. The supplement has
+      1-2 borderline items that require adjuster judgment. Photos of hidden
+      damage are provided.
+
+  policy_declarations:
+    clarity: high
+    ambiguity: moderate
+    notes: >
+      The policy lapse (Feb 1-15) is present in the declarations page. The
+      loss occurred on March 15 during the reinstated period. The adjuster
+      must analyze whether the lapse creates any coverage issues for this
+      loss. The reinstatement endorsement language is somewhat ambiguous about
+      pre-existing damage exclusions.

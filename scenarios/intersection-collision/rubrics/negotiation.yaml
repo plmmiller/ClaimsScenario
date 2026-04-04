@@ -1,0 +1,263 @@
+# Negotiation Phase Rubric
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Evaluates the trainee's negotiation of settlements with all parties
+
+phase: negotiation
+phase_name: Negotiation
+description: >
+  Evaluates the trainee's ability to negotiate fair settlements for both the
+  first-party collision claim and the third-party bodily injury and property
+  damage claims, applying the comparative negligence determination and
+  maintaining good faith throughout the process.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of negotiation principles, settlement valuation, and legal constraints
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated strong understanding of California settlement practices and how pure comparative negligence affects settlement calculations
+          - Correctly applied the liability percentage to reduce or adjust damage amounts in the third-party claim
+          - Understood the distinction between first-party claim handling (contractual, owe policy benefits) and third-party negotiation (tort-based, comparative fault applies)
+          - Knew that Sarah's collision claim is paid without regard to fault (subject to deductible) and subrogation pursued afterward
+          - Understood California Civil Code Section 3333.4 (Proposition 213) and its potential impact if Sarah was uninsured at the time of loss (relevant due to the policy lapse, though not applicable here since the loss occurred during the reinstated period)
+          - Recognized the third-party claimant's right to pursue underinsured motorist coverage through their own carrier if Pacific Coast's offer is below their damages
+          - Understood litigation risk assessment and how jury verdicts in Sacramento County factor into settlement valuation
+          - Knew the legal requirements for good faith settlement offers under California law
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Applied comparative negligence correctly to settlement calculations
+          - Understood the difference between first-party and third-party claim handling
+          - Knew basic California settlement requirements
+          - Assessed litigation risk appropriately
+          - Made settlement offers within a defensible range
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Made errors in applying comparative negligence to settlement calculations
+          - Confused first-party and third-party claim handling approaches
+          - Had limited understanding of litigation risk assessment
+          - Settlement offers were not well-calibrated to the case value
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not apply comparative negligence to settlement calculations
+          - Fundamental misunderstanding of first-party vs. third-party obligations
+          - No consideration of litigation risk
+          - Settlement offers were arbitrary or unsupported
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of settlement preparation and demand analysis
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Prepared a comprehensive settlement evaluation before entering negotiations, documenting all damage categories and their assessed values
+          - Reviewed the third-party demand (if received) line by line, identifying supported and unsupported items
+          - Researched comparable Sacramento County jury verdicts for similar intersection collision cases with meniscus tears
+          - Calculated the full range of potential exposure (best case, expected, worst case) considering the liability ambiguity
+          - Verified all medical specials against the claim file before making offers
+          - Assessed the strength of the liability position and how it affects negotiation leverage
+          - Considered the impact of the policy lapse (even though not directly applicable) on the insured's credibility if the case went to trial
+          - Evaluated the claimant's attorney's reputation and typical demand patterns (if attorney involved)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Prepared a settlement evaluation before negotiating
+          - Reviewed the demand and identified key issues
+          - Researched comparable verdicts
+          - Calculated potential exposure range
+          - Verified specials before making offers
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Entered negotiations without thorough preparation
+          - Did not review the demand in detail
+          - No research on comparable verdicts
+          - Exposure range was not calculated
+          - Made offers without verifying underlying specials
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No settlement preparation or evaluation
+          - Demand was not analyzed
+          - No understanding of case value range
+          - Offers were made without any supporting analysis
+
+  - name: communication
+    weight: 0.20
+    description: Quality of negotiation communication with all parties
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Presented settlement offers with clear, professional explanations of the valuation methodology
+          - When negotiating with James Torres (or his attorney), communicated the liability analysis and comparative fault position firmly but respectfully
+          - Responded to counteroffers with reasoned analysis rather than arbitrary concessions
+          - Kept Sarah Mitchell informed of the negotiation progress on both her first-party claim and the third-party claim
+          - If negotiations involved an attorney, maintained professional demeanor and adhered to proper communication protocols
+          - Used anchoring and other ethical negotiation techniques effectively
+          - Documented all offers, counteroffers, and negotiation communications in the claim file
+          - When agreement was reached, confirmed terms clearly and in writing
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Communicated offers and positions clearly
+          - Maintained professional demeanor throughout negotiations
+          - Responded to counteroffers appropriately
+          - Kept the insured informed
+          - Documented negotiation communications
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Communication was unclear or inconsistent
+          - Made unnecessary concessions under pressure
+          - Did not adequately explain the basis for offers
+          - Updates to the insured were irregular
+          - Documentation was incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Poor communication that hindered negotiations
+          - Was argumentative, adversarial, or unprofessional
+          - Caved to pressure without justification or was unreasonably rigid
+          - Failed to keep the insured informed
+          - No documentation of negotiation communications
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of negotiation decisions and settlement outcomes
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Achieved a settlement that fairly reflects the liability determination, documented damages, and litigation risk
+          - First-party collision claim handled promptly -- paid repair costs less deductible and authorized rental within policy limits
+          - Third-party property damage settlement reflects the liability percentage and verified repair costs (including appropriate supplement amount)
+          - Third-party BI settlement reflects a fair evaluation of specials (medical, lost wages) and generals (pain and suffering) adjusted for comparative fault
+          - Made strategic concessions when appropriate (e.g., accepting some contested medical charges to achieve resolution) while holding firm on well-supported positions
+          - Settled the claim within authority or obtained appropriate authority increases with well-documented justification
+          - Balanced the need for timely resolution against the company's financial interests
+          - Recognized when to escalate to a supervisor or litigation counsel if negotiations reached an impasse
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Achieved a reasonable settlement reflecting the liability and damages
+          - Handled first-party claim promptly
+          - Third-party settlement was within an acceptable range
+          - Made appropriate concessions during negotiations
+          - Stayed within authority or obtained increases appropriately
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Settlement was somewhat too high or too low compared to the evaluation
+          - First-party claim handling was delayed
+          - Made excessive concessions or was unnecessarily rigid
+          - Did not seek authority increase when needed
+          - Settlement did not reflect the liability determination appropriately
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Settlement was grossly inappropriate (far too high or too low)
+          - First-party claim was not handled timely
+          - Negotiation approach was ineffective
+          - Exceeded authority without approval
+          - Settlement exposed the company to bad faith liability
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with negotiation and settlement procedures
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Followed company settlement authority guidelines and obtained approval for amounts exceeding authority
+          - Documented all offers and counteroffers with dates, amounts, and terms
+          - Obtained proper releases and settlement agreements before issuing payment
+          - Complied with California's requirements for timely response to settlement demands
+          - Maintained reserve accuracy throughout the negotiation process
+          - Ensured subrogation rights were preserved in settlement documentation
+          - Confirmed all medical liens and provider rights were addressed before settlement
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Followed settlement authority guidelines
+          - Documented negotiations adequately
+          - Obtained releases before payment
+          - Met regulatory timelines
+          - Maintained reserves
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Deviated from authority guidelines without proper approval
+          - Documentation was incomplete
+          - Delayed obtaining releases
+          - Regulatory timelines were not consistently met
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Exceeded authority without approval
+          - No documentation of negotiation process
+          - Issued payment without proper release
+          - Violated regulatory requirements
+
+  - name: fraud_awareness
+    weight: 0.05
+    description: Awareness of fraud indicators during negotiations
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - During negotiations, evaluated whether the third-party demand included inflated or unsupported items
+          - Assessed whether the demand pattern suggested attorney manipulation (e.g., demanding policy limits on a moderate injury)
+          - Verified that the claimant's medical treatment was completed before settlement to ensure specials are final
+          - Checked for medical provider liens that might indicate a referral relationship (attorney-to-provider pipeline)
+          - Evaluated the supplement approval from Mike's Auto Body in the context of the overall third-party claim value
+          - Ensured the settlement amount was based on verified, supported damages rather than inflated demands
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Evaluated the demand for inflated items
+          - Verified treatment completion before settlement
+          - Checked for unusual billing patterns
+          - Based settlement on verified damages
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not critically evaluate the demand for inflation
+          - Did not verify treatment completion
+          - Settled based on claimed rather than verified amounts
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Accepted the demand without scrutiny
+          - No awareness of demand inflation tactics
+          - Settled on unverified damages

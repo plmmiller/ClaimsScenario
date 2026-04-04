@@ -1,0 +1,274 @@
+# Damages Evaluation Phase Rubric
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Evaluates the trainee's assessment of property damage, bodily injury, and special damages
+
+phase: damages
+phase_name: Damages Evaluation
+description: >
+  Evaluates the trainee's ability to assess and quantify all damages including
+  vehicle repairs, medical expenses, lost wages, pain and suffering, and any
+  additional claimed damages. Includes evaluation of repair estimates, medical
+  billing, and damage reasonableness.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of damage assessment, medical billing, repair estimation, and valuation methods
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated thorough understanding of auto damage appraisal including OEM vs. aftermarket parts, labor rates, and supplement processes
+          - Correctly evaluated the repair estimates for both vehicles against Sacramento-area market rates
+          - Understood how to assess medical billing reasonableness using Usual and Customary Rates (UCR) for the Sacramento area
+          - Recognized the relationship between mechanism of injury (dashboard knee impact) and the diagnosed meniscus tear
+          - Understood the appropriate treatment progression (ER, orthopedic consult, MRI, PT) for a meniscus tear
+          - Knew how to calculate lost wages damages (salary documentation, medical work restrictions, duration)
+          - Understood general damages valuation methods (per diem, multiplier) and their application in California
+          - Recognized the difference between specials (medical, lost wages, property) and general damages (pain and suffering)
+          - Evaluated the supplement request from Mike's Auto Body for reasonableness of hidden damage findings
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Evaluated repair estimates against general market rates
+          - Assessed medical billing for reasonableness
+          - Understood the injury-mechanism relationship
+          - Calculated lost wages correctly
+          - Knew the basic framework for general damages valuation
+          - Reviewed the supplement request and made a reasonable determination
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Accepted repair estimates without meaningful analysis of rates or scope
+          - Did not evaluate medical billing against UCR rates
+          - Had limited understanding of injury causation analysis
+          - Made errors in lost wages calculation
+          - Did not critically evaluate the supplement request
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not evaluate repair estimates or medical billing for reasonableness
+          - Lacked understanding of damage valuation methods
+          - Could not distinguish between special and general damages
+          - Failed to review the supplement request
+          - Made significant errors in damage calculations
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of damage investigation and documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Obtained and reviewed complete repair estimates for both vehicles with line-by-line analysis
+          - Inspected or arranged inspection of both vehicles to verify damage claimed is consistent with the collision
+          - Reviewed the supplement request from Mike's Auto Body, including photos of hidden damage, and verified reasonableness
+          - Obtained complete medical records and itemized billing for James Torres
+          - Verified medical treatment was related to the collision and not pre-existing
+          - Requested and reviewed James Torres's employment records to verify lost wages claim
+          - Assessed whether the physical therapy duration and billing (24 sessions, $4,800) is reasonable for a meniscus tear from a vehicle collision
+          - Obtained Sarah Mitchell's medical records for her neck injury (Med Pay claim)
+          - Evaluated both vehicles for potential diminished value claims
+          - Documented all damage assessments with supporting calculations
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Reviewed repair estimates and medical records thoroughly
+          - Verified damage consistency with collision facts
+          - Reviewed the supplement request
+          - Obtained employment records for lost wages verification
+          - Documented damage assessments
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Reviewed repair estimates superficially
+          - Did not verify that damage patterns are consistent with the collision
+          - Accepted medical billing without checking for reasonableness
+          - Did not verify lost wages documentation
+          - Damage documentation was incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not review repair estimates or medical records
+          - No verification of damage consistency
+          - Accepted all damages at face value
+          - No documentation of damage assessment
+          - Failed to obtain key supporting documents
+
+  - name: communication
+    weight: 0.20
+    description: Quality of communication about damages with all parties
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Clearly communicated property damage assessment and repair process to both vehicle owners
+          - Explained the supplement review process to the body shop (Mike's Auto Body) and communicated approval/denial with specific reasons
+          - When communicating with James Torres (or his attorney) about the BI claim, was professional and did not minimize legitimate injuries
+          - Explained the Med Pay claim process to Sarah Mitchell
+          - If any damage items were denied or reduced, provided clear written explanation of the reasons
+          - Communicated rental car coverage status and timeline to Sarah
+          - Provided clear settlement demand response to third-party claimant with itemized evaluation
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Communicated damage assessments to parties clearly
+          - Explained supplement decisions with reasons
+          - Was professional in BI communications
+          - Provided written explanations for any reductions
+          - Managed rental car coverage communication
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Communication about damages was unclear or incomplete
+          - Did not explain supplement decisions adequately
+          - Was dismissive of injury claims or overcommunicated doubt
+          - Written explanations lacked detail
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to communicate damage assessments to parties
+          - No explanation of supplement decisions
+          - Was unprofessional in BI communications
+          - No written documentation of damage communications
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of damage evaluation decisions
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Made a well-supported property damage determination for both vehicles, negotiating fair repair costs while maintaining good faith
+          - Appropriately handled the Mike's Auto Body supplement ($2,100) - verified the hidden damage claims against photos and industry standards before approving, partially approving, or requesting re-inspection
+          - Assessed the total medical specials ($10,550) for reasonableness given the mechanism of injury and diagnosed condition
+          - Recognized that the PT billing (24 sessions at $4,800) may be on the high side for a meniscus tear from a moderate-speed collision and evaluated accordingly
+          - Made a reasonable general damages valuation considering the nature of the injury, treatment duration, and Sacramento-area verdicts
+          - Calculated lost wages correctly based on documented income and medical restrictions
+          - Set appropriate reserves reflecting the full evaluation including both special and general damages, adjusted for comparative fault
+          - Considered future medical exposure (possible arthroscopic surgery) in the reserve and evaluation
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Made reasonable property damage and BI evaluations
+          - Handled the supplement request appropriately
+          - Assessed medical billing reasonableness
+          - Made a fair general damages valuation
+          - Set reserves reflecting the evaluation
+          - Considered future medical exposure
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Property damage or BI evaluation had notable errors
+          - Did not adequately scrutinize the supplement or medical billing
+          - General damages valuation was too high or too low without justification
+          - Reserves did not reflect a complete evaluation
+          - Did not consider future medical exposure
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Damage evaluations were unreasonable or unsupported
+          - Accepted or rejected damages without analysis
+          - Failed to set appropriate reserves
+          - Did not consider all categories of damages
+          - Evaluation would expose the company to bad faith claims or unnecessary overpayment
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with damage evaluation procedures and timelines
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Completed damage evaluations within California regulatory timeframes
+          - Documented all evaluations with itemized breakdowns and supporting rationale
+          - Followed company guidelines for repair estimate review, supplement approval, and BI evaluation
+          - Maintained an updated reserve worksheet reflecting all damage categories
+          - Complied with California's prompt payment requirements for undisputed amounts
+          - Used company-approved evaluation tools and databases for rate comparisons
+          - Properly tracked rental car usage against policy limits
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Met evaluation timelines
+          - Documented evaluations adequately
+          - Followed company guidelines
+          - Maintained reserves
+          - Complied with prompt payment requirements
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Evaluation timelines were not consistently met
+          - Documentation was incomplete
+          - Deviated from company guidelines without justification
+          - Reserves were not updated timely
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Significant delays in damage evaluations
+          - Poor or nonexistent documentation
+          - Did not follow company guidelines
+          - Reserves were not maintained
+          - Violated prompt payment requirements
+
+  - name: fraud_awareness
+    weight: 0.05
+    description: Awareness of damage-related fraud indicators
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Critically evaluated Mike's Auto Body supplement for potential inflated or fabricated damage items
+          - Assessed whether the CV axle replacement, strut tower repair, and subframe work are consistent with the collision impact severity and angle
+          - Evaluated the PT billing (24 sessions) against clinical guidelines for meniscus tear treatment from moderate-speed collisions
+          - Checked whether Dr. Patel's treatment recommendations are consistent with standard orthopedic practice
+          - Verified that Mike's Auto Body is a licensed, reputable shop and not associated with a fraud ring
+          - Reviewed the medical billing for upcoding or unbundling indicators
+          - Assessed whether the total claimed damages are proportionate to the collision severity
+          - Documented all concerns and determined whether SIU referral is warranted for any damage component
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Evaluated the supplement for reasonableness
+          - Assessed medical billing for red flags
+          - Verified repair shop legitimacy
+          - Checked treatment against clinical norms
+          - Documented concerns appropriately
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not critically evaluate the supplement or medical billing
+          - Missed potential inflation indicators
+          - Did not verify repair shop reputation
+          - Limited assessment of treatment reasonableness
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Accepted all damage claims without scrutiny
+          - Did not evaluate repair or medical billing for fraud indicators
+          - No awareness of common damage fraud schemes
+          - Failed to document any damage-related concerns
