@@ -54,6 +54,10 @@ export const updateSession = (id: string, data: { status: string }) =>
 export const deleteSession = (id: string) =>
   fetchAPI(`/api/sessions/${id}`, { method: "DELETE" });
 
+// Progress
+export const getProgress = (sessionId: string) =>
+  fetchAPI(`/api/sessions/${sessionId}/progress`);
+
 // Reports
 export const generateReport = (sessionId: string) =>
   fetchAPI(`/api/sessions/${sessionId}/generate-report`, { method: "POST" });

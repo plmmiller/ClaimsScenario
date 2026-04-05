@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { getSession } from "@/lib/api";
+import { getSession, getProgress } from "@/lib/api";
 import { streamMessage, SSECallbacks } from "@/lib/sse";
 import { useAuth } from "@/providers/AuthProvider";
 import {
@@ -23,6 +23,10 @@ import {
   ChevronRight,
   Loader2,
   X,
+  BarChart3,
+  CheckCircle2,
+  Circle,
+  TrendingUp,
 } from "lucide-react";
 
 interface ChatMessage {
@@ -32,6 +36,27 @@ interface ChatMessage {
   persona?: PersonaInfo;
   type?: "document" | "coaching" | "score" | "phase_change" | "simulation_complete";
   metadata?: Record<string, unknown>;
+}
+
+interface DimensionScore {
+  label: string;
+  average_score: number;
+  count: number;
+  weight: number;
+  weighted_score: number;
+  level: string;
+}
+
+interface ProgressData {
+  mode: string;
+  current_phase: string;
+  phase_tasks: { action: string; completed: boolean }[];
+  phases_completed: number;
+  phases_total: number;
+  dimension_scores: Record<string, DimensionScore>;
+  overall_score: number;
+  overall_level: string;
+  scoring_events_count: number;
 }
 
 export default function SessionPage() {
@@ -52,6 +77,9 @@ export default function SessionPage() {
   const [coachingMessages, setCoachingMessages] = useState<
     { type: string; hint: string }[]
   >([]);
+  const [progressOpen, setProgressOpen] = useState(false);
+  const [progressData, setProgressData] = useState<ProgressData | null>(null);
+  const [progressLoading, setProgressLoading] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -63,6 +91,19 @@ export default function SessionPage() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, streamBuffer, scrollToBottom]);
+
+  const fetchProgress = useCallback(async () => {
+    setProgressLoading(true);
+    try {
+      const data = await getProgress(sessionId);
+      setProgressData(data);
+      setProgressOpen(true);
+    } catch (err) {
+      console.error("Failed to load progress:", err);
+    } finally {
+      setProgressLoading(false);
+    }
+  }, [sessionId]);
 
   // Load session
   useEffect(() => {
@@ -358,14 +399,32 @@ export default function SessionPage() {
               </>
             )}
           </div>
-          {session?.status === "completed" && (
-            <button
-              onClick={() => router.push(`/dashboard/report/${sessionId}`)}
-              className="bg-blue-600 text-white px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-blue-700"
-            >
-              View Report
-            </button>
-          )}
+          <div className="flex items-center gap-2">
+            {session?.status === "active" && (
+              <button
+                onClick={fetchProgress}
+                disabled={progressLoading}
+                className="flex items-center gap-1.5 bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors disabled:opacity-50"
+              >
+                {progressLoading ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : session.mode === "assessment" ? (
+                  <BarChart3 className="h-4 w-4" />
+                ) : (
+                  <TrendingUp className="h-4 w-4" />
+                )}
+                {session.mode === "assessment" ? "Score" : "Progress"}
+              </button>
+            )}
+            {session?.status === "completed" && (
+              <button
+                onClick={() => router.push(`/dashboard/report/${sessionId}`)}
+                className="bg-blue-600 text-white px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-blue-700"
+              >
+                View Report
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Messages */}
@@ -435,6 +494,185 @@ export default function SessionPage() {
           </div>
         </div>
       </div>
+
+      {/* Progress Panel (slide-over from right) */}
+      {progressOpen && progressData && (
+        <div className="w-80 bg-white border-l border-gray-200 flex flex-col overflow-y-auto">
+          <div className="p-4 border-b border-gray-200 flex items-center justify-between">
+            <h3 className="font-semibold text-sm flex items-center gap-2">
+              {progressData.mode === "assessment" ? (
+                <>
+                  <BarChart3 className="h-4 w-4 text-purple-600" />
+                  Running Score
+                </>
+              ) : (
+                <>
+                  <TrendingUp className="h-4 w-4 text-blue-600" />
+                  Phase Progress
+                </>
+              )}
+            </h3>
+            <button
+              onClick={() => setProgressOpen(false)}
+              className="text-gray-400 hover:text-gray-600"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+
+          {/* Phase progress bar */}
+          <div className="p-4 border-b border-gray-200">
+            <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
+              <span>Overall Progress</span>
+              <span>{progressData.phases_completed}/{progressData.phases_total} phases</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-blue-500 h-2 rounded-full transition-all"
+                style={{
+                  width: `${(progressData.phases_completed / progressData.phases_total) * 100}%`,
+                }}
+              />
+            </div>
+            <p className="text-xs text-gray-500 mt-2">
+              Current: <span className="font-medium text-gray-700">{PHASE_LABELS[progressData.current_phase] || progressData.current_phase}</span>
+            </p>
+          </div>
+
+          {/* Learning mode: task checklist */}
+          {progressData.mode !== "assessment" && progressData.phase_tasks.length > 0 && (
+            <div className="p-4 border-b border-gray-200">
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
+                Phase Tasks
+              </p>
+              <div className="space-y-2">
+                {progressData.phase_tasks.map((task, idx) => (
+                  <div
+                    key={idx}
+                    className={`flex items-start gap-2 text-xs ${
+                      task.completed ? "text-green-700" : "text-gray-600"
+                    }`}
+                  >
+                    {task.completed ? (
+                      <CheckCircle2 className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />
+                    ) : (
+                      <Circle className="h-4 w-4 text-gray-300 shrink-0 mt-0.5" />
+                    )}
+                    <span className={task.completed ? "line-through opacity-70" : ""}>
+                      {task.action}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-gray-400 mt-3">
+                {progressData.phase_tasks.filter((t) => t.completed).length}/
+                {progressData.phase_tasks.length} completed
+              </p>
+            </div>
+          )}
+
+          {/* Score section (always shown in assessment, shown with scores in learning/hybrid) */}
+          {(progressData.mode === "assessment" || progressData.scoring_events_count > 0) && (
+            <div className="p-4">
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
+                {progressData.mode === "assessment" ? "Score Breakdown" : "Running Scores"}
+              </p>
+
+              {/* Overall score */}
+              <div className="bg-gray-50 rounded-lg p-3 mb-4">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm font-medium text-gray-700">Overall</span>
+                  <span className={`text-lg font-bold ${
+                    progressData.overall_score >= 3.5
+                      ? "text-green-600"
+                      : progressData.overall_score >= 2.5
+                      ? "text-blue-600"
+                      : progressData.overall_score >= 1.5
+                      ? "text-yellow-600"
+                      : progressData.overall_score > 0
+                      ? "text-red-600"
+                      : "text-gray-400"
+                  }`}>
+                    {progressData.overall_score > 0
+                      ? `${progressData.overall_score}/4.0`
+                      : "—"}
+                  </span>
+                </div>
+                {progressData.overall_score > 0 && (
+                  <span className={`text-xs capitalize px-2 py-0.5 rounded-full ${
+                    progressData.overall_level === "exemplary"
+                      ? "bg-green-100 text-green-700"
+                      : progressData.overall_level === "proficient"
+                      ? "bg-blue-100 text-blue-700"
+                      : progressData.overall_level === "developing"
+                      ? "bg-yellow-100 text-yellow-700"
+                      : "bg-red-100 text-red-700"
+                  }`}>
+                    {progressData.overall_level.replace(/_/g, " ")}
+                  </span>
+                )}
+              </div>
+
+              {/* Dimension scores */}
+              <div className="space-y-3">
+                {Object.entries(progressData.dimension_scores).map(([key, dim]) => (
+                  <div key={key}>
+                    <div className="flex items-center justify-between text-xs mb-1">
+                      <span className="text-gray-600">{dim.label}</span>
+                      <span className="font-medium text-gray-700">
+                        {dim.count > 0 ? `${dim.average_score}/4` : "—"}
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-1.5">
+                      <div
+                        className={`h-1.5 rounded-full transition-all ${
+                          dim.average_score >= 3.5
+                            ? "bg-green-500"
+                            : dim.average_score >= 2.5
+                            ? "bg-blue-500"
+                            : dim.average_score >= 1.5
+                            ? "bg-yellow-500"
+                            : dim.count > 0
+                            ? "bg-red-500"
+                            : "bg-gray-300"
+                        }`}
+                        style={{
+                          width: dim.count > 0 ? `${(dim.average_score / 4) * 100}%` : "0%",
+                        }}
+                      />
+                    </div>
+                    <div className="flex items-center justify-between text-xs mt-0.5">
+                      <span className="text-gray-400">
+                        {Math.round(dim.weight * 100)}% weight
+                      </span>
+                      {dim.count > 0 && (
+                        <span className="text-gray-400">{dim.count} eval{dim.count !== 1 ? "s" : ""}</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {progressData.scoring_events_count === 0 && (
+                <p className="text-xs text-gray-400 mt-3 text-center italic">
+                  No scoring events yet. Continue the simulation to build your score.
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* Refresh button */}
+          <div className="p-4 border-t border-gray-200 mt-auto">
+            <button
+              onClick={fetchProgress}
+              disabled={progressLoading}
+              className="w-full text-center text-xs text-blue-600 hover:text-blue-800 font-medium disabled:opacity-50"
+            >
+              {progressLoading ? "Refreshing..." : "Refresh Progress"}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
