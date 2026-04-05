@@ -1,12 +1,12 @@
-# Auto Claims Simulation Platform
+# Insurance Training Simulation Platform
 
 ## Project Overview
-AI-driven auto claims simulation platform that teaches and assesses insurance adjusters through conversational AI. Uses Claude to play multiple personas (claimant, witnesses, body shop, doctor, attorney) across the full claims lifecycle.
+AI-driven simulation platform that teaches and assesses insurance professionals through conversational AI. Uses Claude to play multiple personas across the full lifecycle of claims, underwriting, and marketing scenarios. Supports 3 scenario types, 3 simulation modes, 3 difficulty tiers, and 3 experience levels.
 
 ## Tech Stack
 - **Frontend:** Next.js 14+ (App Router) + TypeScript + Tailwind CSS (in `frontend/`)
 - **Backend:** FastAPI + Python (in `backend/`)
-- **AI Engine:** Anthropic Claude API with tool use (streaming SSE)
+- **AI Engine:** Anthropic Claude API with tool use (streaming SSE via AsyncAnthropic)
 - **Database:** Supabase (Postgres + Auth + RLS)
 - **Deploy:** Render (two services: frontend + backend)
 
@@ -16,9 +16,12 @@ AI-driven auto claims simulation platform that teaches and assesses insurance ad
 cd frontend && npm install && npm run dev    # Runs on :3000
 
 # Backend
-cd backend && source venv/bin/activate
-pip install -r requirements.txt
+cd backend && pip install -r requirements.txt
 uvicorn main:app --reload --port 8000        # Runs on :8000
+
+# Supabase migrations
+export SUPABASE_ACCESS_TOKEN=sbp_...
+supabase db push --linked
 ```
 
 ## Environment Variables
@@ -38,13 +41,17 @@ SUPABASE_JWT_SECRET=your-jwt-secret
 FRONTEND_URL=http://localhost:3000
 ```
 
+**Note:** The backend config (`config.py`) explicitly injects `.env` values when shell env vars are empty — needed because Claude Desktop sets `ANTHROPIC_API_KEY=` (empty) in the shell.
+
 ## Key Architecture Decisions
 - **Single-conversation multi-persona:** One Anthropic API call per user message where Claude plays all non-adjuster roles, switching via `set_active_persona` tool
 - **7 AI tools:** set_active_persona, show_document, record_decision, score_action, advance_phase, provide_coaching, complete_simulation
-- **SSE streaming:** Anthropic API -> FastAPI StreamingResponse -> fetch+ReadableStream on frontend (not EventSource, since we need POST)
+- **SSE streaming:** Anthropic AsyncAnthropic -> FastAPI StreamingResponse -> fetch+ReadableStream on frontend (not EventSource, since we need POST)
 - **Scenario data:** YAML/markdown files in `scenarios/` directory, loaded at backend startup
 - **Stateless backend:** Session state rebuilt from Supabase per request; no sticky sessions needed
 - **Context management:** Sliding window of last 50 messages + current-phase tool interactions; older phases summarized
+- **JWT auth:** Supabase issues ES256 JWTs; backend verifies via JWKS endpoint (not legacy HS256 secret)
+- **Multi-scenario phases:** Different scenarios have different phase sets; phase_manager dynamically resolves phase order from scenario definition
 
 ## Project Structure
 ```
@@ -52,53 +59,63 @@ FRONTEND_URL=http://localhost:3000
 │   ├── app/                    # Next.js App Router pages
 │   │   ├── login/, register/   # Auth pages
 │   │   └── dashboard/          # Protected pages
-│   │       ├── scenarios/      # Scenario selection
+│   │       ├── scenarios/      # Scenario selection (mode, difficulty, level)
 │   │       ├── session/[id]/   # Chat interface (main simulation)
 │   │       ├── report/[id]/    # Performance report
+│   │       ├── help/           # Help & documentation page
 │   │       └── admin/          # Analytics & user management
 │   ├── lib/                    # supabase clients, api.ts, sse.ts
 │   ├── providers/              # AuthProvider (Supabase auth context)
-│   └── types/                  # TypeScript types
+│   └── types/                  # TypeScript types (Phase is string for multi-scenario support)
 ├── backend/
 │   ├── api/routes/             # FastAPI endpoints (auth, scenarios, sessions, chat, reports, admin)
+│   ├── api/middleware/auth.py  # JWT verification via JWKS (ES256) with HS256 fallback
 │   ├── engine/                 # AI engine
-│   │   ├── orchestrator.py     # Core conversation loop with streaming
-│   │   ├── prompt_builder.py   # Dynamic system prompt assembly
+│   │   ├── orchestrator.py     # Core conversation loop with async streaming
+│   │   ├── prompt_builder.py   # Dynamic system prompt assembly (includes level context)
 │   │   ├── tools.py            # Tool definitions (JSON schema for Claude)
 │   │   ├── tool_handlers.py    # Tool execution logic
-│   │   ├── phase_manager.py    # Phase transition validation
+│   │   ├── phase_manager.py    # Multi-scenario phase transition validation
 │   │   ├── scorer.py           # Score accumulation and computation
+│   │   ├── coaching.py         # Phase intro coaching for all scenario types
 │   │   └── report_generator.py # Post-session report generation
 │   ├── db/                     # Supabase client and queries
 │   └── models/                 # Pydantic models
-├── scenarios/intersection-collision/
-│   ├── scenario.yaml           # Master scenario definition
-│   ├── personas/*.yaml         # 6 AI persona character sheets
-│   ├── evidence/*.md           # Documents (police report, policy dec, etc.)
-│   ├── rubrics/*.yaml          # Per-phase scoring rubrics
-│   └── tiers/*.yaml            # Difficulty tier overrides
-└── supabase/migrations/        # SQL schema
+├── scenarios/
+│   ├── intersection-collision/       # Auto claims scenario (7 phases, 6 personas)
+│   ├── commercial-property-underwriting/  # Underwriting scenario (7 phases, 4 personas)
+│   └── product-launch-campaign/      # Marketing scenario (7 phases, 5 personas)
+└── supabase/migrations/              # SQL schema (2 migrations)
 ```
+
+## Scenarios
+
+### 1. Two-Vehicle Intersection Collision (Claims)
+- **Phases:** FNOL → Coverage → Investigation → Liability → Damages → Negotiation → Resolution
+- **Personas:** Sarah Mitchell (insured), James Torres (claimant), Linda Park (witness), Mike's Auto Body, Dr. Patel, Attorney Davis
+- **Key dispute:** Both drivers claim the other ran a red light
+
+### 2. Commercial Property Underwriting
+- **Phases:** Submission Review → Risk Assessment → Loss History → Pricing → Terms & Conditions → Negotiation → Binding
+- **Personas:** Karen Wells (agent), David Chen (business owner), Maria Santos (loss control), Tom Bradshaw (mentor)
+- **Key challenge:** 25-year-old building, prior water damage claim, adjacent restaurant exposure
+
+### 3. SmartDrive Product Launch (Marketing)
+- **Phases:** Market Research → Strategy Development → Content Creation → Agency Enablement → Campaign Launch → Performance Tracking → Reporting
+- **Personas:** Lisa Morgan (VP Marketing), Raj Patel (agency principal), Emma Wright (digital specialist), Carlos Mendez (actuary), Jennifer Kim (consumer)
+- **Key challenge:** Launch UBI auto product in new state with $500K budget
 
 ## Database
 - **Tables:** profiles, sessions, messages, reports
-- **Auth:** Supabase Auth with JWT, auto-creates profile via trigger
+- **Auth:** Supabase Auth with JWT (ES256), auto-creates profile via trigger (`SECURITY DEFINER SET search_path = public`)
 - **RLS:** Users see own data; instructors/admins see all
 - **Service role key** used by backend (bypasses RLS)
+- **Sessions table** includes: mode, difficulty, level, current_phase, phase_history, decisions, scoring_events
 
-## Simulation Modes
-- **Learning:** Real-time coaching hints + visible scoring feedback
-- **Assessment:** Silent scoring, no hints, generates performance report
-- **Hybrid:** Coaching in phases 1-3, assessment in phases 4-7
-
-## Claims Lifecycle Phases
-1. FNOL (First Notice of Loss)
-2. Coverage Verification
-3. Investigation
-4. Liability Determination
-5. Damage Assessment & Valuation
-6. Negotiation & Settlement
-7. Resolution & Closing
+## Session Configuration
+- **Modes:** Learning (coaching + visible scoring), Assessment (silent scoring), Hybrid (coaching phases 1-3, assessment 4-7)
+- **Difficulty:** Guided (cooperative, hints), Standard (realistic), Advanced (uncooperative, complications)
+- **Level:** Beginner (simple language, terms explained), Intermediate (standard industry language), Experienced (full jargon, fast pace)
 
 ## Scoring Dimensions (weighted)
 - Technical Knowledge (25%)
@@ -106,4 +123,9 @@ FRONTEND_URL=http://localhost:3000
 - Communication (20%)
 - Judgment & Decision-Making (20%)
 - Process Adherence (10%)
-- Fraud Awareness (5%)
+- Risk/Fraud Awareness (5%)
+
+## Known Quirks
+- Python 3.9 compatibility: all backend files use `from __future__ import annotations`
+- Supabase client placeholders in `supabase-browser.ts` / `supabase-server.ts` for build-time safety
+- Backend config explicitly overrides empty shell env vars (Claude Desktop sets `ANTHROPIC_API_KEY=`)

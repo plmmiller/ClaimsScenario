@@ -1,0 +1,256 @@
+# Submission Review Phase Rubric
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Evaluates the trainee's handling of initial application review
+
+phase: submission_review
+phase_name: Submission Review
+description: >
+  Evaluates the trainee's ability to conduct a thorough review of a commercial
+  property insurance application, identify missing or incomplete information,
+  and determine whether the submission meets basic eligibility requirements
+  before proceeding to detailed risk assessment.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of commercial property application requirements, coverage forms, and eligibility
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly identified all coverage types requested (building TIB, BPP, business income, equipment breakdown, ordinance or law)
+          - Recognized the dual-structure of the building request (TIB-only vs. full building) and flagged the coinsurance implications
+          - Identified the appropriate policy form (Commercial Package Policy with CP 00 10 or BOP) based on risk size and complexity
+          - Verified the NAICS/SIC code is consistent with the described operations
+          - Recognized that the repair services operation may affect the occupancy classification
+          - Noted that the building is tenant-occupied and confirmed the appropriate insurable interest (TIB vs. building)
+          - Identified that Texas has specific wind/hail considerations for commercial property
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified primary coverages requested and appropriate policy form
+          - Recognized the TIB vs. full building distinction
+          - Verified basic eligibility against underwriting guidelines
+          - Identified the occupancy classification correctly
+          - Noted the Texas jurisdiction and general wind/hail exposure
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified some but not all coverages requested
+          - Did not fully understand the TIB vs. building coverage distinction
+          - Missed the occupancy classification nuance from the repair operations
+          - Did not consider wind/hail exposure for Texas location
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to identify key coverages or misclassified the risk
+          - Did not understand the insurable interest (tenant vs. building owner)
+          - Could not determine the appropriate policy form
+          - Missed fundamental eligibility requirements
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of application review and identification of missing information
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Identified all missing or incomplete items on the application including loss control inspection, building valuation, financial statements, and restaurant hood cleaning documentation
+          - Recognized that the application lists $2,500 deductible but does not specify whether it applies per occurrence or per peril
+          - Noted the discrepancy potential between TIB-only ($350K) and full building ($1.2M) and requested clarification on the agent's intent
+          - Asked about seasonal inventory fluctuation and whether the BPP limit accounts for peak values
+          - Requested the lease agreement to confirm tenant obligations regarding property insurance
+          - Asked about the nature and scope of repair operations including specific equipment and materials used
+          - Requested documentation on the restaurant's hood cleaning schedule and any available fire department inspection records
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified most missing documents and requested them from the agent
+          - Recognized the building limit question and sought clarification
+          - Asked about the prior claim and corrective actions
+          - Requested loss control inspection
+          - Identified the need for financial verification
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Missed 2-3 key items that should have been requested
+          - Did not question the building coverage structure
+          - Did not ask about seasonal inventory fluctuation
+          - Accepted the application at face value without probing for additional detail
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to identify missing documentation
+          - Did not request a loss control inspection
+          - Did not question obvious gaps in the application
+          - Proceeded to risk assessment without adequate information
+
+  - name: communication
+    weight: 0.20
+    description: Quality of interaction with the agent during submission review
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Acknowledged receipt of the submission promptly and provided an expected timeline for review
+          - Communicated information requests clearly and in a single organized list to minimize back-and-forth
+          - Explained why each piece of additional information is needed (demonstrating underwriting rationale)
+          - Maintained a professional, collaborative tone that reinforces the agent relationship
+          - Set appropriate expectations about the timeline given the effective date request of April 15
+          - Thanked the agent for the submission and expressed interest in the account
+          - Used proper insurance terminology while remaining clear and accessible
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Acknowledged receipt and communicated requests clearly
+          - Maintained professional tone
+          - Provided a reasonable timeline
+          - Communicated information needs in an organized manner
+          - Used appropriate industry terminology
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Delayed acknowledgment or did not provide a timeline
+          - Information requests were disorganized, requiring multiple follow-ups
+          - Tone was either overly casual or unnecessarily demanding
+          - Did not explain the rationale for information requests
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to acknowledge receipt in a timely manner
+          - Communication was unclear or unprofessional
+          - Did not provide any timeline or set expectations
+          - Made the agent feel the submission was unwelcome or burdensome
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of initial decisions and prioritization during submission review
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly assessed the submission as within company appetite (retail occupancy, masonry NC construction, sprinklered, Protection Class 3)
+          - Identified the adjacent restaurant as the primary underwriting concern requiring detailed evaluation
+          - Recognized the prior water damage claim as a secondary concern requiring loss history analysis
+          - Prioritized the loss control inspection as the most critical next step
+          - Appropriately flagged the submission for standard processing (not expedited or referred)
+          - Noted the April 15 effective date and planned the review timeline accordingly
+          - Recognized this as a competitive account that deserves prompt attention to retain the agent's business
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Assessed the submission as within general appetite
+          - Identified the restaurant and prior claim as key concerns
+          - Ordered the loss control inspection promptly
+          - Planned the review timeline appropriately
+          - Recognized the competitive dynamics
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Uncertain about whether the submission fits company appetite
+          - Did not prioritize the loss control inspection
+          - Failed to recognize the time sensitivity of the effective date
+          - Did not identify the restaurant exposure as a priority concern
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Incorrectly assessed eligibility (either premature decline or failure to flag concerns)
+          - Did not order a loss control inspection
+          - No timeline planning for the review
+          - Failed to recognize basic risk characteristics
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with underwriting procedures during submission intake
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Created the underwriting file with all required fields populated
+          - Assigned a submission number and logged the submission in the tracking system
+          - Documented the initial review findings and information requests
+          - Ordered the loss control inspection through the proper channel
+          - Set diary dates for follow-up on outstanding items
+          - Followed company procedures for new business submission intake
+          - Verified the agent's appointment status and authority
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Created the file and assigned a submission number
+          - Documented initial findings
+          - Ordered the loss control inspection
+          - Set diary dates for follow-up
+          - Verified agent appointment
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - File setup was incomplete
+          - Did not set diary dates
+          - Documentation was sparse
+          - Missed a procedural step
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not create a proper underwriting file
+          - No documentation of the review
+          - Failed to follow basic submission intake procedures
+          - No diary or follow-up tracking
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Early identification of risk factors and potential concerns during submission review
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Identified the adjacent restaurant as a significant fire exposure requiring detailed assessment
+          - Noted the prior water damage claim and flagged it for loss history analysis
+          - Recognized the vacant adjacent unit as a potential vandalism and arson exposure
+          - Questioned whether the repair area operations could change the occupancy classification or hazard grade
+          - Noted the high-value electronics inventory and its susceptibility to water, smoke, and theft
+          - Identified the potential for seasonal inventory fluctuation to create underinsurance during peak periods
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified the restaurant and prior claim as risk factors
+          - Noted the vacant unit concern
+          - Recognized the high-value inventory exposure
+          - Flagged items for further investigation
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified only one or two risk factors
+          - Did not connect the repair operations to occupancy classification
+          - Overlooked the vacant unit exposure
+          - Did not consider seasonal inventory fluctuation
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to identify any significant risk factors during initial review
+          - Did not flag the adjacent restaurant exposure
+          - Treated the submission as a routine, low-complexity account
+          - No awareness of the risk characteristics that distinguish this submission

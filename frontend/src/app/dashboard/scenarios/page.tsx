@@ -11,6 +11,7 @@ export default function ScenariosPage() {
   const [loading, setLoading] = useState(true);
   const [selectedScenario, setSelectedScenario] = useState<Scenario | null>(null);
   const [mode, setMode] = useState<string>("learning");
+  const [level, setLevel] = useState<string>("beginner");
   const [difficulty, setDifficulty] = useState<string>("guided");
   const [starting, setStarting] = useState(false);
   const router = useRouter();
@@ -30,6 +31,7 @@ export default function ScenariosPage() {
         scenario_id: selectedScenario.id,
         mode,
         difficulty,
+        level,
       });
       router.push(`/dashboard/session/${session.id}`);
     } catch (err) {
@@ -142,6 +144,33 @@ export default function ScenariosPage() {
                 >
                   <p className="font-medium text-sm">{m.label}</p>
                   <p className="text-xs text-gray-500 mt-1">{m.desc}</p>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Level selection */}
+          <div className="mb-8">
+            <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">
+              Level
+            </h2>
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { id: "beginner", label: "Beginner", desc: "New to insurance, detailed explanations" },
+                { id: "intermediate", label: "Intermediate", desc: "Some experience, standard terminology" },
+                { id: "experienced", label: "Experienced", desc: "Industry veteran, full jargon and pace" },
+              ].map((l) => (
+                <button
+                  key={l.id}
+                  onClick={() => setLevel(l.id)}
+                  className={`p-4 rounded-xl border-2 text-left transition-all ${
+                    level === l.id
+                      ? "border-blue-500 bg-blue-50"
+                      : "border-gray-200 hover:border-gray-300"
+                  }`}
+                >
+                  <p className="font-medium text-sm">{l.label}</p>
+                  <p className="text-xs text-gray-500 mt-1">{l.desc}</p>
                 </button>
               ))}
             </div>

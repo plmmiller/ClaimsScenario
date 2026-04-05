@@ -11,11 +11,13 @@ import {
   BarChart3,
   Users,
   LogOut,
+  HelpCircle,
 } from "lucide-react";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/dashboard/scenarios", label: "Scenarios", icon: Play },
+  { href: "/dashboard/help", label: "Help", icon: HelpCircle },
 ];
 
 const adminItems = [

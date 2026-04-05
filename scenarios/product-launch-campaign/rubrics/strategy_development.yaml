@@ -1,0 +1,259 @@
+# Strategy Development Phase Rubric
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Evaluates the trainee's marketing strategy and positioning development
+
+phase: strategy_development
+phase_name: Strategy Development
+description: >
+  Evaluates the trainee's ability to develop a comprehensive marketing strategy
+  including product positioning, messaging hierarchy, channel selection, budget
+  allocation, and success metrics for the SmartDrive Colorado launch.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of marketing strategy frameworks, positioning theory, and channel planning
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Applied a recognized positioning framework (e.g., Ries & Trout, brand positioning statement) to develop SmartDrive's differentiated position in the Colorado market
+          - Created a messaging hierarchy with distinct primary, secondary, and supporting messages tailored to each audience segment (consumers, agents, leadership)
+          - Developed a clear value proposition canvas connecting SmartDrive's features to customer pain points and desired gains
+          - Selected and prioritized marketing channels based on audience reach data, cost efficiency analysis, and customer journey mapping
+          - Created a customer journey map from awareness through policy bind that informed content strategy and channel sequencing
+          - Defined SMART KPIs for each channel with realistic benchmarks based on insurance industry data
+          - Understood the relationship between brand awareness (zero in Colorado) and direct response, and allocated budget accordingly
+          - Applied the concept of integrated marketing communications to ensure consistent messaging across all channels
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Developed a clear positioning statement and messaging framework
+          - Selected appropriate channels with reasonable rationale
+          - Created a value proposition that addresses target audience needs
+          - Defined KPIs and success metrics for the campaign
+          - Planned a campaign timeline with key milestones
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Positioning was generic rather than differentiated
+          - Channel selection lacked clear rationale or audience alignment
+          - Messaging did not address key consumer barriers (privacy, trust)
+          - KPIs were vague or unrealistic
+          - Strategy lacked cohesion across channels
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No clear positioning or messaging framework developed
+          - Channel selection was arbitrary
+          - Did not develop a value proposition
+          - No KPIs or success metrics defined
+          - Strategy was incoherent or missing entirely
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of strategy research and evidence supporting strategic decisions
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Grounded the positioning strategy in market research findings (competitive gaps, consumer attitudes, channel preferences)
+          - Analyzed the competitive messaging landscape and identified the privacy-first positioning gap
+          - Validated channel selections with audience data (72% of 25-34 prefer online, 61% of 35-45 prefer mix)
+          - Researched cost benchmarks for each channel (CPC $35-65 for search, CPM $12-18 for social) and used them to project budget efficiency
+          - Analyzed the budget allocation against comparable insurance product launches to assess sufficiency
+          - Investigated the agent channel's economics (commission comparisons, training investment, co-op expectations) to inform enablement strategy
+          - Mapped the competitive response scenarios (Root increasing spend, Progressive promoting Snapshot) and planned contingencies
+          - Referenced brand guidelines to ensure strategy aligns with Pinnacle's brand voice and visual identity
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Strategy was grounded in market research
+          - Channel selections were supported by audience data
+          - Budget allocation referenced cost benchmarks
+          - Competitive positioning was research-based
+          - Brand guidelines were consulted
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Strategy was loosely connected to research findings
+          - Channel selections lacked data support
+          - Budget allocation was not benchmarked
+          - Competitive positioning was assumption-based rather than research-based
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Strategy was developed without reference to research
+          - No data supporting channel or budget decisions
+          - Competitive analysis was not incorporated into strategy
+          - Strategy was based on assumptions rather than evidence
+
+  - name: communication
+    weight: 0.20
+    description: Quality of strategy communication and stakeholder management
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Presented the strategy to Lisa Morgan with a clear executive summary leading with the positioning headline
+          - Adapted communication style for different audiences (data-heavy for Lisa, product-accurate for Carlos, platform-specific for Emma)
+          - Responded to Lisa Morgan's probing questions with data-backed answers and maintained the strategic rationale under pressure
+          - Incorporated Carlos Mendez's product accuracy feedback into messaging without diluting the creative impact
+          - Engaged Emma Wright early to validate digital channel assumptions and incorporate platform-specific recommendations
+          - Presented budget allocation with clear rationale connecting spend to expected outcomes for each channel
+          - Created a strategy document that could serve as a campaign brief for all team members
+          - Managed differing stakeholder opinions (e.g., Lisa wanting aggressive timeline, Carlos wanting accuracy, Emma wanting digital-first) diplomatically
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Presented strategy clearly to key stakeholders
+          - Responded to questions with reasonable answers
+          - Incorporated stakeholder feedback appropriately
+          - Created a usable strategy document
+          - Managed stakeholder expectations
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Strategy presentation was unclear or disorganized
+          - Struggled to answer stakeholder questions
+          - Did not effectively incorporate feedback
+          - Strategy document was incomplete or hard to follow
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to present strategy to stakeholders
+          - Could not defend strategic decisions
+          - Ignored stakeholder feedback
+          - No usable strategy document produced
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of strategic decisions including positioning, channel mix, and budget allocation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Chose a differentiated positioning that leverages SmartDrive's unique strengths (privacy-first, no rate increase, agent + digital) rather than competing on price or brand awareness
+          - Allocated budget strategically between brand awareness (necessary for new-market entry) and direct response (necessary for policy targets)
+          - Prioritized high-ROI digital channels while maintaining agent channel investment as a strategic differentiator
+          - Recognized the need for a pre-launch phase to build awareness before the September launch date
+          - Made sound tradeoffs between channel breadth and depth given the $500K budget constraint
+          - Planned contingency responses for competitive actions (Root increasing spend, negative PR about telematics)
+          - Set realistic KPIs that account for the 90-day monitoring period's impact on early metrics
+          - Balanced Lisa Morgan's expectations (2,000 policies in 6 months) with market reality and budget constraints
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Chose a reasonable positioning strategy
+          - Budget allocation was sound for the overall objective
+          - Channel priorities were appropriate for the target audience
+          - Campaign timeline was realistic
+          - KPIs were achievable and relevant
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Positioning was not clearly differentiated
+          - Budget allocation had significant imbalances
+          - Channel mix did not match target audience preferences
+          - Campaign timeline was unrealistic
+          - KPIs were disconnected from business objectives
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No clear strategic direction
+          - Budget allocation was arbitrary
+          - Channel selection was inappropriate for the audience
+          - No campaign timeline or milestones
+          - KPIs were absent or irrelevant
+
+  - name: process_adherence
+    weight: 0.10
+    description: Following strategy development procedures and maintaining proper documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Developed a comprehensive strategy document following a standard campaign brief format
+          - Obtained formal approval from Lisa Morgan before proceeding to content creation
+          - Documented all strategic decisions with supporting rationale
+          - Created a campaign timeline with dependencies and milestones
+          - Established a measurement framework before launch to enable post-launch evaluation
+          - Aligned strategy with brand guidelines and secured brand team sign-off
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Produced a strategy document with key elements
+          - Obtained stakeholder approval before proceeding
+          - Documented major decisions
+          - Created a campaign timeline
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Strategy documentation was incomplete
+          - Proceeded without formal approval
+          - Decisions were not well-documented
+          - Timeline lacked detail or dependencies
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No strategy documentation produced
+          - No stakeholder approval process
+          - Decisions were undocumented
+          - No campaign timeline
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of strategic risks including competitive, regulatory, and brand risks
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Identified the risk that $500K may be insufficient for a new-state launch against well-funded competitors and proposed mitigation (efficient channel allocation, agency leverage)
+          - Assessed the competitive response risk and developed contingency messaging if Root or Progressive increase Colorado activity
+          - Recognized the compliance risk of aggressive marketing claims and built regulatory review into the content creation timeline
+          - Identified the brand risk of promising savings that the 90-day monitoring period delays and planned messaging to set expectations
+          - Flagged the agency adoption risk and planned enablement activities to mitigate
+          - Assessed the risk of channel conflict between digital lead generation and agency distribution
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified key strategic risks
+          - Proposed reasonable mitigations for top risks
+          - Built compliance review into the timeline
+          - Recognized competitive response risk
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified some risks but missed key threats
+          - Mitigations were vague or incomplete
+          - Compliance risk was not adequately addressed
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No strategic risk assessment conducted
+          - Did not consider competitive, regulatory, or brand risks
+          - Strategy was developed without risk awareness

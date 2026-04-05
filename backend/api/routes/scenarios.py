@@ -10,17 +10,19 @@ router = APIRouter()
 @router.get("")
 async def list_scenarios():
     scenarios = scenario_loader.get_all_scenarios()
-    return [
-        {
+    result = []
+    for s in scenarios:
+        phases = s.get("phases", {})
+        phase_list = list(phases.keys()) if isinstance(phases, dict) else phases
+        result.append({
             "id": s["id"],
             "title": s["title"],
             "description": s["description"],
-            "difficulty_range": s["difficulty_range"],
-            "estimated_duration": s["estimated_duration"],
-            "phases": list(s["phases"].keys()),
-        }
-        for s in scenarios
-    ]
+            "difficulty_range": s.get("difficulty_range", ["guided", "standard", "advanced"]),
+            "estimated_duration": s.get("estimated_duration", {}),
+            "phases": phase_list,
+        })
+    return result
 
 
 @router.get("/{scenario_id}")

@@ -1,0 +1,255 @@
+# Campaign Launch Phase Rubric
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Evaluates the trainee's execution of the multi-channel campaign launch
+
+phase: campaign_launch
+phase_name: Campaign Launch
+description: >
+  Evaluates the trainee's ability to execute a coordinated multi-channel launch
+  of SmartDrive in Colorado, managing timing, stakeholders, real-time issues,
+  and ensuring all live assets are compliant and brand-consistent.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of campaign execution, multi-channel coordination, and launch management
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated strong understanding of multi-channel launch sequencing (pre-launch teasers, launch day activation, post-launch amplification)
+          - Correctly configured digital advertising campaigns with proper targeting (Colorado geo, age 25-45, interest-based and behavioral audiences)
+          - Ensured all tracking infrastructure was in place before launch (UTM parameters, conversion pixels, call tracking, attribution)
+          - Understood the interplay between paid, owned, and earned channels and how to sequence them for maximum impact
+          - Coordinated email, social, digital ads, and agency communications to launch simultaneously with consistent messaging
+          - Ensured landing pages were optimized for mobile (majority of traffic) with fast load times and clear conversion paths
+          - Understood how to manage real-time digital advertising (budget pacing, bid adjustments, creative rotation)
+          - Applied launch day monitoring protocols including hourly performance checks and escalation procedures
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Executed a coordinated multi-channel launch
+          - Configured digital campaigns with appropriate targeting
+          - Ensured tracking was in place
+          - Managed launch day monitoring
+          - Coordinated timing across channels
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Launch was poorly coordinated with channels going live at different times
+          - Digital campaign targeting had errors or was too broad
+          - Tracking was incomplete or improperly configured
+          - Launch day monitoring was reactive rather than proactive
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No coordinated launch plan
+          - Digital campaigns were misconfigured
+          - No tracking infrastructure
+          - No launch day monitoring
+          - Channels were not aligned
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of launch preparation, testing, and quality assurance
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Conducted a comprehensive pre-launch checklist covering all channels, assets, tracking, compliance, and stakeholder notifications
+          - Tested all landing pages across devices and browsers before launch
+          - Verified all tracking pixels fire correctly and attribution is recording
+          - Tested email sequences end-to-end including trigger logic, personalization, and rendering
+          - Confirmed all digital ad creative has been approved by compliance and is correctly formatted for each platform
+          - Verified that the agent portal is live and agents can access quoting tools and marketing materials
+          - Tested the quote-to-bind funnel with sample data to identify any broken steps
+          - Prepared contingency plans for common launch issues (site crash, ad disapproval, compliance concern)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Conducted pre-launch testing across major channels
+          - Verified tracking and attribution
+          - Tested landing pages and email sequences
+          - Confirmed compliance approvals
+          - Prepared for common launch issues
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Pre-launch testing was incomplete
+          - Tracking was not fully verified
+          - Some channels were not tested before launch
+          - No contingency plans prepared
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No pre-launch testing conducted
+          - Tracking was not verified
+          - Assets went live without testing
+          - No preparation for launch issues
+
+  - name: communication
+    weight: 0.20
+    description: Quality of launch communication with team, stakeholders, and external partners
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Communicated a clear launch timeline to all team members with specific responsibilities and deadlines
+          - Briefed Lisa Morgan on the launch plan and obtained final go/no-go approval
+          - Notified all 12 agency partners of the launch date with clear instructions on what to expect (consumer leads, marketing support, portal access)
+          - Coordinated with Emma Wright on real-time digital campaign management and established a communication cadence for launch day
+          - Prepared and distributed a launch day communication to all stakeholders confirming activation
+          - Managed real-time issues during launch (e.g., ad platform rejections, website performance) with clear communication to affected parties
+          - Sent post-launch status update within 24 hours with initial performance indicators
+          - Managed PR outreach for earned media coverage of the Colorado market entry
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Communicated launch timeline to team
+          - Obtained approval from Lisa Morgan
+          - Notified agency partners
+          - Coordinated with digital team
+          - Sent launch day and post-launch communications
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Launch communication was incomplete or last-minute
+          - Some stakeholders were not notified
+          - Real-time issue communication was disorganized
+          - Post-launch update was delayed or missing
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No launch communication plan
+          - Stakeholders were not informed
+          - Real-time issues were handled poorly
+          - No post-launch communication
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of launch execution decisions and real-time problem solving
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Made sound decisions about launch timing (day of week, time of day) based on audience behavior data
+          - Prioritized launch activities correctly, ensuring critical-path items (landing page, tracking, digital ads) were verified first
+          - Handled real-time launch issues decisively (e.g., pausing an underperforming ad, adjusting bid strategy, escalating a compliance issue)
+          - Made appropriate go/no-go decisions when pre-launch issues were discovered rather than launching with known problems
+          - Balanced the pressure to launch on schedule with the need to ensure quality and compliance
+          - Allocated budget across the first week strategically, reserving funds for optimization rather than spending everything immediately
+          - Made appropriate decisions about which metrics to monitor on launch day versus which can wait for weekly review
+          - Managed Emma Wright's workload during launch to prevent burnout and dropped balls
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Made reasonable launch timing decisions
+          - Prioritized launch activities appropriately
+          - Handled real-time issues effectively
+          - Made sound go/no-go decisions
+          - Managed budget pacing during launch week
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Launch timing was suboptimal
+          - Priority management was weak during launch
+          - Real-time issues caused unnecessary delays or errors
+          - Launched despite known issues
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Poor launch timing decisions
+          - No prioritization of launch activities
+          - Real-time issues were mishandled
+          - Launched with critical problems unresolved
+
+  - name: process_adherence
+    weight: 0.10
+    description: Following launch procedures and maintaining proper documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Used a comprehensive launch checklist and documented completion of each item
+          - Maintained a launch day log with timestamps, actions taken, and issues encountered
+          - Verified compliance of all live assets one final time before activation
+          - Documented all ad platform settings (targeting, budgets, bids, schedules) for reference
+          - Created a post-launch report documenting the launch execution, issues encountered, and resolutions
+          - Followed the approval process for any last-minute changes to creative or targeting
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Used a launch checklist
+          - Maintained basic launch documentation
+          - Verified compliance of live assets
+          - Documented key ad platform settings
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Launch checklist was incomplete or not used
+          - Documentation was sparse
+          - Compliance verification was inconsistent
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No launch checklist or documentation
+          - No compliance verification
+          - No record of launch execution
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness and management of launch risks including technical, compliance, and reputational risks
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Prepared contingency plans for technical failures (site downtime, ad platform outages, tracking failures)
+          - Verified all live creative complies with Colorado Division of Insurance requirements before activation
+          - Assessed the reputational risk of a botched launch and ensured quality controls were in place
+          - Monitored social media for negative sentiment or competitor response during launch
+          - Had a plan for responding to negative media coverage or consumer complaints
+          - Verified that the SmartDrive app was functioning correctly in Colorado before driving traffic to it
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Prepared basic contingency plans
+          - Verified compliance of live assets
+          - Monitored social sentiment during launch
+          - Assessed key technical risks
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Limited contingency planning
+          - Compliance verification was incomplete
+          - Social monitoring was not active during launch
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No contingency plans
+          - No compliance verification before launch
+          - No monitoring during launch
+          - No awareness of launch risks

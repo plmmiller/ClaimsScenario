@@ -1,0 +1,258 @@
+# Reporting Phase Rubric
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Evaluates the trainee's campaign reporting, ROI analysis, and leadership presentation
+
+phase: reporting
+phase_name: Campaign Reporting & ROI Analysis
+description: >
+  Evaluates the trainee's ability to compile comprehensive campaign results,
+  calculate marketing ROI, analyze performance against objectives, identify
+  key learnings, and present findings and recommendations to senior leadership.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of marketing ROI methodology, reporting frameworks, and strategic analysis
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated thorough understanding of marketing ROI calculation including customer acquisition cost (CAC), customer lifetime value (CLV), and payback period
+          - Correctly calculated full-funnel metrics from top (impressions, reach) through middle (leads, quotes) to bottom (binds, policies in force, premium volume)
+          - Applied channel-specific ROI analysis showing return for each major budget category (digital, email, social, agency, events)
+          - Understood how to project customer lifetime value based on average premium, retention rate, and policy duration for the insurance industry
+          - Calculated marketing efficiency ratio (total marketing spend / total premium generated) and compared to industry benchmarks
+          - Distinguished between attributable direct-response results and estimated brand-building impact
+          - Applied appropriate time horizons for ROI calculation recognizing that insurance customer value accrues over years, not weeks
+          - Understood how to present ROI in terms leadership cares about (premium volume, policy count, market share, payback period)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Calculated marketing ROI correctly with reasonable methodology
+          - Reported full-funnel metrics across channels
+          - Understood customer lifetime value concept and applied it to ROI
+          - Compared results against original targets
+          - Presented analysis in business terms
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - ROI calculation had methodology errors or missing components
+          - Reported surface-level metrics without full-funnel analysis
+          - Did not incorporate lifetime value into ROI calculation
+          - Results were not compared against targets
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Could not calculate marketing ROI
+          - No funnel analysis
+          - No understanding of customer lifetime value
+          - Reported vanity metrics without business context
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of campaign analysis and data compilation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Compiled comprehensive performance data across all channels with consistent methodology
+          - Analyzed performance against each of the original KPI targets defined in the strategy phase
+          - Conducted root cause analysis for significant variances (both positive and negative) from targets
+          - Segmented results by channel, audience segment, geography, creative, and time period to identify patterns
+          - Analyzed the customer journey data to identify the most effective paths to conversion
+          - Assessed agency channel performance by individual agency and identified top performers and underperformers
+          - Benchmarked campaign results against insurance industry standards for product launches
+          - Analyzed the cost efficiency of customer acquisition by segment and channel to inform future spend allocation
+          - Evaluated the effectiveness of A/B tests and incorporated learnings into recommendations
+          - Assessed the impact of mid-campaign optimizations on performance trajectory
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Compiled data across all major channels
+          - Analyzed performance against targets
+          - Identified key variances and contributing factors
+          - Segmented results meaningfully
+          - Assessed agency performance
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Data compilation was incomplete (missing channels or time periods)
+          - Limited comparison against targets
+          - Root cause analysis was surface-level
+          - Segmentation was minimal
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Incomplete data compilation
+          - No comparison against targets
+          - No root cause analysis
+          - No segmentation or pattern analysis
+
+  - name: communication
+    weight: 0.20
+    description: Quality of executive reporting and leadership presentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Created an executive presentation that led with the headline result and business impact before diving into channel details
+          - Structured the presentation for Lisa Morgan's communication preference (headline first, supporting data, then recommendations)
+          - Presented results honestly, acknowledging both successes and shortfalls with clear explanations for each
+          - Translated marketing metrics into business outcomes that resonate with senior leadership (premium generated, market share captured, ROI delivered)
+          - Used effective data visualization (charts, comparison tables, trend lines) to make complex results accessible
+          - Presented clear, prioritized recommendations for the next phase with expected impact and resource requirements
+          - Anticipated leadership questions and prepared supporting data for likely follow-ups (competitive comparison, budget efficiency, agent performance)
+          - Delivered findings with confidence while remaining open to feedback and alternative interpretations
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Created a clear executive presentation
+          - Presented results with appropriate context
+          - Acknowledged successes and shortfalls
+          - Included actionable recommendations
+          - Used data visualization effectively
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Presentation was data-heavy without clear narrative
+          - Did not lead with business outcomes
+          - Shortfalls were minimized or unexplained
+          - Recommendations were vague
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No executive presentation created
+          - Results were not contextualized
+          - No honest assessment of performance
+          - No recommendations provided
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of strategic conclusions and forward-looking recommendations
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Drew accurate strategic conclusions from campaign data that connected back to the original market research and strategy
+          - Identified which strategic assumptions proved correct and which did not, with implications for future campaigns
+          - Made actionable recommendations for Q2 optimization including specific channel adjustments, budget reallocations, and creative refreshes
+          - Recommended whether to expand, maintain, or reduce investment in each channel based on demonstrated performance
+          - Assessed whether the Colorado launch model is replicable for future state expansions and identified required modifications
+          - Made honest assessment of whether the 2,000-policy target is achievable at the current trajectory and recommended adjustments
+          - Identified the highest-value customer segment and recommended concentration of future resources
+          - Balanced short-term optimization recommendations with long-term brand-building needs
+          - Provided a realistic forecast for the next quarter based on campaign learnings and current trajectory
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Drew reasonable conclusions from campaign data
+          - Made actionable recommendations for future optimization
+          - Assessed channel performance and recommended adjustments
+          - Evaluated the launch model for replicability
+          - Provided realistic projections
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Conclusions were not well-supported by data
+          - Recommendations were generic rather than specific
+          - Did not assess individual channel performance for future allocation
+          - No assessment of launch model replicability
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No strategic conclusions drawn
+          - No actionable recommendations
+          - No assessment of future direction
+          - Campaign data was not translated into strategic insights
+
+  - name: process_adherence
+    weight: 0.10
+    description: Following reporting procedures and maintaining proper documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Produced all required reporting deliverables (executive summary, channel-level detail, ROI analysis, recommendations)
+          - Met the December 15 reporting deadline
+          - Documented data sources, calculation methodologies, and assumptions for transparency
+          - Created a campaign archive with all performance data, creative assets, and learnings for future reference
+          - Provided attribution methodology documentation so results can be replicated or audited
+          - Compiled a lessons-learned document for the marketing team
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Produced required reporting deliverables
+          - Met the reporting deadline
+          - Documented key methodologies and assumptions
+          - Created a campaign archive
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Some deliverables were missing or incomplete
+          - Deadline was missed
+          - Documentation was insufficient
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Required deliverables were not produced
+          - Deadline was significantly missed
+          - No documentation of methodology
+          - No campaign archive
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of reporting risks including data accuracy, misrepresentation, and strategic risks
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Verified data accuracy before presenting results to leadership to avoid credibility damage
+          - Presented results honestly without cherry-picking metrics that make the campaign look better than it was
+          - Acknowledged limitations of the attribution model and noted where results may be over- or under-counted
+          - Assessed the strategic risk of continuing, scaling, or stopping investment based on the data
+          - Identified risks in the forward-looking recommendations (e.g., scaling a channel that may saturate, reducing agent investment that may cause churn)
+          - Recognized the career risk of presenting unfavorable results and chose honesty over spin, building long-term credibility
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Verified data accuracy
+          - Presented results honestly
+          - Acknowledged attribution limitations
+          - Assessed strategic risks in recommendations
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Data accuracy was not verified
+          - Results were presented selectively
+          - Attribution limitations were not acknowledged
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Data was inaccurate or unverified
+          - Results were misleading
+          - No acknowledgment of limitations
+          - No strategic risk assessment

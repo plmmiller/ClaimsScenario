@@ -1,0 +1,259 @@
+# Agency Enablement Phase Rubric
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Evaluates the trainee's agency training, equipping, and motivation strategy
+
+phase: agency_enablement
+phase_name: Agency Enablement
+description: >
+  Evaluates the trainee's ability to design and execute an agency enablement
+  strategy that trains, equips, and motivates independent agency partners to
+  actively sell SmartDrive in the Colorado market.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of independent agent channel dynamics, distribution strategy, and insurance sales enablement
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated thorough understanding of independent agent economics including commission sensitivity, time investment trade-offs, and multi-carrier competition for shelf space
+          - Recognized that agents evaluate new products based on commission rate, ease of sale, claims service quality, and carrier stability
+          - Understood the co-op marketing model and how to structure it for agent adoption (simple approval process, pre-built assets, clear reimbursement)
+          - Developed agent training content that covers product features, competitive positioning, telematics explanation, and objection handling
+          - Created a competitive comparison that positions SmartDrive favorably against products agents already sell (Progressive Snapshot, Allstate Drivewise)
+          - Understood the importance of the commission structure (15% new, 12% renewal) relative to the Colorado independent agent market average
+          - Designed an incentive program that drives early adoption without creating long-term entitlement
+          - Recognized that Raj Patel's influence on other agencies makes his buy-in critical to network-wide adoption
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Understood agent economics and distribution channel dynamics
+          - Developed appropriate training content
+          - Created competitive comparison materials
+          - Designed a reasonable incentive program
+          - Recognized the importance of key agency relationships
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Had limited understanding of agent economics or distribution dynamics
+          - Training content was too product-focused without competitive context
+          - Did not address agent concerns about commission structure
+          - Incentive program was poorly designed
+          - Did not recognize the importance of key agency relationships
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No understanding of independent agent channel
+          - No training program developed
+          - No competitive materials for agents
+          - No incentive or motivation strategy
+          - Did not engage with agency partners
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of agent needs assessment and enablement preparation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Assessed agent training needs by engaging with Raj Patel to understand his producers' current knowledge gaps and concerns
+          - Gathered competitive intelligence from agents about how they currently position UBI products from other carriers
+          - Researched the commission structures offered by competing carriers to validate SmartDrive's competitiveness
+          - Investigated the co-op marketing preferences of agents (pre-built assets vs. custom, digital vs. print, approval process expectations)
+          - Tested agent-facing materials with Raj Patel for clarity, usefulness, and credibility before distributing to all agencies
+          - Assessed the technical readiness of the agent portal (quoting tools, marketing asset library) before the launch event
+          - Reviewed Carlos Mendez's rate comparisons to create compelling agent sales scenarios
+          - Analyzed agent production capacity to set realistic sales targets per agency
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Engaged with Raj Patel to understand agent needs
+          - Researched competitive commission structures
+          - Tested materials with at least one agency
+          - Assessed agent portal readiness
+          - Created agent sales scenarios
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Limited engagement with agents before developing materials
+          - Did not research competitive commission structures
+          - Materials were not tested with agents
+          - Agent portal was not assessed for readiness
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No agent needs assessment conducted
+          - No competitive research from agent perspective
+          - Materials developed without agent input
+          - No portal or tools assessment
+
+  - name: communication
+    weight: 0.20
+    description: Quality of communication with agency partners and internal stakeholders
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Presented SmartDrive to Raj Patel with a clear value proposition focused on agent economics (commission, lead generation, competitive advantage)
+          - Addressed Raj's skepticism with data-driven responses about market opportunity, consumer demand, and competitive positioning
+          - Handled objections about commission structure professionally, acknowledging the concern and presenting the total value package (commission + volume bonus + launch incentive + co-op marketing + lead routing)
+          - Adapted presentation style for an experienced agency principal (business-focused, data-backed, respectful of his expertise)
+          - Facilitated a productive agent launch event or webinar that built excitement while setting realistic expectations
+          - Provided ongoing communication cadence with agents (monthly production reports, marketing updates, success stories)
+          - Coordinated with Lisa Morgan on agency strategy and with Carlos Mendez on product accuracy for agent materials
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Presented SmartDrive to agents with a clear value proposition
+          - Addressed agent objections reasonably
+          - Conducted an agent launch event or training session
+          - Maintained communication with agents
+          - Coordinated with internal stakeholders
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Presentation to agents was too product-focused without addressing economics
+          - Struggled to handle agent objections or became defensive
+          - Agent event was poorly organized or poorly attended
+          - Communication with agents was sporadic
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to present SmartDrive to agents effectively
+          - Could not handle agent objections
+          - No agent training event conducted
+          - No ongoing communication with agents
+          - No coordination with internal team
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of decisions about agency enablement strategy and resource allocation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Prioritized engagement with Raj Patel and other high-influence agencies first, recognizing their network influence
+          - Structured the co-op marketing program to be simple and agent-friendly (pre-approved assets, easy reimbursement, minimal paperwork)
+          - Designed the launch incentive ($50/policy for first 90 days) to create urgency without being so generous as to attract poor-quality business
+          - Made sound decisions about agent training format (in-person launch event for relationship building, online certification for ongoing access)
+          - Recognized the need to provide agents with digital lead routing to address the online-vs-agent consumer preference gap
+          - Balanced the agent enablement budget ($60K) effectively across training, events, co-op, and materials
+          - Set realistic agency production targets based on agency size and the new-market context
+          - Created an escalation path for agent concerns that routes through the trainee rather than directly to Lisa Morgan
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Prioritized high-influence agencies appropriately
+          - Co-op marketing program was reasonable
+          - Launch incentive was well-structured
+          - Training format was appropriate
+          - Agency targets were realistic
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not prioritize agencies strategically
+          - Co-op program was overly complex or underfunded
+          - Incentive structure was poorly designed
+          - Training was insufficient or in the wrong format
+          - Agency targets were unrealistic
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No strategic approach to agency prioritization
+          - No co-op marketing program
+          - No incentive structure for agents
+          - No training program
+          - No production targets set
+
+  - name: process_adherence
+    weight: 0.10
+    description: Following agency enablement procedures and maintaining proper documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Created a structured agent onboarding checklist covering training, portal access, materials, and co-op enrollment
+          - Documented agent feedback and concerns from meetings and the launch event
+          - Established a tracking system for agent production metrics and marketing activity
+          - Set up the co-op marketing program with clear guidelines, approval process, and reimbursement procedures
+          - Created a timeline for agent enablement activities that aligned with the overall campaign timeline
+          - Maintained records of agent training completion and certification
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Created an agent onboarding process
+          - Documented key agent interactions
+          - Tracked agent production metrics
+          - Co-op program had clear guidelines
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Agent onboarding was informal
+          - Documentation was sparse
+          - Limited tracking of agent metrics
+          - Co-op guidelines were unclear
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No structured onboarding process
+          - No documentation of agent interactions
+          - No tracking of agent performance
+          - No co-op marketing program structure
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of risks related to agency channel including adoption, compliance, and brand consistency
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Identified the risk that agents may appoint for SmartDrive but not actively sell it and designed incentives to drive active production
+          - Recognized that agent-generated marketing materials must comply with brand guidelines and regulatory requirements, and built review into the co-op process
+          - Assessed the risk that Raj Patel's negative impression could influence other agencies and prioritized his successful onboarding
+          - Flagged the risk of agents making unauthorized product claims (e.g., guaranteeing specific savings) and addressed it in training
+          - Recognized that agent turnover or disengagement could leave customer service gaps and planned for ongoing support
+          - Identified the E&O risk if agents misrepresent the 90-day monitoring period or discount structure
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified the risk of low agent adoption
+          - Ensured co-op marketing compliance
+          - Recognized key agency relationship risks
+          - Addressed product misrepresentation risk in training
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not fully assess agent adoption risk
+          - Co-op compliance was not addressed
+          - Key relationship risks were not identified
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No awareness of agency channel risks
+          - No compliance controls for agent marketing
+          - No risk mitigation strategies for the agent channel

@@ -37,6 +37,7 @@ export const createSession = (data: {
   scenario_id: string;
   mode: string;
   difficulty: string;
+  level: string;
 }) => fetchAPI("/api/sessions", { method: "POST", body: JSON.stringify(data) });
 
 export const getSessions = (limit = 20, offset = 0) =>
@@ -49,6 +50,9 @@ export const updateSession = (id: string, data: { status: string }) =>
     method: "PATCH",
     body: JSON.stringify(data),
   });
+
+export const deleteSession = (id: string) =>
+  fetchAPI(`/api/sessions/${id}`, { method: "DELETE" });
 
 // Reports
 export const generateReport = (sessionId: string) =>

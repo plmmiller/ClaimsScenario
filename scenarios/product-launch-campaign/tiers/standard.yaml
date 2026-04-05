@@ -1,0 +1,175 @@
+# Standard Tier Configuration
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Moderate difficulty with realistic complications and persona behaviors
+
+tier: standard
+tier_name: Standard
+description: >
+  Mid-level difficulty designed for trainees with foundational marketing knowledge
+  who need to handle realistic campaign complications. No hints are provided.
+  Personas exhibit realistic behaviors including skepticism, impatience, and
+  competing priorities. Evidence contains some ambiguity that requires analysis.
+
+settings:
+  hints_enabled: false
+  phase_transition_hints: false
+  explicit_prompts: false
+  time_pressure: moderate  # Campaign deadlines and stakeholder expectations are enforced
+  max_score_multiplier: 1.0  # Standard tier allows full scoring range
+
+persona_overrides:
+  lisa_morgan:
+    demeanor: professional_but_demanding
+    provides_information: when_asked
+    emotional_state: results_focused
+    notes: >
+      Lisa is professional and fair but expects the trainee to come prepared.
+      She asks challenging questions during strategy presentations and expects
+      data to back up every recommendation. She becomes visibly frustrated if
+      deadlines slip or deliverables contain errors. She may push back on budget
+      allocations that lack clear justification and request revisions before
+      approving. She does not volunteer strategic context -- the trainee must
+      ask the right questions to uncover the CEO's expectations and board
+      pressure.
+
+  raj_patel:
+    demeanor: skeptical_but_persuadable
+    provides_information: selectively
+    emotional_state: cautious
+    notes: >
+      Raj is interested but needs convincing. He pushes back on the commission
+      structure, comparing it unfavorably to Progressive's 14% renewal rate.
+      He questions whether Pinnacle's marketing spend is sufficient for Colorado.
+      He expresses concern about the time investment for his producers to learn
+      a new product. He will commit conditionally but sets clear expectations
+      for marketing support and co-op advertising. He shares market knowledge
+      but uses it to challenge the trainee's positioning rather than to help.
+
+  emma_wright:
+    demeanor: capable_but_needs_direction
+    provides_information: when_asked
+    emotional_state: occasionally_overwhelmed
+    notes: >
+      Emma is capable but needs help prioritizing. She may pursue tactical
+      optimization at the expense of strategic priorities. She pushes back on
+      timelines when creative approvals are delayed by compliance. She provides
+      good data but sometimes overwhelms with detail rather than leading with
+      insights. She expresses frustration with the legal review process and
+      may need the trainee to mediate.
+
+  carlos_mendez:
+    demeanor: helpful_but_precise
+    provides_information: with_caveats
+    emotional_state: protective_of_accuracy
+    notes: >
+      Carlos is helpful but insistent on accuracy. He returns marketing materials
+      with detailed markup of any claims that are not precisely correct. His
+      review cycle may slow down the creative process. He expects the trainee to
+      understand the difference between "up to 30% discount" and "average 12-15%
+      discount" and will flag any ambiguity. He presents data in actuarial
+      format that requires interpretation.
+
+  jennifer_kim:
+    demeanor: engaged_but_critical
+    provides_information: with_strong_opinions
+    emotional_state: skeptical_of_traditional_insurance
+    notes: >
+      Jennifer is engaged in the focus group but more critical of the messaging.
+      She challenges vague claims and asks for specifics about data privacy and
+      average discount amounts. She compares SmartDrive unfavorably to Root
+      Insurance's consumer reviews. She questions whether she would trust a
+      carrier she has never heard of. Her feedback is valuable but requires the
+      trainee to respond thoughtfully.
+
+complications:
+  - type: compliance_delay
+    phase: content_creation
+    description: >
+      The Colorado Division of Insurance compliance review takes longer than
+      expected. The legal team flags three items on the digital ad creative and
+      requires changes to the disclaimer text on the landing page. This creates
+      a potential delay of 5-7 business days for the content creation phase,
+      putting the launch timeline at risk.
+    impact: >
+      Tests the trainee's ability to manage the compliance process efficiently,
+      negotiate between creative needs and regulatory requirements, and adjust
+      the timeline without missing the launch date. The trainee must find a way
+      to resolve compliance issues quickly while maintaining creative quality.
+
+  - type: agent_resistance
+    phase: agency_enablement
+    description: >
+      After the initial presentation, Raj Patel expresses strong reservations
+      about SmartDrive's renewal commission rate (12%) and questions whether
+      the product can compete with Progressive's Snapshot on brand recognition.
+      He states that unless the economics improve, he will "keep SmartDrive on
+      the shelf" and focus his producers on products that sell more easily.
+      His attitude is influencing other agency principals in the network.
+    impact: >
+      Tests the trainee's ability to handle stakeholder resistance with
+      data-driven responses. The trainee must address Raj's concerns about
+      commission economics, competitive positioning, and marketing support
+      without making promises that cannot be kept. The trainee may need to
+      escalate to Lisa Morgan for authority to modify the incentive program.
+
+  - type: budget_pressure
+    phase: performance_tracking
+    description: >
+      Six weeks into the campaign, digital advertising CPL is tracking 22%
+      above the target ($55 vs. $45 target). Lisa Morgan asks for an
+      explanation and a plan to bring costs in line. At the same time, the
+      social media video content is performing well above benchmarks,
+      suggesting a budget reallocation opportunity. The trainee must decide
+      how to optimize spend within the existing budget.
+    impact: >
+      Tests the trainee's analytical skills and ability to make data-driven
+      optimization decisions. The trainee must diagnose the CPL issue (is it
+      creative, targeting, or market-driven?), propose a reallocation plan,
+      and present it to Lisa Morgan with expected impact.
+
+evidence_presentation:
+  market_analysis:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Market data is comprehensive but some competitor data points are from
+      different time periods, requiring the trainee to note data freshness
+      limitations. UBI market share estimates are labeled as estimates with
+      varying confidence levels.
+  product_spec:
+    clarity: high
+    ambiguity: low
+    notes: >
+      Product specifications are clear. However, the competitive rate comparison
+      shows SmartDrive is not the cheapest on base price, requiring the trainee
+      to develop a more nuanced value proposition than simple price comparison.
+  customer_personas:
+    clarity: high
+    ambiguity: low
+    notes: >
+      Customer personas are well-defined. The tension between the digital-first
+      "Tech-Forward Traci" persona and the agent-dependent "Family-First Fernando"
+      persona creates a channel strategy challenge the trainee must resolve.
+  budget_allocation:
+    clarity: high
+    ambiguity: moderate
+    notes: >
+      Budget allocations are detailed but the trainee must assess whether the
+      split between brand awareness and direct response is appropriate for a
+      new-market entry. Some line items may need reallocation based on
+      performance data.
+  brand_guidelines:
+    clarity: high
+    ambiguity: low
+    notes: >
+      Brand guidelines are comprehensive. The SmartDrive sub-brand guidelines
+      create some tension with the parent brand's conservative positioning
+      that the trainee must navigate.
+  competitive_intel:
+    clarity: high
+    ambiguity: moderate
+    notes: >
+      Competitive intelligence is detailed but some data is estimated rather
+      than confirmed. Root Insurance's financial instability and claims issues
+      are documented but the trainee must decide how to use this information
+      ethically (agent conversations vs. public advertising).

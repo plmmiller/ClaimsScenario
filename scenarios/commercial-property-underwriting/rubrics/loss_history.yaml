@@ -1,0 +1,253 @@
+# Loss History Analysis Phase Rubric
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Evaluates the trainee's analysis of prior claims and loss trends
+
+phase: loss_history
+phase_name: Loss History Analysis
+description: >
+  Evaluates the trainee's ability to analyze the applicant's prior claims
+  history, calculate meaningful loss metrics, assess whether prior losses
+  indicate systemic risk or isolated incidents, and determine the appropriate
+  experience modification for pricing purposes.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of loss history analysis, loss ratios, experience modification, and actuarial concepts
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly calculated the 5-year loss ratio (68.4%) and the 3-year loss ratio (104.9%) and understood the significance of each
+          - Recognized that a single large loss skews the 3-year ratio and that frequency (1 claim in 5 years) is more meaningful than the elevated 3-year ratio alone
+          - Applied appropriate experience modification methodology, weighing the single claim against the overall claim-free history
+          - Understood the concept of loss development and recognized the claim is closed with no reserves (fully developed)
+          - Distinguished between attritional losses and catastrophe losses and noted this was an attritional water damage event
+          - Recognized that the 5-year combined loss history (1 claim, $42,500) falls within an acceptable range for a $2M commercial property account
+          - Understood how the loss history interacts with the schedule rating plan (debit for prior loss vs. credit for predominately clean history)
+          - Compared the loss ratio to the company's target combined ratio for commercial property business
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Calculated loss ratios correctly
+          - Recognized the single-claim nature of the loss history
+          - Applied reasonable experience modification
+          - Understood the claim is closed and fully developed
+          - Compared loss experience to acceptable thresholds
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Made errors in loss ratio calculations
+          - Overweighted the single claim relative to the overall clean history
+          - Did not understand experience modification methodology
+          - Failed to note that the claim is closed with no reserves
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Could not calculate loss ratios
+          - No understanding of experience modification
+          - Treated the single claim as equivalent to a pattern of losses
+          - No meaningful analysis of the loss history
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of loss history analysis and root cause investigation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Reviewed the loss runs in detail, noting payment breakdowns by coverage (building $12,500, BPP $30,000)
+          - Analyzed the root cause of the water damage claim (clogged roof drain causing ponding) and assessed the adequacy of corrective actions
+          - Verified that corrective actions were implemented (additional drains installed, quarterly drain cleaning schedule, roof replacement predated the claim)
+          - Investigated whether the claim indicates a systemic building envelope issue or an isolated maintenance failure
+          - Noted that the 2023 loss occurred on the 2021 replacement roof, meaning the roof membrane was not the failure point -- the drain was
+          - Cross-referenced the loss history with the inspection report to verify current conditions
+          - Checked for any prior carrier history and confirmed 5 claim-free years with Austin Mutual before Lone Star
+          - Assessed the loss trend (improving -- no claims since 2023 with corrective actions in place)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Reviewed loss runs and noted payment details
+          - Analyzed root cause and corrective actions
+          - Verified that the claim is not indicative of a pattern
+          - Cross-referenced with inspection findings
+          - Assessed the loss trend as improving
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Reviewed loss runs superficially
+          - Did not analyze root cause in detail
+          - Did not verify corrective actions
+          - Failed to cross-reference with inspection findings
+          - Did not assess loss trend
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not meaningfully review the loss runs
+          - No root cause analysis
+          - No verification of corrective actions
+          - No cross-referencing with other data sources
+          - Treated the loss history as either disqualifying or irrelevant without analysis
+
+  - name: communication
+    weight: 0.20
+    description: Quality of communication regarding loss history findings
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Discussed the loss history with the agent, acknowledging the corrective actions while explaining why the prior claim still factors into pricing
+          - If consulting the senior underwriter, presented the loss analysis with appropriate context and a recommendation
+          - Explained the experience modification rationale clearly, distinguishing between the impact of the single loss and the overall favorable frequency
+          - Documented the loss history analysis in the underwriting file with clear conclusions
+          - Communicated to the agent that the loss history, while not ideal, is manageable and will not result in declination
+          - Set appropriate expectations about how the prior claim will affect pricing
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Discussed loss history with the agent appropriately
+          - Presented analysis to mentor clearly
+          - Explained pricing impact reasonably
+          - Documented analysis in the file
+          - Set appropriate expectations
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Limited discussion of loss history with the agent
+          - Analysis presentation lacked structure
+          - Did not explain pricing impact clearly
+          - Documentation was sparse
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not discuss loss history with any party
+          - Could not articulate the analysis
+          - No documentation
+          - Failed to set expectations about pricing impact
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of conclusions drawn from loss history analysis
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Concluded that the single water damage claim represents an isolated incident rather than a systemic pattern based on root cause analysis, corrective actions, and subsequent claim-free years
+          - Determined an appropriate experience modification debit (5-10% range) that reflects the claim without overpenalizing a predominantly clean history
+          - Recognized that the loss was first-party only (no liability or third-party involvement) which is less concerning than a frequency pattern
+          - Weighed the 3-year elevated loss ratio against the 5-year overall ratio and the claim-free years before and after the incident
+          - Considered that the corrective actions (additional drains, quarterly cleaning) materially reduce the likelihood of recurrence
+          - Factored the loss history into the overall underwriting decision without allowing it to dominate the assessment
+          - Determined that the loss history supports writing the risk with conditions rather than declining
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Concluded the loss is an isolated incident
+          - Applied a reasonable experience modification
+          - Recognized the corrective actions as mitigating factors
+          - Balanced the loss history against other risk factors
+          - Supported writing the risk
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Overreacted to the single loss or dismissed it entirely
+          - Experience modification was too high or too low
+          - Did not adequately credit corrective actions
+          - Let the loss history disproportionately influence the decision
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Drew inappropriate conclusions from the loss data
+          - No experience modification applied or grossly incorrect amount
+          - Either recommended declination based solely on one claim or ignored it entirely
+          - No analytical reasoning behind the loss history assessment
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with loss history analysis procedures
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Obtained and reviewed the full 5-year loss runs from the prior carrier
+          - Verified the loss runs are complete and reconcile with the application disclosure
+          - Documented the loss ratio calculations and experience modification in the file
+          - Created a loss history summary sheet for the underwriting file
+          - Updated the diary with loss history analysis completion
+          - Confirmed there are no open reserves or pending subrogation
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Obtained and reviewed loss runs
+          - Verified completeness against the application
+          - Documented calculations and conclusions
+          - Updated the file appropriately
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Reviewed loss runs but did not verify completeness
+          - Documentation was incomplete
+          - Did not reconcile with application disclosure
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not obtain or review loss runs
+          - No documentation of analysis
+          - No reconciliation with application
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of loss patterns and potential future loss indicators
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Recognized that water damage on commercial property with flat roofs is one of the most common loss types and the prior claim, while isolated, indicates the property's susceptibility
+          - Noted that the BPP component of the loss ($30,000) was disproportionately large relative to the building component ($12,500), highlighting the inventory's vulnerability to water damage
+          - Considered whether the applicant's inventory storage practices have been modified to reduce future BPP water damage exposure
+          - Assessed whether the claim reporting was timely and mitigation was appropriate (both were, which reflects well on the insured)
+          - Evaluated whether the current carrier's 18% rate increase was related to the loss experience and what that signals about the risk
+          - Considered the potential for future hail damage claims on the flat roof given the Travis County exposure
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Recognized water damage as a common flat roof exposure
+          - Noted the BPP vulnerability
+          - Assessed claim reporting and mitigation as positive indicators
+          - Considered the reason behind the carrier's rate increase
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not connect the prior loss to the broader flat roof water damage exposure
+          - Did not consider the inventory vulnerability specifically
+          - Did not assess claim handling quality as a risk indicator
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No awareness of loss patterns beyond the specific claim
+          - Did not consider future loss potential
+          - Treated the loss history analysis as purely historical with no forward-looking assessment

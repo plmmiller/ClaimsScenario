@@ -6,6 +6,7 @@ from pydantic import BaseModel
 from api.deps import get_current_user
 from db import queries
 from engine import scenario_loader
+from engine.phase_manager import get_phase_order_for_scenario
 
 router = APIRouter()
 
@@ -14,6 +15,7 @@ class CreateSessionRequest(BaseModel):
     scenario_id: str
     mode: str  # learning, assessment, hybrid
     difficulty: str  # guided, standard, advanced
+    level: str  # beginner, intermediate, experienced
 
 
 class UpdateSessionRequest(BaseModel):
@@ -29,8 +31,14 @@ async def create_session(req: CreateSessionRequest, user: dict = Depends(get_cur
         raise HTTPException(status_code=400, detail="Invalid mode")
     if req.difficulty not in ("guided", "standard", "advanced"):
         raise HTTPException(status_code=400, detail="Invalid difficulty")
+    if req.level not in ("beginner", "intermediate", "experienced"):
+        raise HTTPException(status_code=400, detail="Invalid level")
 
-    session = queries.create_session(user["id"], req.scenario_id, req.mode, req.difficulty)
+    # Determine the first phase for this scenario type
+    phase_order = get_phase_order_for_scenario(scenario)
+    first_phase = phase_order[0] if phase_order else "fnol"
+
+    session = queries.create_session(user["id"], req.scenario_id, req.mode, req.difficulty, req.level, first_phase)
     return session
 
 
@@ -62,3 +70,14 @@ async def update_session(session_id: str, req: UpdateSessionRequest, user: dict 
         raise HTTPException(status_code=400, detail="Invalid status")
     updated = queries.update_session(session_id, {"status": req.status})
     return updated
+
+
+@router.delete("/{session_id}")
+async def delete_session(session_id: str, user: dict = Depends(get_current_user)):
+    session = queries.get_session(session_id)
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found")
+    if session["user_id"] != user["id"]:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    queries.delete_session(session_id)
+    return {"ok": True}

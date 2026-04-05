@@ -1,0 +1,158 @@
+# Guided Tier Configuration
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Beginner-friendly mode with full assistance and no complications
+
+tier: guided
+tier_name: Guided
+description: >
+  Entry-level difficulty designed for new underwriters or those learning the
+  commercial property underwriting process. All personas are cooperative,
+  evidence is clearly presented with no ambiguity, and the system provides
+  hints and prompts throughout each phase.
+
+settings:
+  hints_enabled: true
+  phase_transition_hints: true
+  explicit_prompts: true
+  time_pressure: false
+  max_score_multiplier: 0.75  # Guided tier caps at 75% of max possible score
+
+hints:
+  submission_review:
+    - "Check the application for completeness -- are all sections filled out?"
+    - "Verify that the NAICS/SIC code matches the described business operations."
+    - "Note the coverage structure -- is the applicant requesting building coverage or just TIB and BPP?"
+    - "Identify what supporting documents you need (loss runs, inspection, valuation, financials)."
+    - "Look at the adjacent occupancies section -- the restaurant is a key risk factor."
+  risk_assessment:
+    - "Review the inspection report for fire protection systems (sprinklers, alarms, extinguishers)."
+    - "The 2-hour fire wall between TechVault and the restaurant is a critical mitigant."
+    - "Check the roof condition -- a 5-year-old modified bitumen roof is well within its useful life."
+    - "The repair area uses heat-producing equipment -- evaluate the safety controls."
+    - "Note the vacant adjacent unit and its potential impact on risk."
+  loss_history:
+    - "Calculate the 5-year and 3-year loss ratios from the loss run data."
+    - "One claim in five years represents low frequency -- focus on whether the root cause was addressed."
+    - "The water damage claim was caused by a clogged drain, not a roof failure."
+    - "Corrective actions (additional drains, quarterly cleaning) mitigate the recurrence risk."
+    - "Compare the loss ratio to industry benchmarks for commercial property."
+  pricing:
+    - "Start with the base rate for ISO Construction Class 4, Protection Class 3, retail electronics occupancy."
+    - "Apply schedule credits for the sprinkler system, monitored alarm, and updated building systems."
+    - "Apply schedule debits for the adjacent restaurant, prior water claim, and flat roof."
+    - "The expiring premium is $14,200 -- try to be competitive while maintaining rate adequacy."
+    - "Consider offering multiple deductible options ($2,500, $5,000) with different premiums."
+  terms_conditions:
+    - "Consider a water damage sublimit given the prior loss history."
+    - "Include equipment breakdown coverage for the HVAC, electrical, and computer systems."
+    - "Verify that the building limit meets the 80% coinsurance requirement against the appraised value."
+    - "The ordinance or law coverage is important for a 25-year-old building."
+    - "Set loss control conditions for the ceiling tile replacement and hot work procedures."
+  negotiation:
+    - "Present the quote with a clear explanation of the premium components."
+    - "Be prepared for the agent to push back on the restaurant loading and water damage sublimit."
+    - "The competing quote has a higher deductible and sublimits -- point this out in your comparison."
+    - "Use the deductible as a negotiating lever if the agent needs a lower premium."
+    - "Remember to highlight the value of your coverage breadth, not just the price."
+  binding:
+    - "Verify all documents are in the file before binding."
+    - "The binder must include all agreed terms, conditions, sublimits, and deductibles."
+    - "Communicate the loss control condition deadlines clearly to the agent."
+    - "Set diary dates for condition compliance and renewal."
+    - "Send the binding confirmation in writing promptly."
+
+phase_transition_prompts:
+  submission_review_to_risk_assessment: >
+    Good work reviewing the application. You've identified the key information and
+    requested the necessary supporting documents. Now review the loss control
+    inspection report, building valuation, and photos to evaluate the physical
+    risk characteristics of the property.
+  risk_assessment_to_loss_history: >
+    You've completed your risk assessment. Now analyze the loss history using the
+    5-year loss runs. Look at the frequency, severity, and root cause of the
+    prior water damage claim to determine the appropriate experience modification.
+  loss_history_to_pricing: >
+    Your loss history analysis is complete. Now develop the premium using base
+    rates, territory factors, and schedule credits and debits. Remember to balance
+    favorable and unfavorable factors and compare to market benchmarks.
+  pricing_to_terms_conditions: >
+    You've developed the premium. Now determine the coverage terms, deductibles,
+    sublimits, and endorsements. Consider the risk exposures you identified and
+    structure the policy to address them appropriately.
+  terms_conditions_to_negotiation: >
+    Your terms and pricing are ready. Now present the quote to the agent and be
+    prepared to negotiate. Know your target premium, walk-away point, and which
+    terms are flexible versus firm.
+  negotiation_to_binding: >
+    You've reached agreement on terms and premium. Now execute the binding process.
+    Verify all documentation, issue the binder, set up the policy, and communicate
+    the binding confirmation to the agent.
+
+persona_overrides:
+  karen_wells:
+    demeanor: cooperative
+    provides_information: readily
+    negotiation_style: collaborative
+    notes: >
+      Karen is fully cooperative and provides all requested information promptly.
+      She does not apply heavy competitive pressure. She accepts the quote if
+      it is reasonable and within market range. She openly discloses the competing
+      quote details including its limitations (higher deductible, sublimits).
+
+  david_chen:
+    demeanor: cooperative
+    provides_information: readily
+    emotional_state: patient
+    notes: >
+      David is patient and cooperative throughout the process. He answers all
+      questions about his business and property thoroughly. He is mildly
+      concerned about premium but accepts a reasonable quote without extended
+      pushback. He provides financial statements and other documentation
+      promptly.
+
+  maria_santos:
+    demeanor: thorough_and_clear
+    provides_information: readily
+    report_clarity: high
+    notes: >
+      Maria provides a comprehensive, unambiguous inspection report. All findings
+      are clearly categorized and explained. She volunteers context and
+      recommendations proactively. Her report leaves no significant questions
+      unanswered.
+
+  tom_bradshaw:
+    demeanor: actively_mentoring
+    provides_guidance: proactively
+    notes: >
+      Tom is highly engaged and offers guidance at every phase without being
+      asked. He walks the trainee through each decision, explains the rationale,
+      and provides specific recommendations. He effectively serves as a co-pilot
+      through the underwriting process.
+
+complications: []
+
+evidence_presentation:
+  application:
+    clarity: high
+    ambiguity: none
+    notes: "Application is complete and accurate. All sections are filled out. No discrepancies."
+  loss_runs:
+    clarity: high
+    ambiguity: none
+    notes: "Loss runs are complete and clearly presented. The single claim is fully documented with root cause and corrective actions."
+  inspection_report:
+    clarity: high
+    ambiguity: none
+    notes: "Inspection report is thorough with clear findings and actionable recommendations. All conditions are well-documented with photos."
+  building_valuation:
+    clarity: high
+    ambiguity: none
+    notes: "Replacement cost appraisal is complete and clearly identifies the coinsurance adequacy issue."
+  financial_statements:
+    clarity: high
+    ambiguity: none
+    notes: "Financials are straightforward and consistent with the application data."
+  photos:
+    clarity: high
+    ambiguity: none
+    notes: "Photo documentation is complete and clearly referenced in the inspection report."

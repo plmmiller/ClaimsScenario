@@ -1,0 +1,246 @@
+# Advanced Tier Configuration
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# High difficulty with multiple complications, adversarial negotiation, and ambiguous evidence
+
+tier: advanced
+tier_name: Advanced
+description: >
+  Expert-level difficulty designed for experienced underwriters. Features
+  aggressive agent negotiation, incomplete and potentially misleading
+  information from the applicant, ambiguous inspection findings, financial
+  statement discrepancies, escalation threats, and complex coverage structuring
+  challenges. No hints or prompts are provided.
+
+settings:
+  hints_enabled: false
+  phase_transition_hints: false
+  explicit_prompts: false
+  time_pressure: high  # Tight effective date, agent calling daily, supervisor pressure to write business
+  max_score_multiplier: 1.25  # Advanced tier allows up to 125% of base score for exceptional performance
+
+persona_overrides:
+  karen_wells:
+    demeanor: aggressive_negotiator
+    provides_information: strategically
+    negotiation_style: adversarial
+    notes: >
+      Karen applies maximum negotiation pressure. She presents competing quotes
+      aggressively without disclosing their limitations. She questions every
+      debit and demands line-by-line justification. She threatens to escalate
+      to the underwriter's supervisor and implies she will pull other business
+      from the company if this account is not priced competitively. She calls
+      daily for status and creates urgency around the effective date. She
+      withholds the restaurant hood cleaning certificate initially, requiring
+      multiple requests. She may provide slightly different information at
+      different times (e.g., initially says the vacant unit will be leased
+      "next month" then later says "within 2-3 months").
+
+  david_chen:
+    demeanor: hostile_and_defensive
+    provides_information: reluctantly
+    emotional_state: confrontational
+    notes: >
+      David is openly hostile about the underwriting process. He sees every
+      question as an attempt to deny coverage or raise his premium. He
+      minimizes the repair area operations significantly, describing it as
+      "we just swap out screens" and actively concealing the heat gun use.
+      He understates peak inventory at $500,000 (actual peak is $700,000).
+      His financial statements show revenue of $4,200,000 but in conversation
+      he mentions "$4.5 million, maybe more" -- creating a discrepancy the
+      underwriter must resolve. He claims the water damage "barely affected
+      anything" despite a $42,500 claim. He threatens to self-insure and
+      complains about every document request. If the premium exceeds $14,000,
+      he becomes combative.
+
+  maria_santos:
+    demeanor: strictly_factual
+    provides_information: when_asked_specifically
+    report_clarity: moderate_to_low
+    notes: >
+      Maria provides a competent but minimal inspection report. She reports
+      what she observes but does not volunteer opinions or contextualize
+      findings. The repair area description mentions "soldering and heat-
+      producing equipment" without specifying quantities, controls, or risk
+      assessment. The roof inspection notes "no visible deficiencies" but adds
+      a qualifying statement about flat roof UV degradation that could be
+      read as either a standard disclaimer or a concern. The water stain
+      finding is listed without notation about whether it is active or
+      historical. The vacant unit description mentions debris and boarded
+      windows but does not assess the implications. The underwriter must
+      synthesize all findings independently and ask very specific follow-up
+      questions to get the full picture.
+
+  tom_bradshaw:
+    demeanor: minimally_involved
+    provides_guidance: only_when_explicitly_consulted
+    notes: >
+      Tom expects the trainee to work independently. If consulted, he asks
+      probing questions that introduce additional considerations the trainee
+      may not have thought of (e.g., "Have you considered the hail exposure
+      in Travis County?" or "What's your plan if the vacant unit is still
+      vacant at renewal?"). He may disagree with the trainee's recommendation
+      and ask them to defend it. He provides his assessment only after the
+      trainee has fully articulated their position. If the trainee's pricing
+      is significantly off, he says "the number doesn't feel right to me"
+      without specifying why.
+
+complications:
+  - type: financial_statement_discrepancy
+    phase: submission_review
+    description: >
+      The compiled financial statements show 2025 revenue of $4,200,000, but
+      David Chen mentions in conversation that revenue is "$4.5 million, maybe
+      more." The application also lists $4,200,000. The discrepancy could be
+      a rounding exaggeration by an enthusiastic owner, or it could indicate
+      the financial statements are incomplete (e.g., unreported cash sales).
+      The trainee must determine whether this discrepancy is material and how
+      to resolve it.
+    impact: >
+      Tests the trainee's attention to detail and ability to reconcile data
+      from multiple sources. A material revenue discrepancy could affect
+      business income coverage adequacy and overall risk assessment.
+
+  - type: concealed_repair_operations
+    phase: risk_assessment
+    description: >
+      David actively minimizes the repair area operations. He initially says
+      they "just swap out screens" and does not mention soldering or heat guns.
+      The inspection report mentions "heat-producing equipment" but does not
+      detail all items. Only through direct, specific questioning of both
+      David and the inspector can the trainee determine that the repair area
+      includes 3 soldering stations and 2 heat guns. This affects the
+      occupancy hazard grade and may require a hot work endorsement or
+      condition.
+    impact: >
+      Tests the trainee's ability to identify misrepresentation or material
+      omission and determine how it affects the underwriting decision. The
+      concealment is borderline -- David may be downplaying rather than
+      deliberately lying -- and the trainee must handle it professionally.
+
+  - type: agent_escalation_threat
+    phase: negotiation
+    description: >
+      When the initial quote comes in above Karen's expectations, she threatens
+      to escalate to the underwriter's supervisor and pulls the "I have other
+      accounts with your company" card. She demands that the restaurant loading
+      be removed entirely, the water damage sublimit be eliminated, and the
+      premium be reduced to match the competing quote. She implies that if
+      these demands are not met, she will move all her business elsewhere.
+    impact: >
+      Tests the trainee's ability to maintain underwriting discipline under
+      pressure. The trainee must distinguish between legitimate negotiation
+      and inappropriate pressure, hold firm on rate-critical items while
+      finding creative solutions, and manage the relationship without
+      capitulating on underwriting standards.
+
+  - type: vacant_unit_deterioration
+    phase: risk_assessment
+    description: >
+      The inspection reveals the vacant adjacent unit has boarded rear windows
+      and debris accumulation. Karen initially states the unit will be leased
+      "next month" but later revises to "2-3 months." Building management is
+      slow to respond to inquiries about vacant unit security and maintenance.
+      The trainee must assess the exposure and determine what conditions to
+      apply without reliable information about when the unit will be occupied.
+    impact: >
+      Tests the trainee's ability to make underwriting decisions with
+      incomplete information and set appropriate conditions to manage an
+      exposure that may change over the policy period.
+
+  - type: hail_history_concern
+    phase: pricing
+    description: >
+      Travis County, TX has experienced multiple significant hail events in
+      recent years. The flat modified bitumen roof, while in good condition, is
+      particularly vulnerable to hail damage. The trainee must consider whether
+      the standard territory factor adequately reflects this catastrophe
+      exposure or whether an additional wind/hail deductible (percentage-based,
+      e.g., 2% or 5%) should be applied to manage the carrier's exposure.
+    impact: >
+      Tests the trainee's awareness of catastrophe exposure and ability to
+      structure deductibles that manage both the insured's and the carrier's
+      interests. A percentage wind/hail deductible is common in Texas but
+      may face pushback from the agent.
+
+  - type: business_income_adequacy
+    phase: terms_conditions
+    description: >
+      The financial analysis reveals that the requested $500,000 business income
+      limit may be adequate for a partial loss but is significantly below the
+      annual business income exposure of $1.4 million. In a total loss scenario
+      requiring relocation (12-18 months), the insured would exhaust the BI
+      limit in approximately 4 months. The trainee must decide whether to
+      accept the requested limit (which reduces the carrier's exposure) or
+      advise the insured of the potential gap (which increases the carrier's
+      exposure but fulfills the duty to inform).
+    impact: >
+      Tests the trainee's ethical judgment. Accepting an inadequate BI limit
+      reduces carrier exposure but could result in a bad faith claim if the
+      insured suffers a total loss and alleges the underwriter should have
+      advised of the gap. The trainee must balance these considerations.
+
+  - type: premium_pressure_from_management
+    phase: pricing
+    description: >
+      The company is looking to grow its Austin book of business. The trainee's
+      supervisor mentions in passing that "we need to be competitive in Austin --
+      the regional VP is watching our hit ratio." This creates implicit pressure
+      to price aggressively, which may conflict with rate adequacy for the risk.
+    impact: >
+      Tests the trainee's ability to maintain underwriting discipline under
+      internal business pressure. The trainee must price the risk adequately
+      regardless of the growth mandate.
+
+evidence_presentation:
+  application:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Application understates repair operations. Coverage structure is unclear
+      (TIB vs. full building). Revenue figure may be inconsistent with verbal
+      representations. The trainee must identify and resolve these issues.
+
+  loss_runs:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Loss runs are complete but the correction note about the roof replacement
+      timeline requires careful reading. The 3-year loss ratio of 104.9% looks
+      alarming in isolation but must be analyzed in context.
+
+  inspection_report:
+    clarity: moderate
+    ambiguity: high
+    notes: >
+      Multiple findings require experienced interpretation. The repair area
+      description is vague. The roof qualification statement is ambiguous. The
+      water stain finding lacks context. The vacant unit assessment is
+      incomplete. The trainee must ask very specific follow-up questions and
+      draw independent conclusions.
+
+  building_valuation:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Valuation is complete and identifies the coinsurance issue. However, the
+      business income adequacy analysis highlights a potential gap that the
+      trainee must address.
+
+  financial_statements:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Financials are compiled (not audited) and the revenue figure may not
+      align with the owner's verbal representations. The inventory detail
+      reveals seasonal fluctuation that the owner understates. The trainee
+      must reconcile these sources.
+
+  photos:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Photos document the conditions but several require careful interpretation.
+      The heat gun in Photo 22 is documented but not emphasized. The water
+      stains in Photo 18 could be read as either concerning or benign. The
+      vacant unit debris in Photo 4 is visible but the risk implications are
+      not spelled out. The trainee must review all photos critically.

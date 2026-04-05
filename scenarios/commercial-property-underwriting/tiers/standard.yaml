@@ -1,0 +1,164 @@
+# Standard Tier Configuration
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Moderate difficulty with realistic complications and persona behaviors
+
+tier: standard
+tier_name: Standard
+description: >
+  Mid-level difficulty designed for underwriters with foundational knowledge who
+  need to handle realistic underwriting complications. No hints are provided.
+  Personas exhibit realistic behaviors including negotiation pressure, incomplete
+  information, and typical real-world friction. Evidence contains some ambiguity
+  that requires analysis.
+
+settings:
+  hints_enabled: false
+  phase_transition_hints: false
+  explicit_prompts: false
+  time_pressure: moderate  # Effective date deadline and agent follow-up pressure
+  max_score_multiplier: 1.0  # Standard tier allows full scoring range
+
+persona_overrides:
+  karen_wells:
+    demeanor: professional_but_firm
+    provides_information: with_prompting
+    negotiation_style: competitive
+    notes: >
+      Karen is professional but applies real negotiation pressure. She uses the
+      competing quote as leverage and implies she needs a response within a week.
+      She initially omits that the competing quote has a $5,000 deductible and
+      water damage sublimit -- the trainee must ask for details. She pushes back
+      on the restaurant loading and the experience modification debit. She calls
+      for status updates if the quote takes more than 3-4 business days.
+
+  david_chen:
+    demeanor: cooperative_but_impatient
+    provides_information: with_prompting
+    emotional_state: mildly_defensive
+    notes: >
+      David is generally cooperative but impatient with paperwork. He becomes
+      mildly defensive when the prior water damage claim is discussed, emphasizing
+      that he fixed the problem. He initially understates the repair area
+      operations (says "just basic soldering" without mentioning heat guns). He
+      may not disclose peak seasonal inventory values unless asked specifically
+      about seasonal fluctuation. He pushes back if the premium exceeds $15,000.
+
+  maria_santos:
+    demeanor: professional_and_objective
+    provides_information: when_asked
+    report_clarity: moderate
+    notes: >
+      Maria provides a good inspection report but some findings require follow-up
+      questions. Her description of the repair area mentions "heat-producing
+      equipment" without specifying all types. The water stain finding notes the
+      staining without explicitly stating whether it is active or historical --
+      the trainee must ask. She answers follow-up questions accurately but does
+      not volunteer additional context unless asked directly.
+
+  tom_bradshaw:
+    demeanor: available_but_socratic
+    provides_guidance: when_consulted
+    notes: >
+      Tom is available when consulted but does not volunteer guidance. He uses
+      the Socratic method, asking questions to guide the trainee's thinking
+      rather than providing direct answers. If the trainee's pricing is
+      significantly off, Tom will ask probing questions but will not give the
+      correct answer directly. He expects the trainee to present a completed
+      analysis before offering his assessment.
+
+complications:
+  - type: incomplete_information
+    phase: submission_review
+    description: >
+      The application lists the repair area as "on-site repair services for
+      computers and smartphones" but does not mention the heat-producing
+      equipment (soldering irons, heat guns). The trainee must identify this
+      through the inspection report and follow-up questions. David Chen initially
+      describes it as "just basic soldering" and does not mention heat guns
+      until asked specifically about heat-producing equipment.
+    impact: >
+      Tests the trainee's ability to identify incomplete information and probe
+      for details that could affect the occupancy classification and hazard
+      assessment.
+
+  - type: competing_quote_pressure
+    phase: negotiation
+    description: >
+      Karen presents a competing quote at $15,400 but initially does not
+      disclose that it has a $5,000 deductible (vs. $2,500 requested) and a
+      $200,000 water damage sublimit. She uses the lower premium number as
+      leverage. The trainee must ask about the competing quote's terms to
+      make a fair comparison.
+    impact: >
+      Tests the trainee's ability to analyze competitive quotes critically
+      and make apples-to-apples comparisons rather than reacting to headline
+      premium numbers.
+
+  - type: coinsurance_adequacy
+    phase: terms_conditions
+    description: >
+      The building valuation report shows a replacement cost of $1,575,000,
+      but the applicant requested $1,200,000 in building coverage with 80%
+      coinsurance. The 80% coinsurance requirement is $1,260,000, meaning
+      the requested limit falls short by $60,000. The trainee must identify
+      this and recommend either increasing the limit or adding an agreed
+      amount endorsement.
+    impact: >
+      Tests the trainee's understanding of coinsurance mechanics and their
+      ability to advise the agent on adequate coverage limits.
+
+  - type: seasonal_inventory_fluctuation
+    phase: risk_assessment
+    description: >
+      The application lists average inventory at $468,000 but peak inventory
+      during the holiday season reaches $700,000. David initially quotes the
+      average figure when asked about inventory values. The trainee must ask
+      about seasonal fluctuation to understand the true BPP exposure and
+      verify the $800,000 BPP limit is adequate.
+    impact: >
+      Tests the trainee's ability to probe beyond surface-level data and
+      consider worst-case exposure when setting coverage limits.
+
+evidence_presentation:
+  application:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Application is mostly complete but the repair services description
+      understates the scope of operations. The coverage structure (TIB vs.
+      full building) requires clarification with the agent.
+  loss_runs:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Loss runs are complete. The adjuster notes section contains a correction
+      regarding the roof replacement timeline that requires careful reading to
+      understand (the 2021 roof replacement predated the 2023 claim).
+  inspection_report:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Some findings require follow-up. The repair area description is somewhat
+      vague about equipment types. The water stain finding does not explicitly
+      state whether it is active or historical. The vacant unit assessment
+      does not fully quantify the fire risk.
+  building_valuation:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Valuation is complete and clearly identifies the coinsurance issue.
+      The trainee must read the adequacy analysis section carefully.
+  financial_statements:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Financials are consistent with the application but the inventory detail
+      section reveals seasonal fluctuation that is not obvious from the
+      balance sheet alone.
+  photos:
+    clarity: high
+    ambiguity: minor
+    notes: >
+      Photos are well-documented. The water-stained ceiling tiles and the
+      heat gun in the repair area are documented but the trainee must review
+      the photos systematically to catch all relevant details.

@@ -8,7 +8,8 @@ from db.client import get_supabase
 
 # --- Sessions ---
 
-def create_session(user_id: str, scenario_id: str, mode: str, difficulty: str) -> dict:
+def create_session(user_id: str, scenario_id: str, mode: str, difficulty: str, level: str,
+                    first_phase: str = "fnol") -> dict:
     db = get_supabase()
     session = {
         "id": str(uuid4()),
@@ -16,9 +17,10 @@ def create_session(user_id: str, scenario_id: str, mode: str, difficulty: str) -
         "scenario_id": scenario_id,
         "mode": mode,
         "difficulty": difficulty,
-        "current_phase": "fnol",
+        "level": level,
+        "current_phase": first_phase,
         "status": "active",
-        "phase_history": [{"phase": "fnol", "entered_at": datetime.now(timezone.utc).isoformat(), "exited_at": None}],
+        "phase_history": [{"phase": first_phase, "entered_at": datetime.now(timezone.utc).isoformat(), "exited_at": None}],
         "decisions": [],
         "documents_accessed": [],
         "scoring_events": [],
@@ -52,6 +54,12 @@ def update_session(session_id: str, updates: dict) -> dict:
     updates["updated_at"] = datetime.now(timezone.utc).isoformat()
     result = db.table("sessions").update(updates).eq("id", session_id).execute()
     return result.data[0]
+
+
+def delete_session(session_id: str) -> None:
+    db = get_supabase()
+    # Messages and reports cascade-delete via FK constraints
+    db.table("sessions").delete().eq("id", session_id).execute()
 
 
 # --- Messages ---

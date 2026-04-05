@@ -1,0 +1,265 @@
+# Terms and Conditions Phase Rubric
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Evaluates the trainee's determination of policy terms, exclusions, and endorsements
+
+phase: terms_conditions
+phase_name: Terms and Conditions
+description: >
+  Evaluates the trainee's ability to structure appropriate policy terms,
+  deductibles, sublimits, exclusions, and endorsements that adequately
+  address the identified risk exposures while providing meaningful coverage
+  to the insured.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of commercial property coverage forms, endorsements, and policy structure
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Selected the appropriate policy form (CPP with CP 00 10 Building and Personal Property Coverage Form or BOP with appropriate endorsements)
+          - Correctly structured the deductible options based on the risk profile (recommended $5,000 as optimal balance of premium savings and risk retention)
+          - Set an appropriate water damage sublimit reflecting the prior loss history and flat roof exposure (e.g., $250,000-$500,000 per occurrence)
+          - Included equipment breakdown coverage with appropriate terms for HVAC, electrical, and computer systems
+          - Applied the correct coinsurance percentage (80%) and verified limit-to-value compliance or recommended an agreed amount endorsement
+          - Included ordinance or law coverage (Coverages A, B, C) at the requested $250,000 given the 25-year-old building
+          - Set business income terms with appropriate waiting period (72 hours) and verified the extended period of indemnity provision
+          - Added utility services direct damage endorsement at requested limits
+          - Considered whether a wind/hail deductible (percentage-based) is appropriate for Travis County
+          - Included appropriate theft provisions given the high-value electronics inventory
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Selected an appropriate policy form
+          - Structured deductible options appropriately
+          - Set a water damage sublimit
+          - Included equipment breakdown
+          - Addressed coinsurance adequacy
+          - Included key endorsements
+          - Set business income terms reasonably
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Policy form selection was questionable
+          - Deductible was not well-matched to the risk
+          - No water damage sublimit despite the prior loss
+          - Missed one or more key endorsements
+          - Did not address coinsurance adequacy
+          - Business income terms were incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Wrong policy form selected
+          - No understanding of deductible structuring
+          - No sublimits applied
+          - Missing critical endorsements
+          - No coinsurance analysis
+          - Terms were generic with no risk-specific customization
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of coverage analysis and terms development
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Reviewed each identified risk exposure and determined the appropriate coverage response (sublimit, exclusion, endorsement, or condition)
+          - Analyzed the building valuation report to verify limit-to-value and coinsurance compliance
+          - Evaluated the business income worksheet against the financial statements to verify the requested limit is appropriate
+          - Assessed whether the BPP limit adequately covers peak seasonal inventory
+          - Reviewed the loss control recommendations and incorporated required actions as policy conditions
+          - Considered the lease requirements to ensure policy terms comply with the tenant's insurance obligations
+          - Evaluated multiple deductible scenarios and their premium impact to present options
+          - Assessed whether an agreed amount endorsement would benefit the insured and reduce coinsurance risk
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Reviewed risk exposures and determined coverage responses
+          - Verified limit-to-value
+          - Assessed BPP and BI limits
+          - Incorporated loss control conditions
+          - Considered lease requirements
+          - Evaluated deductible options
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Coverage responses did not align with all identified risks
+          - Did not verify limit-to-value
+          - BPP or BI limits were not validated
+          - Loss control conditions were not incorporated
+          - No consideration of lease requirements
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No connection between risk assessment and coverage terms
+          - No limit verification
+          - Terms were generic and not customized
+          - No conditions applied
+
+  - name: communication
+    weight: 0.20
+    description: Quality of communication regarding terms and conditions decisions
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Prepared a clear quote letter detailing all coverage terms, limits, deductibles, sublimits, and conditions
+          - Explained the rationale for the water damage sublimit in a way the agent and insured can understand
+          - Presented deductible options with corresponding premiums to facilitate decision-making
+          - Clearly communicated any loss control conditions and their timelines
+          - If applicable, explained the coinsurance provision and the consequences of underinsurance
+          - Used the agent as a partner in structuring terms rather than imposing them unilaterally
+          - Documented all terms decisions with rationale in the underwriting file
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Prepared a quote letter with key terms
+          - Explained the water damage sublimit rationale
+          - Presented at least one deductible option
+          - Communicated conditions clearly
+          - Documented terms decisions
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Quote letter was incomplete or unclear
+          - Rationale for terms was not well-communicated
+          - No deductible options presented
+          - Conditions were not clearly stated
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No quote letter prepared
+          - Terms were not communicated
+          - No rationale provided
+          - No documentation
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of terms and conditions decisions
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Terms balance adequate protection for the insured with appropriate risk management for the carrier
+          - Water damage sublimit is reasonable (not so low as to be meaningless, not so high as to negate the purpose)
+          - Deductible recommendation reflects the risk profile and the insured's financial capacity
+          - Conditions are achievable and reasonable (not punitive or unrealistic)
+          - Endorsements provide necessary coverage enhancements without creating unintended exposure
+          - The overall coverage program is competitive with the market while maintaining underwriting standards
+          - Recognized that overly restrictive terms may lose the account while overly broad terms may create adverse results
+          - Considered the insured's perspective and business needs when structuring terms
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Terms are reasonable and balanced
+          - Sublimits are appropriate
+          - Conditions are achievable
+          - Coverage is competitive
+          - Insured's needs are considered
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Terms are either too restrictive or too broad
+          - Sublimits are poorly calibrated
+          - Conditions are unreasonable
+          - Coverage is not competitive
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Terms are fundamentally flawed
+          - No risk-appropriate sublimits
+          - Conditions would be rejected by any reasonable insured
+          - Coverage program is unworkable
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with coverage structuring procedures
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Followed the company's coverage structuring guidelines
+          - Used approved policy forms and endorsements
+          - Documented all terms with specific references to form numbers and endorsement codes
+          - Verified that all terms are within underwriting authority
+          - Created a coverage summary for the underwriting file
+          - Updated the diary with terms development completion
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Followed coverage guidelines
+          - Used approved forms
+          - Documented key terms
+          - Verified authority
+          - Updated the file
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Deviated from guidelines without justification
+          - Documentation was incomplete
+          - Did not verify authority for non-standard terms
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not follow guidelines
+          - No documentation
+          - Used non-approved forms or terms
+          - No authority verification
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of coverage gaps and potential exposure issues in the terms structure
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Identified that the building limit of $1,200,000 falls short of the appraised replacement cost ($1,575,000), creating a coinsurance penalty risk
+          - Recognized that the business income limit of $500,000 may be inadequate for a total loss scenario (annual BI exposure is $1.4M)
+          - Considered whether the wind/hail deductible should be percentage-based to limit catastrophe exposure
+          - Assessed whether the policy should include an electronic data processing equipment endorsement for specialized repair equipment
+          - Evaluated whether the exterior sign coverage ($15,000) is adequate for an illuminated channel-letter sign
+          - Considered the implications of the repair area for the property coverage (heat damage from soldering -- is this a covered peril or excluded?)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified the coinsurance adequacy issue
+          - Recognized the BI limit concern
+          - Considered wind/hail deductible
+          - Evaluated specialized equipment coverage
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Missed the coinsurance issue
+          - Did not evaluate BI limit adequacy
+          - No wind/hail deductible consideration
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No awareness of coverage gaps
+          - Did not identify limit adequacy issues
+          - Terms created potential unintended exposures

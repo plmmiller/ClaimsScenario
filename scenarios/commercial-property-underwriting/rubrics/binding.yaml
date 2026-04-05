@@ -1,0 +1,265 @@
+# Binding Phase Rubric
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Evaluates the trainee's execution of binding procedures and file documentation
+
+phase: binding
+phase_name: Binding
+description: >
+  Evaluates the trainee's ability to properly execute the binding process
+  including verifying all required documentation, issuing the binder with
+  correct terms, setting up the policy, communicating binding confirmation,
+  and ensuring the underwriting file is complete and audit-ready.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of binding procedures, binder requirements, and policy issuance
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly identified all elements required for a valid binder (named insured, effective date, coverage terms, limits, deductibles, premium, conditions)
+          - Understood that the binder creates a legally binding contract and must accurately reflect the negotiated terms
+          - Included all agreed sublimits, endorsements, and conditions in the binder
+          - Set the correct policy period (April 15, 2026 to April 15, 2027)
+          - Verified that the premium payment terms are clear (deposit, installment schedule, or agency bill)
+          - Understood the distinction between binding authority and policy issuance
+          - Included loss control conditions with specific compliance deadlines in the binder
+          - Applied the correct forms and endorsement codes to the policy setup
+          - Recognized that the binder should reference the inspection requirements and their timelines
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Included all essential binder elements
+          - Terms accurately reflect the negotiation outcome
+          - Policy period is correct
+          - Premium payment terms are specified
+          - Conditions are included
+          - Forms and endorsements are correct
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Missing one or more binder elements
+          - Terms do not fully match the negotiated agreement
+          - Conditions are incomplete or unclear
+          - Some forms or endorsements are missing
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Binder is fundamentally incomplete
+          - Terms are incorrect or inconsistent with the negotiation
+          - No conditions included
+          - Policy setup has significant errors
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of pre-binding verification and file review
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Conducted a pre-binding checklist review to ensure all required documents are in the file (application, loss runs, inspection report, valuation, financials, photos)
+          - Verified that the final premium matches the premium development worksheet with all negotiated modifications
+          - Confirmed that the named insured, address, and coverage details match across all documents
+          - Verified that no material changes have occurred since the inspection (no new claims, no change in occupancy)
+          - Confirmed the agent's binding authority and appointment status
+          - Reviewed the underwriting file for completeness before binding
+          - Verified that all loss control Priority 1 conditions are documented with deadlines
+          - Confirmed the effective date allows for timely policy issuance
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Conducted a pre-binding review
+          - Verified the premium calculation
+          - Confirmed key information matches across documents
+          - Verified agent authority
+          - Reviewed the file for completeness
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Pre-binding review was superficial
+          - Did not verify the premium against the worksheet
+          - Some document discrepancies were not caught
+          - File review was incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No pre-binding review conducted
+          - Bound without verifying documentation
+          - Significant discrepancies in the file
+          - Missing critical documents
+
+  - name: communication
+    weight: 0.20
+    description: Quality of binding communication with the agent and internal stakeholders
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Issued a clear, professional binder document to the agent promptly upon binding
+          - Confirmed all terms in writing, including any conditions the insured must meet post-binding
+          - Communicated the loss control condition deadlines clearly and explained the consequences of non-compliance
+          - Thanked the agent for the business and expressed interest in a long-term relationship
+          - Provided the agent with a clear timeline for when the full policy will be issued
+          - Communicated internally to operations, billing, and loss control about the new account
+          - Set expectations for the first renewal review
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Issued the binder promptly
+          - Confirmed terms in writing
+          - Communicated conditions and deadlines
+          - Provided policy issuance timeline
+          - Thanked the agent
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Binder issuance was delayed
+          - Written confirmation was incomplete
+          - Conditions were not clearly communicated
+          - No policy issuance timeline provided
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No binder issued
+          - No written confirmation of terms
+          - Failed to communicate conditions
+          - No internal communication about the new account
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of binding decisions and file documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Made a sound decision to bind based on a complete underwriting analysis
+          - Final terms appropriately reflect the risk profile and are defensible in an audit
+          - Loss control conditions are practical and have appropriate timelines (30 days for Priority 1, 90 days for Priority 2)
+          - Set appropriate diary dates for condition compliance verification, mid-term review, and renewal
+          - Documented the underwriting rationale -- a reviewer could understand why this risk was written at these terms by reading the file
+          - Scheduled a post-binding inspection if any items require verification
+          - Planned for renewal underwriting considerations (re-inspect roof at year 10, verify vacant unit status, monitor loss history)
+          - Considered the policy's contribution to the company's portfolio balance and growth objectives
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Binding decision is well-supported
+          - Terms are defensible
+          - Conditions have appropriate timelines
+          - Diary dates are set
+          - File is adequately documented
+          - Renewal considerations are noted
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Binding decision lacks full support in the file
+          - Some terms are not well-documented
+          - Conditions lack timelines
+          - No diary dates set
+          - File documentation is incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Bound without adequate underwriting support
+          - File would not pass an audit
+          - No conditions or follow-up planned
+          - No documentation of the underwriting rationale
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with binding procedures and regulatory requirements
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Followed all company binding procedures step by step
+          - Issued the binder within the required timeframe
+          - Set up the policy correctly in the management system with all coverages, limits, deductibles, and endorsements
+          - Verified that the binding is within the underwriter's authority level
+          - Filed all documents in the underwriting file in proper order
+          - Sent binding confirmation with all required regulatory disclosures
+          - Initiated the premium billing process
+          - Created the policy issuance workflow for the processing team
+          - Complied with Texas Department of Insurance requirements for policy issuance timeline
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Followed binding procedures
+          - Issued binder timely
+          - Set up policy correctly
+          - Verified authority
+          - Filed documents properly
+          - Sent binding confirmation
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Missed one or more procedural steps
+          - Binder issuance was delayed
+          - Policy setup had minor errors
+          - Filing was incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not follow binding procedures
+          - No binder issued
+          - Policy setup was incorrect
+          - No filing or documentation
+          - Regulatory requirements were not met
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of post-binding risk monitoring needs
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Established a monitoring plan for loss control condition compliance (30-day and 90-day checkpoints)
+          - Set diary for mid-term check on the vacant adjacent unit status
+          - Planned for annual roof inspection verification
+          - Identified renewal underwriting triggers (new claims, changes in occupancy, roof age approaching 10 years)
+          - Considered whether quarterly loss reports should be requested for this account
+          - Noted the seasonal inventory fluctuation and set diary to verify peak coverage is adequate before Q4
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Set up condition compliance monitoring
+          - Diary set for key follow-up items
+          - Renewal triggers identified
+          - Seasonal inventory consideration noted
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - No condition compliance monitoring plan
+          - Limited diary entries
+          - No renewal triggers identified
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No post-binding monitoring established
+          - No diary entries
+          - No awareness of ongoing risk management needs

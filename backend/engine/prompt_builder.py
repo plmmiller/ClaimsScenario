@@ -14,12 +14,15 @@ def build_system_prompt(session: dict, scenario: dict) -> str:
     difficulty = session["difficulty"]
     current_phase = session["current_phase"]
 
+    level = session.get("level", "beginner")
+
     sections = [
         _role_definition(),
         _scenario_context(scenario, session),
         _active_personas(scenario, current_phase, difficulty),
         _current_phase_section(scenario, current_phase),
         _tier_behavior(scenario, difficulty, current_phase),
+        _level_context(level),
         _mode_rules(mode, current_phase),
         _tool_instructions(),
         _response_format(),
@@ -178,6 +181,39 @@ def _tier_behavior(scenario: dict, difficulty: str, current_phase: str) -> str:
             section += f"\n- {comp.get('description', '')}"
 
     return section
+
+
+def _level_context(level: str) -> str:
+    """Return instructions adapted to the trainee's experience level."""
+    if level == "beginner":
+        return """# TRAINEE EXPERIENCE LEVEL: BEGINNER
+
+- Use simpler language and avoid unnecessary jargon
+- Explain insurance terms and acronyms when they first appear
+- Be patient — allow extra time for the trainee to process information
+- Provide more context and background for each phase
+- Personas should be slightly more forthcoming with information
+- When the trainee seems confused, offer clarifying details proactively"""
+
+    elif level == "experienced":
+        return """# TRAINEE EXPERIENCE LEVEL: EXPERIENCED
+
+- Use full industry jargon and technical terminology without explanation
+- Move quickly through routine procedural steps
+- Challenge the trainee's assumptions and push for deeper analysis
+- Expect efficiency — personas may become impatient with unnecessary questions
+- Do not over-explain standard insurance processes
+- Introduce nuance and edge cases appropriate for a seasoned professional"""
+
+    else:  # intermediate
+        return """# TRAINEE EXPERIENCE LEVEL: INTERMEDIATE
+
+- Use standard industry language throughout the simulation
+- Explain complex or uncommon terms only when they first appear
+- Maintain a moderate pacing — neither rushed nor overly slow
+- Personas behave naturally without extra accommodation
+- Expect the trainee to know basic insurance concepts and terminology
+- Provide context for advanced topics but not for fundamentals"""
 
 
 def _mode_rules(mode: str, current_phase: str) -> str:
