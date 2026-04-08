@@ -12,6 +12,7 @@ import {
   Loader2,
   Target,
 } from "lucide-react";
+import ContextHelp from "@/components/ContextHelp";
 
 const LEVEL_COLORS = {
   exemplary: "text-green-700 bg-green-50 border-green-200",
@@ -93,9 +94,12 @@ export default function ReportPage() {
         <ArrowLeft className="h-4 w-4" /> Back to Dashboard
       </button>
 
-      <h1 className="text-2xl font-bold text-gray-900 mb-2">
-        Performance Report
-      </h1>
+      <div className="flex items-start justify-between mb-2">
+        <h1 className="text-2xl font-bold text-gray-900">
+          Performance Report
+        </h1>
+        <ContextHelp page="report" />
+      </div>
 
       {/* Overall Score */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">

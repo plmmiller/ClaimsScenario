@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { getScenarios, createSession } from "@/lib/api";
 import { Scenario } from "@/types";
 import { Clock, Layers, Play } from "lucide-react";
+import ContextHelp from "@/components/ContextHelp";
 
 export default function ScenariosPage() {
   const [scenarios, setScenarios] = useState<Scenario[]>([]);
@@ -86,10 +87,15 @@ export default function ScenariosPage() {
 
   return (
     <div className="p-8 max-w-4xl">
-      <h1 className="text-2xl font-bold text-gray-900 mb-2">Scenarios</h1>
-      <p className="text-gray-500 mb-8">
-        Choose a scenario, mode, and difficulty to start a new simulation
-      </p>
+      <div className="flex items-start justify-between mb-8">
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Scenarios</h1>
+          <p className="text-gray-500">
+            Choose a scenario, mode, and difficulty to start a new simulation
+          </p>
+        </div>
+        <ContextHelp page="scenarios" />
+      </div>
 
       {/* Scenario selection */}
       <div className="mb-8">

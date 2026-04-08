@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { getSessions, deleteSession } from "@/lib/api";
 import { Session, PHASE_LABELS } from "@/types";
 import { Play, Clock, CheckCircle, AlertCircle, Trash2 } from "lucide-react";
+import ContextHelp from "@/components/ContextHelp";
 
 const STATUS_CONFIG = {
   active: { label: "Active", color: "bg-green-100 text-green-700", icon: Play },
@@ -47,13 +48,16 @@ export default function DashboardPage() {
           <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
           <p className="text-gray-500 mt-1">Your simulation sessions</p>
         </div>
-        <button
-          onClick={() => router.push("/dashboard/scenarios")}
-          className="bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 flex items-center gap-2 transition-colors"
-        >
-          <Play className="h-4 w-4" />
-          New Simulation
-        </button>
+        <div className="flex items-center gap-2">
+          <ContextHelp page="dashboard" />
+          <button
+            onClick={() => router.push("/dashboard/scenarios")}
+            className="bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 flex items-center gap-2 transition-colors"
+          >
+            <Play className="h-4 w-4" />
+            New Simulation
+          </button>
+        </div>
       </div>
 
       {loading ? (

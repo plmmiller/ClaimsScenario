@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { getSession, getProgress } from "@/lib/api";
 import { streamMessage, SSECallbacks } from "@/lib/sse";
 import { useAuth } from "@/providers/AuthProvider";
+import ContextHelp from "@/components/ContextHelp";
 import {
   Session,
   Message,
@@ -455,6 +456,13 @@ export default function SessionPage() {
                 View Report
               </button>
             )}
+            <ContextHelp
+              page="session"
+              phase={currentPhase}
+              mode={session?.mode}
+              scenarioId={session?.scenario_id}
+              difficulty={session?.difficulty}
+            />
           </div>
         </div>
 
