@@ -104,12 +104,17 @@ async def get_progress(session_id: str, user: dict = Depends(get_current_user)):
 
     # Build phase tasks from scenario definition
     phase_tasks = []
-    phases_data = scenario.get("phases", [])
+    phases_data = scenario.get("phases", {})
     current_phase_data = None
-    for p in phases_data:
-        if p.get("id") == current_phase:
-            current_phase_data = p
-            break
+    if isinstance(phases_data, dict):
+        # phases is a dict keyed by phase ID
+        current_phase_data = phases_data.get(current_phase)
+    elif isinstance(phases_data, list):
+        # phases is a list of dicts with "id" fields
+        for p in phases_data:
+            if isinstance(p, dict) and p.get("id") == current_phase:
+                current_phase_data = p
+                break
 
     if current_phase_data:
         required_actions = current_phase_data.get("required_actions", [])

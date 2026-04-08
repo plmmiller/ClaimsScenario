@@ -92,6 +92,9 @@ class ToolHandlers:
             feedback=input["feedback"],
             phase=self.session["current_phase"],
             rubric_criteria=input.get("rubric_criteria"),
+            what_was_expected=input.get("what_was_expected"),
+            evidence=input.get("evidence"),
+            improvement_tip=input.get("improvement_tip"),
         )
         self.new_scoring_events.append(event)
 
@@ -107,6 +110,10 @@ class ToolHandlers:
                     "dimension": input["dimension"],
                     "score": input["score"],
                     "feedback": input["feedback"],
+                    "action_description": input["action_description"],
+                    "what_was_expected": input.get("what_was_expected", ""),
+                    "evidence": input.get("evidence", []),
+                    "improvement_tip": input.get("improvement_tip", ""),
                 },
             })
 

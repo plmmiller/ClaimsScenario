@@ -93,11 +93,14 @@ TOOLS = [
     {
         "name": "score_action",
         "description": (
-            "Evaluate an adjuster action against the scoring rubric. Call this after "
-            "the adjuster takes a significant action (asks a good question, misses "
+            "Evaluate a trainee action against the scoring rubric. Call this after "
+            "the trainee takes a significant action (asks a good question, misses "
             "something important, makes a correct determination, etc.). "
-            "In learning mode, the score and feedback will be shown to the user. "
-            "In assessment mode, it is recorded silently."
+            "You MUST provide specific evidence from the trainee's actual words or actions "
+            "to justify the score. Be concrete — quote what they said or describe exactly "
+            "what they did or failed to do. "
+            "In learning mode, the full explanation is shown to the user. "
+            "In assessment mode, it is recorded silently for the final report."
         ),
         "input_schema": {
             "type": "object",
@@ -121,7 +124,7 @@ TOOLS = [
                 },
                 "action_description": {
                     "type": "string",
-                    "description": "What the adjuster did that is being scored",
+                    "description": "Exactly what the trainee did or said that triggered this score. Quote their words or describe their specific action.",
                 },
                 "rubric_criteria": {
                     "type": "string",
@@ -129,10 +132,26 @@ TOOLS = [
                 },
                 "feedback": {
                     "type": "string",
-                    "description": "Constructive feedback about the action",
+                    "description": "Constructive feedback explaining the score",
+                },
+                "what_was_expected": {
+                    "type": "string",
+                    "description": "What an ideal/exemplary response would have looked like for this action. Be specific about what a top performer would say or do differently.",
+                },
+                "evidence": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "List of 1-3 specific pieces of evidence from the trainee's response that support this score. Quote their exact words or describe precise actions/omissions.",
+                },
+                "improvement_tip": {
+                    "type": "string",
+                    "description": "One concrete, actionable tip the trainee can apply immediately to improve in this dimension.",
                 },
             },
-            "required": ["dimension", "score", "action_description", "feedback"],
+            "required": [
+                "dimension", "score", "action_description", "feedback",
+                "what_was_expected", "evidence", "improvement_tip",
+            ],
         },
     },
     {

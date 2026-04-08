@@ -21,12 +21,17 @@ import {
   Lightbulb,
   Award,
   ChevronRight,
+  ChevronDown,
   Loader2,
   X,
   BarChart3,
   CheckCircle2,
   Circle,
   TrendingUp,
+  Quote,
+  Target,
+  ArrowUpRight,
+  Info,
 } from "lucide-react";
 
 interface ChatMessage {
@@ -38,6 +43,18 @@ interface ChatMessage {
   metadata?: Record<string, unknown>;
 }
 
+interface ScoreExplanation {
+  score: number;
+  level: string;
+  action: string;
+  feedback: string;
+  what_was_expected: string;
+  evidence: string[];
+  improvement_tip: string;
+  phase: string;
+  timestamp: string;
+}
+
 interface DimensionScore {
   label: string;
   average_score: number;
@@ -45,6 +62,9 @@ interface DimensionScore {
   weight: number;
   weighted_score: number;
   level: string;
+  explanations: ScoreExplanation[];
+  strongest_action: string;
+  weakest_action: string;
 }
 
 interface ProgressData {
@@ -80,6 +100,7 @@ export default function SessionPage() {
   const [progressOpen, setProgressOpen] = useState(false);
   const [progressData, setProgressData] = useState<ProgressData | null>(null);
   const [progressLoading, setProgressLoading] = useState(false);
+  const [expandedDimensions, setExpandedDimensions] = useState<Set<string>>(new Set());
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -215,12 +236,22 @@ export default function SessionPage() {
         ]);
       },
       onScoreEvent: (data) => {
+        const parts = [`**${data.dimension.replace(/_/g, " ")}**: ${data.score}/4 — ${data.feedback}`];
+        if (data.evidence && data.evidence.length > 0) {
+          parts.push(`\n**Evidence:** ${data.evidence.map((e: string) => `"${e}"`).join("; ")}`);
+        }
+        if (data.what_was_expected) {
+          parts.push(`\n**Exemplary response:** ${data.what_was_expected}`);
+        }
+        if (data.improvement_tip) {
+          parts.push(`\n**Tip:** ${data.improvement_tip}`);
+        }
         setMessages((prev) => [
           ...prev,
           {
             id: `score-${Date.now()}`,
             role: "system",
-            content: `${data.dimension.replace(/_/g, " ")}: ${data.score}/4 — ${data.feedback}`,
+            content: parts.join(""),
             type: "score",
           },
         ]);
@@ -613,44 +644,137 @@ export default function SessionPage() {
                 )}
               </div>
 
-              {/* Dimension scores */}
-              <div className="space-y-3">
-                {Object.entries(progressData.dimension_scores).map(([key, dim]) => (
-                  <div key={key}>
-                    <div className="flex items-center justify-between text-xs mb-1">
-                      <span className="text-gray-600">{dim.label}</span>
-                      <span className="font-medium text-gray-700">
-                        {dim.count > 0 ? `${dim.average_score}/4` : "—"}
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div
-                        className={`h-1.5 rounded-full transition-all ${
-                          dim.average_score >= 3.5
-                            ? "bg-green-500"
-                            : dim.average_score >= 2.5
-                            ? "bg-blue-500"
-                            : dim.average_score >= 1.5
-                            ? "bg-yellow-500"
-                            : dim.count > 0
-                            ? "bg-red-500"
-                            : "bg-gray-300"
-                        }`}
-                        style={{
-                          width: dim.count > 0 ? `${(dim.average_score / 4) * 100}%` : "0%",
-                        }}
-                      />
-                    </div>
-                    <div className="flex items-center justify-between text-xs mt-0.5">
-                      <span className="text-gray-400">
-                        {Math.round(dim.weight * 100)}% weight
-                      </span>
-                      {dim.count > 0 && (
-                        <span className="text-gray-400">{dim.count} eval{dim.count !== 1 ? "s" : ""}</span>
+              {/* Dimension scores with expandable explanations */}
+              <div className="space-y-2">
+                {Object.entries(progressData.dimension_scores).map(([key, dim]) => {
+                  const isExpanded = expandedDimensions.has(key);
+                  const toggleExpand = () => {
+                    setExpandedDimensions((prev) => {
+                      const next = new Set(prev);
+                      if (next.has(key)) next.delete(key);
+                      else next.add(key);
+                      return next;
+                    });
+                  };
+
+                  return (
+                    <div key={key} className="rounded-lg border border-gray-100 overflow-hidden">
+                      {/* Dimension header — clickable to expand */}
+                      <button
+                        onClick={dim.count > 0 ? toggleExpand : undefined}
+                        className={`w-full text-left p-2.5 ${dim.count > 0 ? "hover:bg-gray-50 cursor-pointer" : "cursor-default"}`}
+                      >
+                        <div className="flex items-center justify-between text-xs mb-1">
+                          <span className="text-gray-600 flex items-center gap-1">
+                            {dim.count > 0 && (
+                              isExpanded
+                                ? <ChevronDown className="h-3 w-3 text-gray-400" />
+                                : <ChevronRight className="h-3 w-3 text-gray-400" />
+                            )}
+                            {dim.label}
+                          </span>
+                          <span className="font-medium text-gray-700">
+                            {dim.count > 0 ? `${dim.average_score}/4` : "—"}
+                          </span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-1.5">
+                          <div
+                            className={`h-1.5 rounded-full transition-all ${
+                              dim.average_score >= 3.5
+                                ? "bg-green-500"
+                                : dim.average_score >= 2.5
+                                ? "bg-blue-500"
+                                : dim.average_score >= 1.5
+                                ? "bg-yellow-500"
+                                : dim.count > 0
+                                ? "bg-red-500"
+                                : "bg-gray-300"
+                            }`}
+                            style={{
+                              width: dim.count > 0 ? `${(dim.average_score / 4) * 100}%` : "0%",
+                            }}
+                          />
+                        </div>
+                        <div className="flex items-center justify-between text-xs mt-0.5">
+                          <span className="text-gray-400">
+                            {Math.round(dim.weight * 100)}% weight
+                          </span>
+                          {dim.count > 0 && (
+                            <span className="text-gray-400">{dim.count} eval{dim.count !== 1 ? "s" : ""}</span>
+                          )}
+                        </div>
+                      </button>
+
+                      {/* Expanded explanation panel */}
+                      {isExpanded && dim.explanations && dim.explanations.length > 0 && (
+                        <div className="border-t border-gray-100 bg-gray-50 px-3 py-2 space-y-3">
+                          {dim.explanations.map((exp, idx) => (
+                            <div key={idx} className="text-xs space-y-1.5 pb-2 border-b border-gray-200 last:border-b-0 last:pb-0">
+                              {/* Score badge + phase */}
+                              <div className="flex items-center justify-between">
+                                <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-xs font-medium ${
+                                  exp.score >= 4 ? "bg-green-100 text-green-700"
+                                    : exp.score >= 3 ? "bg-blue-100 text-blue-700"
+                                    : exp.score >= 2 ? "bg-yellow-100 text-yellow-700"
+                                    : "bg-red-100 text-red-700"
+                                }`}>
+                                  {exp.score}/4 · {exp.level.replace(/_/g, " ")}
+                                </span>
+                                <span className="text-gray-400 text-xs">{exp.phase}</span>
+                              </div>
+
+                              {/* What you did */}
+                              <div>
+                                <p className="text-gray-500 font-medium mb-0.5">What you did:</p>
+                                <p className="text-gray-700">{exp.action}</p>
+                              </div>
+
+                              {/* Evidence from your response */}
+                              {exp.evidence && exp.evidence.length > 0 && (
+                                <div>
+                                  <p className="text-gray-500 font-medium mb-0.5 flex items-center gap-1">
+                                    <Quote className="h-3 w-3" /> Evidence:
+                                  </p>
+                                  <ul className="space-y-0.5 ml-3">
+                                    {exp.evidence.map((e, i) => (
+                                      <li key={i} className="text-gray-600 italic">&ldquo;{e}&rdquo;</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {/* Feedback */}
+                              <div>
+                                <p className="text-gray-500 font-medium mb-0.5">Feedback:</p>
+                                <p className="text-gray-700">{exp.feedback}</p>
+                              </div>
+
+                              {/* What was expected */}
+                              {exp.what_was_expected && (
+                                <div className="bg-blue-50 rounded p-2">
+                                  <p className="text-blue-700 font-medium mb-0.5 flex items-center gap-1">
+                                    <Target className="h-3 w-3" /> What exemplary looks like:
+                                  </p>
+                                  <p className="text-blue-600">{exp.what_was_expected}</p>
+                                </div>
+                              )}
+
+                              {/* Improvement tip */}
+                              {exp.improvement_tip && (
+                                <div className="bg-amber-50 rounded p-2">
+                                  <p className="text-amber-700 font-medium mb-0.5 flex items-center gap-1">
+                                    <ArrowUpRight className="h-3 w-3" /> Tip to improve:
+                                  </p>
+                                  <p className="text-amber-600">{exp.improvement_tip}</p>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
                       )}
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               {progressData.scoring_events_count === 0 && (

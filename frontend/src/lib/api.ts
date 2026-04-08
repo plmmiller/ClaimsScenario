@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = "";
 
 async function getToken(): Promise<string | null> {
   // Import dynamically to avoid SSR issues

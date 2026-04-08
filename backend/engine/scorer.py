@@ -29,6 +29,30 @@ SCORE_LEVELS = {
     1: "needs_improvement",
 }
 
+# Import-safe phase labels for scorer display
+PHASE_LABELS_FOR_SCORER = {
+    "fnol": "First Notice of Loss",
+    "coverage": "Coverage Verification",
+    "investigation": "Investigation",
+    "liability": "Liability Determination",
+    "damages": "Damage Assessment",
+    "negotiation": "Negotiation",
+    "resolution": "Resolution",
+    "submission_review": "Submission Review",
+    "risk_assessment": "Risk Assessment",
+    "loss_history": "Loss History",
+    "pricing": "Pricing & Rating",
+    "terms_conditions": "Terms & Conditions",
+    "binding": "Binding & Issuance",
+    "market_research": "Market Research",
+    "strategy_development": "Strategy Development",
+    "content_creation": "Content Creation",
+    "agency_enablement": "Agency Enablement",
+    "campaign_launch": "Campaign Launch",
+    "performance_tracking": "Performance Tracking",
+    "reporting": "Reporting & ROI",
+}
+
 
 def create_scoring_event(
     dimension: str,
@@ -37,15 +61,22 @@ def create_scoring_event(
     feedback: str,
     phase: str,
     rubric_criteria: str | None = None,
+    what_was_expected: str | None = None,
+    evidence: list[str] | None = None,
+    improvement_tip: str | None = None,
 ) -> dict:
-    """Create a new scoring event."""
+    """Create a new scoring event with detailed explanation."""
     return {
         "dimension": dimension,
         "score": score,
         "max_score": 4,
+        "level": SCORE_LEVELS.get(score, "developing"),
         "action_description": action_description,
         "feedback": feedback,
         "rubric_criteria": rubric_criteria or "",
+        "what_was_expected": what_was_expected or "",
+        "evidence": evidence or [],
+        "improvement_tip": improvement_tip or "",
         "phase": phase,
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }
@@ -53,19 +84,40 @@ def create_scoring_event(
 
 def compute_dimension_scores(scoring_events: list[dict]) -> dict:
     """Compute average scores per dimension from accumulated events."""
-    dimension_totals: dict[str, list[int]] = {}
+    dimension_events: dict[str, list[dict]] = {}
 
     for event in scoring_events:
         dim = event["dimension"]
-        if dim not in dimension_totals:
-            dimension_totals[dim] = []
-        dimension_totals[dim].append(event["score"])
+        if dim not in dimension_events:
+            dimension_events[dim] = []
+        dimension_events[dim].append(event)
 
     scores = {}
     for dim, weight in DIMENSION_WEIGHTS.items():
-        if dim in dimension_totals:
-            values = dimension_totals[dim]
+        if dim in dimension_events:
+            events = dimension_events[dim]
+            values = [e["score"] for e in events]
             avg = sum(values) / len(values)
+
+            # Build explanation details from individual events
+            explanations = []
+            for e in events:
+                explanations.append({
+                    "score": e["score"],
+                    "level": SCORE_LEVELS.get(e["score"], "developing"),
+                    "action": e.get("action_description", ""),
+                    "feedback": e.get("feedback", ""),
+                    "what_was_expected": e.get("what_was_expected", ""),
+                    "evidence": e.get("evidence", []),
+                    "improvement_tip": e.get("improvement_tip", ""),
+                    "phase": PHASE_LABELS_FOR_SCORER.get(e.get("phase", ""), e.get("phase", "")),
+                    "timestamp": e.get("timestamp", ""),
+                })
+
+            # Identify strongest and weakest events for summary
+            best_event = max(events, key=lambda e: e["score"])
+            worst_event = min(events, key=lambda e: e["score"])
+
             scores[dim] = {
                 "label": DIMENSION_LABELS[dim],
                 "average_score": round(avg, 2),
@@ -73,6 +125,9 @@ def compute_dimension_scores(scoring_events: list[dict]) -> dict:
                 "weight": weight,
                 "weighted_score": round(avg * weight, 2),
                 "level": SCORE_LEVELS.get(round(avg), "developing"),
+                "explanations": explanations,
+                "strongest_action": best_event.get("action_description", ""),
+                "weakest_action": worst_event.get("action_description", "") if worst_event["score"] < best_event["score"] else "",
             }
         else:
             scores[dim] = {
@@ -82,6 +137,9 @@ def compute_dimension_scores(scoring_events: list[dict]) -> dict:
                 "weight": weight,
                 "weighted_score": 0,
                 "level": "not_assessed",
+                "explanations": [],
+                "strongest_action": "",
+                "weakest_action": "",
             }
 
     return scores

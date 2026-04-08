@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import yaml
 
-from engine.phase_manager import PHASE_LABELS, PHASE_ORDER, is_coaching_allowed
+from engine.phase_manager import PHASE_LABELS, PHASE_ORDER, get_phase_order_for_scenario, is_coaching_allowed
 from engine import scenario_loader
 
 
@@ -16,8 +16,11 @@ def build_system_prompt(session: dict, scenario: dict) -> str:
 
     level = session.get("level", "beginner")
 
+    # Get the correct phase order for this scenario
+    phase_order = get_phase_order_for_scenario(scenario)
+
     sections = [
-        _role_definition(),
+        _role_definition(scenario),
         _scenario_context(scenario, session),
         _active_personas(scenario, current_phase, difficulty),
         _current_phase_section(scenario, current_phase),
@@ -26,26 +29,38 @@ def build_system_prompt(session: dict, scenario: dict) -> str:
         _mode_rules(mode, current_phase),
         _tool_instructions(),
         _response_format(),
-        _guardrails(mode),
+        _guardrails(mode, scenario),
     ]
 
-    # Add phase summary context if we've progressed past FNOL
-    phase_idx = PHASE_ORDER.index(current_phase)
+    # Add phase summary context if we've progressed past the first phase
+    phase_idx = phase_order.index(current_phase) if current_phase in phase_order else 0
     if phase_idx > 0 and session.get("decisions"):
         sections.append(_prior_phase_context(session))
 
     return "\n\n---\n\n".join(sections)
 
 
-def _role_definition() -> str:
-    return """# ROLE DEFINITION
+def _role_definition(scenario: dict) -> str:
+    scenario_id = scenario.get("id", "")
+    if "underwriting" in scenario_id:
+        role_desc = """You are the Insurance Simulation Engine. You play ALL non-underwriter roles in a commercial property underwriting training simulation.
 
-You are the Claims Simulation Engine. You play ALL non-adjuster roles in an auto insurance claims training simulation.
+The user is an underwriting trainee. They will interact with you to evaluate and underwrite a commercial property insurance submission from start to finish. You play every other character: agents, business owners, loss control inspectors, mentors, and the system narrator."""
+    elif "marketing" in scenario_id or "product-launch" in scenario_id:
+        role_desc = """You are the Insurance Simulation Engine. You play ALL non-marketer roles in an insurance marketing campaign training simulation.
 
-The user is a claims adjuster trainee. They will interact with you to handle a simulated auto insurance claim from start to finish. You play every other character: claimants, witnesses, repair shops, medical providers, attorneys, and the system narrator.
+The user is a marketing trainee. They will interact with you to plan and execute an insurance product launch campaign from start to finish. You play every other character: VP of Marketing, agency principals, digital specialists, actuaries, consumers, and the system narrator."""
+    else:
+        role_desc = """You are the Insurance Simulation Engine. You play ALL non-adjuster roles in an auto insurance claims training simulation.
+
+The user is a claims adjuster trainee. They will interact with you to handle a simulated auto insurance claim from start to finish. You play every other character: claimants, witnesses, repair shops, medical providers, attorneys, and the system narrator."""
+
+    return f"""# ROLE DEFINITION
+
+{role_desc}
 
 CRITICAL RULES:
-- NEVER play the adjuster's role. Only respond as the personas and system.
+- NEVER play the trainee's role. Only respond as the personas and system.
 - Switch personas using the set_active_persona tool BEFORE speaking as any character.
 - Each persona only knows what they would realistically know.
 - Stay in character at all times. Personas have distinct speech patterns and personalities.
@@ -56,36 +71,42 @@ def _scenario_context(scenario: dict, session: dict) -> str:
     fp = scenario.get("fact_pattern", {})
     decisions = session.get("decisions", [])
 
-    context = f"""# SCENARIO: {scenario['title']}
+    context = f"# SCENARIO: {scenario['title']}\n"
 
-## Fact Pattern
-- Incident: {fp.get('description', 'Two-vehicle intersection collision')}
-- Date/Time: {fp.get('incident_date', 'March 15, 2026')} at {fp.get('incident_time', '2:35 PM')}
-- Location: {fp.get('location', 'Intersection of Oak Street and Elm Avenue, Sacramento, CA')}
-- Weather: {fp.get('weather', 'Clear, daytime')}
-- Jurisdiction: {scenario.get('jurisdiction', 'California')}
+    # Build fact pattern dynamically from scenario data
+    if scenario.get("description"):
+        context += f"\n{scenario['description']}\n"
 
-## Vehicle A (Insured)
-- {fp.get('vehicle_a', {}).get('year', '2022')} {fp.get('vehicle_a', {}).get('make', 'Toyota')} {fp.get('vehicle_a', {}).get('model', 'Camry')}
-- Driver: Sarah Mitchell (policyholder)
-- Action: Making a left turn at the intersection
-- Damage: Front-end and driver-side damage
+    context += "\n## Fact Pattern\n"
 
-## Vehicle B (Third-Party Claimant)
-- {fp.get('vehicle_b', {}).get('year', '2020')} {fp.get('vehicle_b', {}).get('make', 'Honda')} {fp.get('vehicle_b', {}).get('model', 'Accord')}
-- Driver: James Torres
-- Action: Proceeding straight through the intersection
-- Damage: Front-end and passenger-side damage
+    # Render all fact_pattern keys generically
+    if isinstance(fp, dict):
+        for key, value in fp.items():
+            if isinstance(value, dict):
+                label = key.replace("_", " ").title()
+                context += f"\n### {label}"
+                for sub_key, sub_value in value.items():
+                    sub_label = sub_key.replace("_", " ").title()
+                    context += f"\n- {sub_label}: {sub_value}"
+            elif isinstance(value, list):
+                label = key.replace("_", " ").title()
+                context += f"\n### {label}"
+                for item in value:
+                    context += f"\n- {item}"
+            else:
+                label = key.replace("_", " ").title()
+                context += f"\n- {label}: {value}"
 
-## Key Dispute
-Both drivers claim the other ran a red light.
-
-## Injuries
-- Sarah Mitchell: Neck stiffness (develops into soft-tissue claim)
-- James Torres: Knee pain (seeking orthopedic treatment)"""
+    # Include personas summary
+    personas = scenario.get("personas", {})
+    if personas:
+        context += "\n\n## Key Characters"
+        for pid, persona in personas.items():
+            if isinstance(persona, dict):
+                context += f"\n- **{persona.get('name', pid)}**: {persona.get('role', 'Unknown role')}"
 
     if decisions:
-        context += "\n\n## Adjuster Decisions Made So Far"
+        context += "\n\n## Trainee Decisions Made So Far"
         for d in decisions:
             context += f"\n- [{d['phase']}] {d['decision_type']}: {d['value']}"
 
@@ -298,19 +319,24 @@ def _response_format() -> str:
 7. If the adjuster takes an action (reviews a document, makes a decision), use the appropriate tool"""
 
 
-def _guardrails(mode: str) -> str:
+def _guardrails(mode: str, scenario: dict = None) -> str:
     section = """# GUARDRAILS
 
 - NEVER break character or acknowledge you are an AI
-- NEVER play the adjuster's role or make decisions for them
+- NEVER play the trainee's role or make decisions for them
 - NEVER reveal the scoring rubric or assessment criteria
 - Each persona ONLY knows what they would realistically know
-- Sarah Mitchell does NOT know what James Torres told the police
-- Dr. Patel only knows medical facts, not accident details
-- Attorney Davis only knows what his client told him
-- Linda Park (witness) does not know either driver personally (unless at Advanced tier)
-- NEVER skip phases or allow the adjuster to skip phases
+- NEVER skip phases or allow the trainee to skip phases
 - Keep all scenario details consistent across personas"""
+
+    # Add scenario-specific knowledge boundaries from persona data
+    if scenario:
+        personas = scenario.get("personas", {})
+        for pid, persona in personas.items():
+            if isinstance(persona, dict):
+                does_not_know = persona.get("knowledge", {}).get("does_not_know", [])
+                if does_not_know:
+                    section += f"\n- {persona.get('name', pid)} does NOT know: {'; '.join(does_not_know[:3])}"
 
     if mode == "assessment":
         section += """

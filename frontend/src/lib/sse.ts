@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = "";
 
 export interface SSECallbacks {
   onToken: (text: string) => void;
@@ -23,6 +23,10 @@ export interface SSECallbacks {
     dimension: string;
     score: number;
     feedback: string;
+    action_description?: string;
+    what_was_expected?: string;
+    evidence?: string[];
+    improvement_tip?: string;
   }) => void;
   onSimulationComplete: (data: {
     reason: string;
