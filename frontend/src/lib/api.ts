@@ -10,7 +10,7 @@ async function getToken(): Promise<string | null> {
   return session?.access_token || null;
 }
 
-async function fetchAPI(path: string, options: RequestInit = {}) {
+async function fetchAPI(path: string, options: RequestInit = {}, retries = 1) {
   const token = await getToken();
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
@@ -20,12 +20,28 @@ async function fetchAPI(path: string, options: RequestInit = {}) {
     headers["Authorization"] = `Bearer ${token}`;
   }
 
-  const res = await fetch(`${API_URL}${path}`, { ...options, headers });
-  if (!res.ok) {
-    const body = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new Error(body.detail || res.statusText);
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(`${API_URL}${path}`, { ...options, headers });
+      if (res.status === 502 && attempt < retries) {
+        // Backend is waking up (Render free tier cold start) — wait and retry
+        await new Promise((r) => setTimeout(r, 3000));
+        continue;
+      }
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({ detail: res.statusText }));
+        throw new Error(body.detail || res.statusText);
+      }
+      return res.json();
+    } catch (err) {
+      if (attempt < retries && err instanceof TypeError) {
+        // Network error (e.g. CORS preflight got 502) — wait and retry
+        await new Promise((r) => setTimeout(r, 3000));
+        continue;
+      }
+      throw err;
+    }
   }
-  return res.json();
 }
 
 // Scenarios
