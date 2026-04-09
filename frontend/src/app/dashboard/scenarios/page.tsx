@@ -15,6 +15,7 @@ export default function ScenariosPage() {
   const [level, setLevel] = useState<string>("beginner");
   const [difficulty, setDifficulty] = useState<string>("guided");
   const [starting, setStarting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function ScenariosPage() {
   const handleStart = async () => {
     if (!selectedScenario) return;
     setStarting(true);
+    setError(null);
     try {
       const session = await createSession({
         scenario_id: selectedScenario.id,
@@ -35,8 +37,9 @@ export default function ScenariosPage() {
         level,
       });
       router.push(`/dashboard/session/${session.id}`);
-    } catch (err) {
-      console.error(err);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Failed to create session";
+      setError(message);
       setStarting(false);
     }
   };
@@ -204,6 +207,13 @@ export default function ScenariosPage() {
               ))}
             </div>
           </div>
+
+          {/* Error message */}
+          {error && (
+            <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+              {error}
+            </div>
+          )}
 
           {/* Start button */}
           <button
