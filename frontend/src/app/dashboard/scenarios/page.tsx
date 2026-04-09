@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getScenarios, createSession } from "@/lib/api";
 import { Scenario } from "@/types";
@@ -16,6 +16,7 @@ export default function ScenariosPage() {
   const [difficulty, setDifficulty] = useState<string>("guided");
   const [starting, setStarting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const optionsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -109,7 +110,10 @@ export default function ScenariosPage() {
           {scenarios.map((s) => (
             <div
               key={s.id}
-              onClick={() => setSelectedScenario(s)}
+              onClick={() => {
+                setSelectedScenario(s);
+                setTimeout(() => optionsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
+              }}
               className={`bg-white rounded-xl border-2 p-5 cursor-pointer transition-all ${
                 selectedScenario?.id === s.id
                   ? "border-blue-500 ring-2 ring-blue-100"
@@ -136,7 +140,7 @@ export default function ScenariosPage() {
       {selectedScenario && (
         <>
           {/* Mode selection */}
-          <div className="mb-8">
+          <div ref={optionsRef} className="mb-8">
             <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">
               Simulation Mode
             </h2>
