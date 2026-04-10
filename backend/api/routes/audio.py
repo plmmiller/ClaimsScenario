@@ -2,6 +2,10 @@ from __future__ import annotations
 
 """ElevenLabs audio endpoints: transcribe (STT) and speak (TTS)."""
 
+import logging
+import traceback
+from io import BytesIO
+
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
@@ -9,6 +13,8 @@ from pydantic import BaseModel
 from api.deps import get_current_user
 from config import settings
 from engine import scenario_loader
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
@@ -64,14 +70,20 @@ async def transcribe_audio(
     if not audio_bytes:
         raise HTTPException(status_code=400, detail="Empty audio file")
 
+    # Wrap bytes in a named BytesIO — ElevenLabs SDK uses file.name to
+    # determine the content type for the multipart upload.
+    audio_io = BytesIO(audio_bytes)
+    audio_io.name = file.filename or "recording.webm"
+
     try:
         result = client.speech_to_text.convert(
-            file=audio_bytes,
+            file=audio_io,
             model_id="scribe_v1",
         )
         text = getattr(result, "text", None) or ""
         return {"text": text.strip()}
     except Exception as exc:
+        logger.error("Transcription failed: %s\n%s", exc, traceback.format_exc())
         raise HTTPException(status_code=502, detail=f"Transcription failed: {exc}") from exc
 
 

@@ -200,12 +200,22 @@ export default function SessionPage() {
       recorder.onstop = async () => {
         stream.getTracks().forEach((t) => t.stop());
         const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+        if (blob.size === 0) {
+          alert("No audio captured. Please try again and speak clearly.");
+          return;
+        }
         setIsTranscribing(true);
         try {
           const { text } = await transcribeAudio(blob);
-          if (text) setInput((prev) => (prev ? `${prev} ${text}` : text));
+          if (text) {
+            setInput((prev) => (prev ? `${prev} ${text}` : text));
+          } else {
+            alert("Transcription returned empty — try speaking louder or longer.");
+          }
         } catch (err) {
+          const message = err instanceof Error ? err.message : String(err);
           console.error("Transcription error:", err);
+          alert(`Transcription failed: ${message}`);
         } finally {
           setIsTranscribing(false);
         }
