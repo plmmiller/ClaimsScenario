@@ -86,3 +86,37 @@ export const getAnalytics = () => fetchAPI("/api/admin/analytics");
 export const getUsers = () => fetchAPI("/api/admin/users");
 export const getTranscript = (sessionId: string) =>
   fetchAPI(`/api/admin/sessions/${sessionId}/transcript`);
+
+// Audio
+export async function transcribeAudio(audio: Blob): Promise<{ text: string }> {
+  const token = await getToken();
+  const form = new FormData();
+  form.append("file", audio, "recording.webm");
+  const res = await fetch(`${API_URL}/api/audio/transcribe`, {
+    method: "POST",
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+    body: form,
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({ detail: res.statusText }));
+    throw new Error(body.detail || res.statusText);
+  }
+  return res.json();
+}
+
+export async function fetchSpeech(text: string, personaId?: string): Promise<Blob> {
+  const token = await getToken();
+  const res = await fetch(`${API_URL}/api/audio/speak`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({ text, persona_id: personaId }),
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({ detail: res.statusText }));
+    throw new Error(body.detail || res.statusText);
+  }
+  return res.blob();
+}
