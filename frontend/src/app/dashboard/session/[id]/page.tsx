@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { getSession, getProgress } from "@/lib/api";
+import { getSession, getProgress, transcribeAudio, fetchSpeech } from "@/lib/api";
 import { streamMessage, SSECallbacks } from "@/lib/sse";
 import { useAuth } from "@/providers/AuthProvider";
 import ContextHelp from "@/components/ContextHelp";
@@ -33,6 +33,10 @@ import {
   Target,
   ArrowUpRight,
   Info,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
 } from "lucide-react";
 
 interface ChatMessage {
@@ -106,6 +110,14 @@ export default function SessionPage() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  // Audio state
+  const [audioEnabled, setAudioEnabled] = useState(true);
+  const [isRecording, setIsRecording] = useState(false);
+  const [isTranscribing, setIsTranscribing] = useState(false);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
+  const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
@@ -150,6 +162,88 @@ export default function SessionPage() {
       .catch(console.error);
   }, [sessionId]);
 
+  // Play persona speech for a finished AI response
+  const playSpeech = useCallback(
+    async (text: string, personaId?: string) => {
+      if (!audioEnabled || !text.trim()) return;
+      try {
+        // Stop any currently playing audio
+        if (currentAudioRef.current) {
+          currentAudioRef.current.pause();
+          currentAudioRef.current = null;
+        }
+        const blob = await fetchSpeech(text, personaId);
+        const url = URL.createObjectURL(blob);
+        const audio = new Audio(url);
+        currentAudioRef.current = audio;
+        audio.onended = () => {
+          URL.revokeObjectURL(url);
+          if (currentAudioRef.current === audio) currentAudioRef.current = null;
+        };
+        await audio.play();
+      } catch (err) {
+        console.error("TTS error:", err);
+      }
+    },
+    [audioEnabled]
+  );
+
+  // Start / stop microphone recording
+  const startRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream);
+      audioChunksRef.current = [];
+      recorder.ondataavailable = (e) => {
+        if (e.data.size > 0) audioChunksRef.current.push(e.data);
+      };
+      recorder.onstop = async () => {
+        stream.getTracks().forEach((t) => t.stop());
+        const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+        setIsTranscribing(true);
+        try {
+          const { text } = await transcribeAudio(blob);
+          if (text) setInput((prev) => (prev ? `${prev} ${text}` : text));
+        } catch (err) {
+          console.error("Transcription error:", err);
+        } finally {
+          setIsTranscribing(false);
+        }
+      };
+      mediaRecorderRef.current = recorder;
+      recorder.start();
+      setIsRecording(true);
+    } catch (err) {
+      console.error("Microphone access error:", err);
+      alert("Unable to access microphone. Please check browser permissions.");
+    }
+  };
+
+  const stopRecording = () => {
+    const recorder = mediaRecorderRef.current;
+    if (recorder && recorder.state !== "inactive") {
+      recorder.stop();
+    }
+    setIsRecording(false);
+  };
+
+  const toggleRecording = () => {
+    if (isRecording) stopRecording();
+    else startRecording();
+  };
+
+  const toggleAudio = () => {
+    setAudioEnabled((prev) => {
+      const next = !prev;
+      // If disabling, stop any currently playing audio
+      if (!next && currentAudioRef.current) {
+        currentAudioRef.current.pause();
+        currentAudioRef.current = null;
+      }
+      return next;
+    });
+  };
+
   const handleSend = async () => {
     if (!input.trim() || isStreaming || !authSession?.access_token) return;
 
@@ -172,17 +266,20 @@ export default function SessionPage() {
         setStreamBuffer(assistantText);
       },
       onPersona: (data) => {
-        // If there was accumulated text, save it as a message
+        // If there was accumulated text, save it as a message and speak it
         if (assistantText.trim()) {
+          const spokenText = assistantText;
+          const spokenPersona = assistantPersona;
           setMessages((prev) => [
             ...prev,
             {
               id: `assistant-${Date.now()}-${Math.random()}`,
               role: "assistant",
-              content: assistantText,
-              persona: assistantPersona || undefined,
+              content: spokenText,
+              persona: spokenPersona || undefined,
             },
           ]);
+          playSpeech(spokenText, spokenPersona?.persona_id);
           assistantText = "";
           setStreamBuffer("");
         }
@@ -272,15 +369,18 @@ export default function SessionPage() {
       },
       onDone: () => {
         if (assistantText.trim()) {
+          const spokenText = assistantText;
+          const spokenPersona = assistantPersona;
           setMessages((prev) => [
             ...prev,
             {
               id: `assistant-${Date.now()}`,
               role: "assistant",
-              content: assistantText,
-              persona: assistantPersona || undefined,
+              content: spokenText,
+              persona: spokenPersona || undefined,
             },
           ]);
+          playSpeech(spokenText, spokenPersona?.persona_id);
         }
         setStreamBuffer("");
         setIsStreaming(false);
@@ -432,6 +532,17 @@ export default function SessionPage() {
             )}
           </div>
           <div className="flex items-center gap-2">
+            <button
+              onClick={toggleAudio}
+              title={audioEnabled ? "Mute AI voice" : "Enable AI voice"}
+              className="flex items-center gap-1.5 bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
+            >
+              {audioEnabled ? (
+                <Volume2 className="h-4 w-4" />
+              ) : (
+                <VolumeX className="h-4 w-4 text-gray-400" />
+              )}
+            </button>
             {session?.status === "active" && (
               <button
                 onClick={fetchProgress}
@@ -514,15 +625,37 @@ export default function SessionPage() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              disabled={isStreaming || session?.status !== "active"}
+              disabled={isStreaming || session?.status !== "active" || isTranscribing}
               placeholder={
                 session?.status !== "active"
                   ? "Session is not active"
+                  : isTranscribing
+                  ? "Transcribing..."
+                  : isRecording
+                  ? "Recording... click mic to stop"
                   : "Type your message... (Enter to send, Shift+Enter for new line)"
               }
               rows={1}
               className="flex-1 resize-none px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm disabled:opacity-50"
             />
+            <button
+              onClick={toggleRecording}
+              disabled={isStreaming || session?.status !== "active" || isTranscribing}
+              title={isRecording ? "Stop recording" : "Record voice message"}
+              className={`px-4 py-2.5 rounded-xl transition-colors disabled:opacity-50 ${
+                isRecording
+                  ? "bg-red-600 text-white hover:bg-red-700 animate-pulse"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              }`}
+            >
+              {isTranscribing ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : isRecording ? (
+                <MicOff className="h-4 w-4" />
+              ) : (
+                <Mic className="h-4 w-4" />
+              )}
+            </button>
             <button
               onClick={handleSend}
               disabled={!input.trim() || isStreaming}

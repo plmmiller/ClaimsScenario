@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from config import settings
-from api.routes import auth, scenarios, sessions, chat, reports, admin
+from api.routes import auth, scenarios, sessions, chat, reports, admin, audio
 from engine import scenario_loader
 
 
@@ -30,6 +30,7 @@ app.include_router(sessions.router, prefix="/api/sessions", tags=["sessions"])
 app.include_router(chat.router, prefix="/api/sessions", tags=["chat"])
 app.include_router(reports.router, prefix="/api/sessions", tags=["reports"])
 app.include_router(admin.router, prefix="/api/admin", tags=["admin"])
+app.include_router(audio.router, prefix="/api/audio", tags=["audio"])
 
 
 @app.get("/api/health")

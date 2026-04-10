@@ -15,6 +15,7 @@ if _env_path.exists():
 
 class Settings(BaseSettings):
     anthropic_api_key: str = ""
+    elevenlabs_api_key: str = ""
     supabase_url: str = ""
     supabase_service_role_key: str = ""
     supabase_jwt_secret: str = ""
