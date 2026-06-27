@@ -1,0 +1,254 @@
+# Market Research Phase Rubric
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Evaluates the trainee's market research and analysis capabilities
+
+phase: market_research
+phase_name: Market Research & Analysis
+description: >
+  Evaluates the trainee's ability to conduct thorough market research for the
+  SmartDrive Colorado launch, including competitive analysis, customer segmentation,
+  regulatory review, and synthesis of findings into actionable marketing insights.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of insurance marketing research methodology, market sizing, and competitive analysis frameworks
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated thorough understanding of insurance market research methodology including TAM/SAM/SOM analysis for the Colorado UBI segment
+          - Correctly identified the total Colorado auto insurance market ($8.4B) and sized the addressable UBI segment within the 25-45 demographic
+          - Understood how to analyze market share data and competitive positioning maps
+          - Applied SWOT or similar framework to evaluate SmartDrive's market entry position
+          - Demonstrated knowledge of Colorado-specific insurance regulations affecting marketing (CO Rev Stat 10-1-127, SB 21-169)
+          - Understood the significance of distribution channel mix (31% direct, 24% independent agent) for SmartDrive's channel strategy
+          - Analyzed UBI adoption trends (10.1% penetration, 24-28% growth) and their implications for market timing
+          - Recognized the difference between primary research (surveys, focus groups) and secondary research (industry reports, public filings) and used both appropriately
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Conducted solid market sizing and competitive analysis
+          - Identified key competitors and their UBI products
+          - Understood the target demographic and its characteristics
+          - Analyzed competitive pricing and positioning
+          - Recognized regulatory requirements affecting marketing
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Conducted basic market research but missed key segments or competitors
+          - Market sizing was incomplete or used incorrect methodology
+          - Did not fully analyze the UBI competitive landscape
+          - Missed Colorado-specific regulatory requirements
+          - Research lacked depth in consumer attitude analysis
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to conduct meaningful market research
+          - Did not identify key competitors or their UBI offerings
+          - Market sizing was absent or fundamentally flawed
+          - Showed no awareness of regulatory environment
+          - Research was superficial and would not support strategy development
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness and quality of research conducted across market, competitive, and consumer dimensions
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Analyzed all major competitors (Progressive Snapshot, Root, Allstate Drivewise, Nationwide SmartRide) plus traditional threats (State Farm, GEICO)
+          - Profiled each competitor's UBI product features, pricing, technology, monitoring period, and maximum discount
+          - Examined consumer attitudes toward telematics including privacy concerns (67% barrier), rate increase fears (54%), and adoption motivators
+          - Analyzed channel preferences by age group and identified the 25-45 demographic's mix of digital and agent preference
+          - Researched Colorado regional markets and identified the Front Range corridor as the optimal launch geography
+          - Investigated Colorado Division of Insurance advertising requirements and telematics disclosure rules
+          - Reviewed UBI adoption trends over multiple years to project market trajectory
+          - Gathered agent perspective data on new-product adoption barriers and commission expectations
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Analyzed the top 3-4 competitors thoroughly
+          - Examined consumer attitudes toward UBI
+          - Identified key regulatory requirements
+          - Analyzed the target demographic's characteristics
+          - Researched geographic market opportunities
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Analyzed only 1-2 competitors or did surface-level analysis
+          - Consumer research was limited to demographics without psychographics or attitudes
+          - Regulatory research was incomplete
+          - Did not investigate geographic or channel considerations
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Minimal or no competitive analysis conducted
+          - No consumer research or attitude analysis
+          - Regulatory requirements not investigated
+          - Research was insufficient to inform strategy development
+
+  - name: communication
+    weight: 0.20
+    description: Quality of research communication, synthesis, and presentation of findings
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Synthesized research findings into clear, actionable insights rather than presenting raw data
+          - Created a well-organized research brief that connected market data to strategic implications
+          - Communicated findings to Carlos Mendez (actuary) in a way that leveraged his product knowledge
+          - Engaged Emma Wright effectively to gather digital channel data and benchmarks
+          - Presented research to Lisa Morgan with a clear executive summary and supporting detail
+          - Used appropriate data visualization (tables, charts, comparison matrices) to make findings accessible
+          - Clearly articulated the "so what" for each research finding -- why it matters for the campaign
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Presented research findings in a clear, organized format
+          - Connected key findings to strategic implications
+          - Communicated effectively with relevant stakeholders
+          - Used data to support conclusions
+          - Provided a usable research deliverable
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Presented raw data without synthesis or interpretation
+          - Research deliverable was disorganized or hard to follow
+          - Did not clearly connect findings to strategy implications
+          - Communication with stakeholders was limited
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to produce a coherent research deliverable
+          - Data was presented without context or interpretation
+          - No communication with relevant stakeholders
+          - Findings were not actionable
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of strategic judgment in interpreting research findings and identifying opportunities
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly identified privacy-first positioning as the key differentiation opportunity given that 67% of consumers cite privacy as their top concern and no competitor owns this space
+          - Recognized Root Insurance as the primary UBI competitor and identified its weaknesses (rate increases, financial instability, claims issues)
+          - Identified the 90-day monitoring period as a competitive disadvantage versus Root's 2-4 weeks and recommended messaging strategies to address it
+          - Recognized that Pinnacle's zero brand awareness in Colorado requires significant investment in brand building, not just product marketing
+          - Assessed the $500K budget as tight for a new-state launch and identified the need for highly efficient channel allocation
+          - Identified the agent channel as both a differentiator (versus Root's direct model) and a risk (agents may not actively sell)
+          - Recognized the Front Range corridor as the optimal launch geography based on demographic and channel analysis
+          - Flagged the tension between digital-first consumer preferences and the agency distribution model
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified key competitive differentiators and threats
+          - Recognized the major market opportunities and barriers
+          - Made reasonable judgments about target geography and demographics
+          - Identified the primary competitive threats and recommended responses
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified some opportunities but missed key strategic implications
+          - Did not fully assess the competitive threat from Root Insurance
+          - Overlooked the brand awareness challenge or the budget constraints
+          - Judgments were not well-supported by the research data
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to draw meaningful strategic conclusions from the research
+          - Did not identify key opportunities or threats
+          - Judgments contradicted the available data
+          - Research was not connected to strategic decision-making
+
+  - name: process_adherence
+    weight: 0.10
+    description: Following proper research methodology and documentation standards
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Used a structured research methodology with clear objectives, sources, and analysis framework
+          - Documented all data sources and their reliability
+          - Organized research into a professional deliverable with clear sections and supporting data
+          - Completed research within the campaign timeline to allow adequate strategy development time
+          - Maintained proper classification of competitive intelligence (internal use only)
+          - Created a research repository that can be referenced throughout the campaign
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Used a reasonable research methodology
+          - Documented key sources
+          - Produced a usable research deliverable
+          - Completed research on schedule
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Research methodology was ad hoc rather than structured
+          - Source documentation was incomplete
+          - Research deliverable was late or incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No structured research methodology
+          - Sources not documented
+          - No usable research deliverable produced
+          - Research was significantly late
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of brand, compliance, and market risks identified during research
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Identified regulatory compliance risks specific to Colorado insurance advertising and telematics disclosure requirements
+          - Flagged the risk of Root Insurance responding aggressively to SmartDrive's entry with increased Colorado ad spend or pricing changes
+          - Recognized the brand risk of entering a market with zero awareness and insufficient budget to build recognition
+          - Noted the reputational risk if consumer privacy concerns are not addressed proactively in launch messaging
+          - Identified the channel conflict risk between digital lead generation and agency distribution
+          - Assessed the risk of the 90-day monitoring period causing early churn before consumers experience the discount
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified key regulatory compliance risks
+          - Recognized competitive response risks
+          - Noted brand awareness challenges
+          - Flagged privacy-related risks
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified some risks but missed regulatory or competitive threats
+          - Did not assess the likelihood or impact of identified risks
+          - Risk awareness was surface-level
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No risk identification during research
+          - Did not consider regulatory, competitive, or brand risks
+          - Research was conducted without awareness of potential pitfalls

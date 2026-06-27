@@ -1,0 +1,277 @@
+# Advanced Tier Configuration
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# High difficulty with multiple complications, adversarial stakeholders, and ambiguous data
+
+tier: advanced
+tier_name: Advanced
+description: >
+  Expert-level difficulty designed for experienced marketing professionals.
+  Features aggressive stakeholder expectations, skeptical agency partners,
+  budget constraints, competitive responses, compliance challenges, ambiguous
+  performance data, and the need to defend strategic decisions under pressure.
+  No hints or prompts are provided.
+
+settings:
+  hints_enabled: false
+  phase_transition_hints: false
+  explicit_prompts: false
+  time_pressure: high  # Aggressive launch deadline, CEO pressure, competitive urgency
+  max_score_multiplier: 1.25  # Advanced tier allows up to 125% of base score for exceptional performance
+
+persona_overrides:
+  lisa_morgan:
+    demeanor: demanding_and_direct
+    provides_information: selectively
+    emotional_state: under_pressure
+    notes: >
+      Lisa is demanding and direct. She sets aggressive timelines and expects
+      polished work on the first pass. She challenges the trainee's strategy
+      with pointed questions about competitive response, budget sufficiency,
+      and agency motivation. She introduces mid-campaign pressure by sharing
+      that the CEO is unhappy with early metrics and questioning whether the
+      marketing team is executing effectively. She expects the trainee to
+      proactively identify problems and propose solutions before being asked.
+      She may introduce new constraints mid-campaign: a partial budget freeze
+      due to corporate Q3 cost controls (reducing available budget by $50K),
+      an accelerated timeline request from the CEO, or intelligence that Root
+      Insurance is increasing Colorado ad spend by 40%. She withholds some
+      strategic context, expecting the trainee to ask the right questions.
+
+  raj_patel:
+    demeanor: adversarial
+    provides_information: grudgingly
+    emotional_state: hostile
+    notes: >
+      Raj is openly hostile to the SmartDrive appointment. He questions why
+      his agency should invest time in an unknown Midwest carrier when he has
+      established relationships with State Farm, Progressive, and Travelers.
+      He compares Pinnacle's commission structure unfavorably to every carrier
+      he represents. He demands higher commissions (17% new business, 15%
+      renewal) or threatens to decline the appointment entirely. He brings up
+      a specific failed product launch from another carrier two years ago
+      that cost his agency time and money. His negativity is influencing at
+      least three other agency principals who are now wavering. He requires
+      multiple meetings, significant concessions, and visible marketing
+      investment before he will commit. Even after committing, he assigns
+      SmartDrive low priority and his producers write minimal business unless
+      actively managed.
+
+  emma_wright:
+    demeanor: capable_but_stretched_thin
+    provides_information: inconsistently
+    emotional_state: stressed
+    notes: >
+      Emma is stretched thin and occasionally drops balls. She misses a
+      deadline on the Facebook ad creative because she was dealing with a
+      Google Ads policy violation on another Pinnacle campaign. She pushes
+      back on compliance requirements that she sees as overly restrictive,
+      creating tension with the legal team. She over-invests budget in
+      high-performing social channels without considering overall campaign
+      balance, requiring the trainee to intervene. She presents data that
+      sometimes supports her preferred tactics rather than the overall
+      strategy. She becomes defensive when her decisions are questioned.
+      She shares concerning competitive intelligence (Root Insurance is
+      bidding on Pinnacle's branded keywords) that creates urgency and
+      requires rapid decision-making.
+
+  carlos_mendez:
+    demeanor: demanding_about_accuracy
+    provides_information: conservatively
+    emotional_state: concerned
+    notes: >
+      Carlos raises significant concerns about marketing materials. He rejects
+      the initial landing page copy because it implies the average driver will
+      save 30% when the actual average is 12-15%. He insists on language changes
+      that marketing feels will weaken the creative impact. He escalates his
+      concerns to Lisa Morgan, creating internal tension. He also introduces
+      a late-stage development: the actuarial team has adjusted SmartDrive Plus
+      pricing upward by 4% based on early Colorado loss experience, requiring
+      all marketing materials with pricing to be updated within two weeks of
+      launch. He also raises a concern about the telematics app's GPS accuracy
+      in mountainous Colorado terrain, which could affect driving scores and
+      consumer experience.
+
+  jennifer_kim:
+    demeanor: highly_skeptical
+    provides_information: with_strong_challenges
+    emotional_state: distrustful
+    notes: >
+      Jennifer is highly skeptical and provides challenging feedback. She
+      cites specific news articles about telematics data being shared with
+      data brokers and used in court cases. She questions whether the "up to
+      30% discount" is a bait-and-switch designed to collect driving data
+      while delivering minimal savings. She compares SmartDrive's marketing
+      unfavorably to Apple's privacy-first messaging and says the privacy
+      language feels like "corporate CYA, not genuine commitment." She
+      provides detailed feedback about Root Insurance's app that highlights
+      features SmartDrive lacks (immediate discount preview, friend referral
+      program, accident detection). Her feedback is accurate and valuable
+      but requires the trainee to respond without becoming defensive and to
+      separate actionable criticism from unrealistic expectations.
+
+complications:
+  - type: competitive_response
+    phase: campaign_launch
+    description: >
+      Two weeks before SmartDrive's launch, Root Insurance announces a
+      "Colorado Challenge" promotion: new customers who switch from any
+      carrier get an immediate 20% discount for the first 6 months, with
+      the test drive waived. Root also increases its Colorado digital ad
+      spend by an estimated 40%, driving up CPC costs for auto insurance
+      keywords. Root's social media campaign directly targets "drivers who
+      are tired of old-school insurance companies" -- messaging that could
+      be perceived as aimed at traditional carriers like Pinnacle.
+    impact: >
+      Significantly increases competitive pressure at the worst possible
+      time. The trainee must assess the impact on SmartDrive's positioning,
+      decide whether to adjust messaging or launch timing, recommend
+      counter-strategies, and communicate the situation to Lisa Morgan with
+      a clear action plan. The increased CPC costs may require budget
+      reallocation from search to other channels.
+
+  - type: budget_reduction
+    phase: performance_tracking
+    description: >
+      Four weeks after launch, Lisa Morgan informs the trainee that corporate
+      Q3 cost controls are reducing the SmartDrive marketing budget by $50K
+      (from $500K to $450K). The cut must come from remaining unspent budget
+      categories. Lisa asks the trainee to recommend where to cut while
+      minimizing impact on the campaign's ability to meet the 2,000-policy
+      target.
+    impact: >
+      Forces the trainee to make difficult tradeoff decisions under pressure.
+      The trainee must analyze which budget categories have the most and least
+      impact on policy generation and recommend cuts that protect the highest-
+      ROI activities. This tests prioritization, analytical skills, and the
+      ability to communicate difficult decisions to stakeholders (especially
+      agencies who may lose co-op marketing funds).
+
+  - type: pricing_change
+    phase: content_creation
+    description: >
+      Carlos Mendez announces that the actuarial team has adjusted SmartDrive
+      Plus pricing upward by 4% based on Colorado competitive filing analysis
+      and early loss experience from the Missouri beta. The new rate makes
+      SmartDrive Plus $1,477 annually (up from $1,420) for the benchmark
+      Denver profile. All marketing materials that include pricing must be
+      updated. The change is effective with the Colorado launch date.
+    impact: >
+      Tests the trainee's ability to handle a product change during campaign
+      development. Materials already in production must be updated. The pricing
+      increase narrows SmartDrive's competitive positioning against Progressive
+      ($1,350) and requires the trainee to rethink the value-based messaging
+      to emphasize post-discount savings rather than base price comparison.
+
+  - type: compliance_rejection
+    phase: content_creation
+    description: >
+      The Colorado Division of Insurance reviews SmartDrive's pre-launch
+      advertising materials as part of a routine market conduct examination
+      of new entrants. The DOI flags two issues: (1) the "Save up to 30%"
+      headline on the digital ads requires a more prominent disclaimer about
+      average savings, not just fine print; and (2) the telematics privacy
+      disclosure on the landing page does not meet the specificity requirements
+      of SB 21-169. The DOI gives Pinnacle 10 business days to remediate
+      before the launch date.
+    impact: >
+      Creates significant time pressure on the content creation phase. The
+      trainee must coordinate rapid remediation of both issues while maintaining
+      creative quality and meeting the launch deadline. This tests compliance
+      awareness, stakeholder management (legal, creative, regulatory), and
+      the ability to work under time pressure.
+
+  - type: agency_defection_threat
+    phase: agency_enablement
+    description: >
+      After the initial agency training, Raj Patel contacts two other agency
+      principals and suggests they should collectively demand higher commission
+      rates from Pinnacle before committing to active production. His argument
+      is that Pinnacle needs the agencies more than the agencies need Pinnacle,
+      since Pinnacle has zero brand awareness in Colorado. Three of the twelve
+      agencies now state they will "evaluate" SmartDrive but are not committing
+      to active sales. This represents a potential loss of 25% of the
+      distribution network.
+    impact: >
+      Tests the trainee's ability to manage a crisis in the distribution
+      channel. The trainee must develop a strategy to retain wavering agencies
+      without setting a precedent of inflated commission demands, while
+      separately working to bring Raj Patel back to a constructive posture.
+      This may require escalation to Lisa Morgan for authority to offer
+      additional incentives or modified terms.
+
+  - type: data_ambiguity
+    phase: performance_tracking
+    description: >
+      Campaign performance data shows conflicting signals. Digital channels
+      are generating leads at acceptable CPL but the quote-to-bind conversion
+      rate is significantly lower than projected (12% vs. 25% target). However,
+      the attribution model shows that many digital leads are ultimately
+      converting through the agent channel 2-3 weeks after the initial digital
+      touchpoint, suggesting the actual conversion rate may be higher than
+      the digital-only data shows. The attribution model's accuracy for this
+      cross-channel journey is uncertain.
+    impact: >
+      Tests the trainee's analytical sophistication and ability to work with
+      ambiguous data. The trainee must investigate the attribution gap,
+      determine whether the true conversion rate is higher than reported,
+      and make optimization decisions without perfect data. This requires
+      communicating uncertainty to Lisa Morgan without undermining confidence
+      in the campaign.
+
+evidence_presentation:
+  market_analysis:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Market data is comprehensive but some competitor data is estimated with
+      varying confidence levels. UBI market share data is from different
+      sources that use slightly different methodologies. The trainee must
+      note limitations and use ranges rather than precise figures.
+
+  product_spec:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Product specs are initially clear but the mid-campaign pricing adjustment
+      (4% increase on Plus tier) creates ambiguity about which materials need
+      updating and how to message the change. The GPS accuracy concern in
+      mountain terrain is a new variable not addressed in the original spec.
+
+  customer_personas:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Customer personas are well-defined but the focus group feedback (from
+      the highly skeptical Jennifer Kim) challenges several assumptions about
+      consumer willingness to adopt telematics. The trainee must reconcile
+      survey data showing 52% interest with focus group feedback suggesting
+      much higher friction.
+
+  budget_allocation:
+    clarity: moderate
+    ambiguity: high
+    notes: >
+      The initial budget allocation is detailed but the $50K mid-campaign
+      reduction creates difficult tradeoffs. The trainee must re-optimize
+      the remaining budget while maintaining campaign effectiveness. Some
+      budget commitments (events, print) are already spent, limiting
+      flexibility.
+
+  brand_guidelines:
+    clarity: high
+    ambiguity: moderate
+    notes: >
+      Brand guidelines are clear but the tension between the conservative
+      parent brand and the modern SmartDrive sub-brand creates creative
+      challenges, especially when Carlos insists on conservative product
+      claims while Lisa pushes for more aggressive marketing.
+
+  competitive_intel:
+    clarity: moderate
+    ambiguity: high
+    notes: >
+      Competitive intelligence is detailed but Root Insurance's "Colorado
+      Challenge" promotion (introduced mid-campaign) changes the competitive
+      landscape significantly. The trainee must reassess positioning and
+      potentially adjust strategy based on incomplete information about
+      Root's intentions and budget.

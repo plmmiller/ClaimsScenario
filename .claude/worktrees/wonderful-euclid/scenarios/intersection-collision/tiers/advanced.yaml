@@ -1,0 +1,288 @@
+# Advanced Tier Configuration
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# High difficulty with multiple complications, adversarial personas, and ambiguous evidence
+
+tier: advanced
+tier_name: Advanced
+description: >
+  Expert-level difficulty designed for experienced adjusters. Features attorney
+  involvement, fraud indicators, credibility challenges, inflated damages,
+  policy coverage questions, subrogation opportunities against a government
+  entity, and ambiguous evidence requiring sophisticated analysis. No hints
+  or prompts are provided.
+
+settings:
+  hints_enabled: false
+  phase_transition_hints: false
+  explicit_prompts: false
+  time_pressure: high  # Tight regulatory deadlines, attorney demand letter with deadline, insured calling frequently
+  max_score_multiplier: 1.25  # Advanced tier allows up to 125% of base score for exceptional performance
+
+persona_overrides:
+  sarah_mitchell:
+    demeanor: cooperative_but_demanding
+    provides_information: readily
+    emotional_state: stressed_and_impatient
+    notes: >
+      Sarah is cooperative with providing information but increasingly demanding
+      about the timeline. She calls multiple times per week for updates. She is
+      stressed about the rental car running out before her vehicle is repaired.
+      She questions why she has to pay a deductible when she believes the
+      accident was entirely the other driver's fault. She mentions she has a
+      friend who is a lawyer and may seek legal advice if the claim isn't
+      handled to her satisfaction.
+
+  james_torres:
+    demeanor: adversarial_through_attorney
+    provides_information: through_attorney_only
+    emotional_state: not_directly_accessible
+    represented_by_attorney: true
+    attorney:
+      name: "David Chen, Esq."
+      firm: "Chen & Associates"
+      phone: "(916) 555-0933"
+      address: "400 Capitol Mall, Suite 1200, Sacramento, CA 95814"
+      style: aggressive
+      demand_timeline: "30-day demand letter with policy limits demand"
+    notes: >
+      James retains attorney David Chen shortly after the collision. All
+      communication must go through the attorney. Attorney Chen sends an
+      aggressive demand letter seeking policy limits ($100,000 BI) within
+      30 days. The demand includes inflated general damages valuation and
+      threatens litigation. Attorney is experienced and will not accept
+      lowball offers but may negotiate reasonably if the adjuster presents
+      a well-supported position. Attorney also demands the dashcam footage
+      and complete claim file under California's right to inspect.
+
+  linda_park:
+    demeanor: cooperative_but_evasive_on_relationship
+    provides_information: with_significant_caveats
+    credibility_issues: major
+    relationship_to_torres: disclosed_but_minimized
+    notes: >
+      Linda provides her initial statement consistently with the police report.
+      However, during the insurance company's follow-up interview, she
+      mentions that James Torres looks familiar and might be her nephew Kevin's
+      coworker. When pressed on this, she becomes evasive and says "it doesn't
+      matter" and "I told the truth about what I saw." This relationship raises
+      credibility concerns. Additionally, her "hesitation" observation about
+      Vehicle A (added in a follow-up) could be seen as an attempt to further
+      support James's version. Her credibility as an independent witness is
+      significantly compromised.
+
+  mike_reeves:
+    demeanor: aggressive_and_defensive
+    estimate_accuracy: inflated
+    supplement_justified: partially
+    notes: >
+      Mike's Auto Body estimates are above market rates. The initial estimate
+      includes some charges that appear inflated (labor hours on the high
+      side, OEM parts where aftermarket equivalents are available). The
+      supplement request includes items that are questionable: the CV axle
+      replacement may be due to pre-existing wear rather than collision
+      damage, and the strut tower "repair" appears more extensive than the
+      impact would warrant. Mike becomes aggressive and defensive when
+      challenged, threatening to file a complaint with the Department of
+      Insurance and to involve the vehicle owner. The adjuster must
+      professionally negotiate the estimate while maintaining good faith.
+
+      Red flags:
+      - Labor rates $2-7/hr above Sacramento market average
+      - 12 hours of labor on supplement for damage that may be partially pre-existing
+      - Strut tower work seems disproportionate to the impact angle and severity
+      - Mike has been flagged by SIU in two prior claims (different insurers) for estimate inflation
+
+  dr_patel:
+    treatment_approach: aggressive
+    billing_accuracy: questionable
+    notes: >
+      Dr. Patel's treatment plan raises some concerns at the advanced tier.
+      The 12-week PT prescription with 24 sessions is on the aggressive end
+      for a meniscus tear from a moderate-speed intersection collision. Clinical
+      guidelines suggest 6-8 weeks of PT is typically sufficient for this type
+      of injury before reassessing. The orthopedic visits are appropriately
+      spaced but the continued recommendation to "assess for surgery" at week 12
+      keeps the case open and increases the claim value. The PT billing includes
+      charges for modalities (e-stim, ultrasound) that have limited evidence
+      base for meniscus tears. The overall treatment cost ($10,550) seems
+      disproportionate to the mechanism of injury. An independent medical
+      examination (IME) should be considered.
+
+      Red flags:
+      - 24 PT sessions is aggressive for this mechanism of injury
+      - Modalities billed (e-stim, ultrasound) have questionable efficacy for meniscus tears
+      - Treatment extends to exactly 12 weeks (a common threshold for attorney demand timing)
+      - Surgery discussion at week 12 increases claim value without commitment to surgical intervention
+
+complications:
+  - type: attorney_involvement
+    phase: investigation
+    description: >
+      James Torres retains attorney David Chen within one week of the collision.
+      Attorney sends a letter of representation and demands preservation of all
+      evidence. All communication must now go through the attorney. Attorney
+      sends a 30-day demand letter seeking $100,000 (policy limits for BI) with
+      an itemized demand: $10,550 medical specials, $8,000 lost wages, $81,450
+      general damages (pain and suffering). The demand threatens bad faith
+      litigation if not settled within the demand period.
+    impact: >
+      Significantly increases claim complexity. The adjuster must evaluate
+      whether the demand is reasonable, communicate only through the attorney,
+      assess the litigation risk, and make a timely response. The policy limits
+      demand creates an excess exposure concern that may require insured
+      notification under California law.
+
+  - type: fraud_indicators
+    phase: damages
+    description: >
+      Multiple fraud indicators emerge during the damages evaluation:
+      1. Mike's Auto Body has two prior SIU flags for estimate inflation
+      2. The supplement includes questionable items (CV axle, strut tower work)
+      3. The PT billing duration and modalities are aggressive for the injury
+      4. The witness may have a personal connection to the claimant
+      5. The attorney demand arrives exactly at the end of the 12-week PT period
+      6. The treatment timeline is suspiciously aligned with typical demand timing
+    impact: >
+      The adjuster must evaluate these indicators individually and collectively.
+      An SIU referral should be considered. However, the adjuster must balance
+      fraud awareness with good faith claim handling -- not all red flags mean
+      fraud, and denying legitimate claims based on suspicion alone creates
+      bad faith exposure.
+
+  - type: policy_lapse_question
+    phase: coverage
+    description: >
+      The policy experienced a 15-day lapse (Feb 1-15, 2026) due to non-payment
+      and was reinstated Feb 16. The loss occurred March 15 during the reinstated
+      period. The reinstatement endorsement (PCI-RS-01) contains language that
+      "coverage under this reinstatement shall not apply to any loss, damage, or
+      liability arising from conditions or circumstances that existed during the
+      period of lapse." At the advanced tier, the claimant's attorney argues that
+      Sarah's driving habits and route (she drives through this intersection daily
+      for her commute) constitute a "circumstance that existed during the lapse."
+      This is a stretch argument but creates a coverage question that must be
+      analyzed and documented.
+    impact: >
+      The adjuster must analyze the reinstatement endorsement language, determine
+      whether this argument has merit (it likely doesn't -- the collision itself
+      is a new occurrence on March 15, not a pre-existing condition), document the
+      analysis, and potentially consult coverage counsel. This complication tests
+      the adjuster's ability to handle creative coverage defenses while maintaining
+      good faith.
+
+  - type: subrogation_against_municipality
+    phase: resolution
+    description: >
+      During the investigation, signal timing data from Sacramento DOT reveals
+      that the left-turn arrow phase at this intersection has been reported as
+      "intermittently malfunctioning" for 3 months prior to the collision, with
+      the arrow occasionally displaying green simultaneously with the Elm Avenue
+      through-traffic green phase. Sacramento DOT's maintenance records show two
+      prior repair requests for this signal that were closed as "unable to
+      replicate." This creates a potential subrogation opportunity against the
+      City of Sacramento for negligent maintenance of the traffic signal.
+    impact: >
+      The adjuster must recognize this as a significant subrogation opportunity
+      and determine how to pursue a government liability claim, including
+      California Government Code Section 835 (dangerous condition of public
+      property) and the requirements for filing a government tort claim within
+      the statutory period. This also affects the liability analysis -- if the
+      signal was malfunctioning, both drivers may have legitimately had green
+      signals, shifting some fault to the municipality.
+
+  - type: dashcam_ambiguity
+    phase: investigation
+    description: >
+      The dashcam footage cuts out 1 second before impact and cannot determine
+      whether Vehicle A had a protected green arrow or was turning on an
+      unprotected green. The dashcam shows red for southbound Oak Street, which
+      means either Phase 1 (protected left arrow) or Phase 3 (Elm Ave green)
+      was active. The claimant's attorney argues the dashcam supports James's
+      version because "if Vehicle A had a green arrow, the Elm Avenue signal
+      would have been red and Vehicle B would not have been proceeding through."
+      However, this assumes Vehicle B did not run a red light, which is the
+      disputed fact. The argument is circular but sounds compelling. The adjuster
+      must analyze it critically.
+    impact: >
+      Tests the adjuster's ability to critically analyze evidence and identify
+      logical fallacies in arguments. The dashcam evidence is genuinely ambiguous
+      and the attorney's argument, while circular, requires a substantive response.
+
+  - type: excess_exposure_notice
+    phase: negotiation
+    description: >
+      The attorney's demand for policy limits ($100,000 BI) creates a potential
+      excess exposure situation. Under California law (Crisci v. Security Insurance
+      Co.), if the insurer unreasonably refuses a policy limits demand and the
+      case goes to trial with a judgment exceeding policy limits, the insurer may
+      be liable for the excess. The adjuster must evaluate whether a policy limits
+      demand is reasonable given the injuries and liability, and consider whether
+      to notify Sarah of the excess exposure situation.
+    impact: >
+      Tests the adjuster's understanding of bad faith exposure and excess judgment
+      risk. The adjuster must balance the company's financial interests against
+      the duty to protect the insured from excess exposure. This requires careful
+      evaluation of the claim value and a well-documented response to the demand.
+
+evidence_presentation:
+  police_report:
+    clarity: high
+    ambiguity: moderate
+    notes: >
+      Police report is complete but signal timing data is pending. No citations
+      were issued. The report notes the signal has a 3-phase system but does not
+      specify which phase was active. The pending DOT data (when obtained) will
+      reveal the intermittent signal malfunction issue.
+
+  dashcam_footage:
+    clarity: moderate
+    ambiguity: high
+    notes: >
+      Dashcam cuts out 1 second before impact. Shows red for southbound Oak
+      Street but cannot determine whether Vehicle A had a protected arrow or
+      Vehicle B had the green. The attorney makes a circular argument about
+      the footage that sounds compelling but is logically flawed. The adjuster
+      must analyze the footage critically and recognize the ambiguity cannot
+      be resolved by this evidence alone.
+
+  witness_statement:
+    clarity: low
+    ambiguity: high
+    notes: >
+      Linda Park's statement is compromised by: (1) she wasn't watching the
+      signal before the collision, (2) she has a potential personal connection
+      to James Torres through her nephew, (3) she adds the "hesitation" detail
+      in a follow-up that wasn't in her original statement. Her credibility as
+      an independent witness is significantly diminished. The adjuster must
+      weigh this testimony very carefully.
+
+  medical_records:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Medical records document a legitimate meniscus tear but the treatment
+      duration and billing raise questions. The 24-session PT course with
+      modalities of questionable efficacy, combined with the treatment timeline
+      aligning with typical attorney demand timing, should prompt scrutiny.
+      An IME may be warranted.
+
+  repair_estimates:
+    clarity: moderate
+    ambiguity: moderate
+    notes: >
+      Initial estimates are slightly above market. The supplement from Mike's
+      Auto Body includes items of questionable collision-relatedness (CV axle,
+      extensive strut tower work). Mike has prior SIU flags. The adjuster
+      should independently verify the supplement with a re-inspection or
+      independent appraiser.
+
+  policy_declarations:
+    clarity: high
+    ambiguity: moderate
+    notes: >
+      The policy lapse (Feb 1-15) and reinstatement are clearly documented.
+      The reinstatement endorsement language about "conditions or circumstances
+      that existed during the period of lapse" creates an ambiguity that the
+      claimant's attorney exploits. The adjuster must analyze this language
+      carefully and likely conclude the loss is covered, but the analysis must
+      be documented thoroughly.

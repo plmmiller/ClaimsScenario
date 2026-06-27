@@ -1,0 +1,270 @@
+id: product-launch-campaign
+title: "SmartDrive Usage-Based Auto Insurance Product Launch"
+description: >
+  A regional insurer is expanding into Colorado with a new usage-based auto
+  insurance product called SmartDrive, targeting safe drivers aged 25-45. The
+  marketing trainee must conduct market research, develop positioning and messaging,
+  create multi-channel campaign materials, enable agency distribution partners,
+  execute the launch, track performance, and report results to leadership. The
+  scenario covers the full marketing campaign lifecycle from market analysis
+  through ROI reporting, requiring the trainee to balance brand consistency,
+  regulatory compliance, budget constraints, and stakeholder expectations.
+version: "1.0"
+difficulty_range:
+  - guided
+  - standard
+  - advanced
+estimated_duration:
+  guided: 30
+  standard: 45
+  advanced: 60
+jurisdiction: "Colorado"
+
+learning_objectives:
+  - "Conduct thorough market research including competitor analysis, customer segmentation, and regulatory landscape for a new-state insurance product launch"
+  - "Develop a clear product positioning and messaging framework that differentiates SmartDrive from existing usage-based insurance offerings"
+  - "Create integrated campaign materials across digital, email, social, and agency channels that maintain brand consistency and regulatory compliance"
+  - "Design and execute an agency enablement strategy that motivates independent agents to actively sell a new product"
+  - "Launch a coordinated multi-channel campaign within budget constraints while managing stakeholder expectations"
+  - "Monitor campaign KPIs, optimize spend allocation in real time, and calculate marketing ROI"
+  - "Compile and present campaign results to senior leadership with actionable recommendations for future campaigns"
+
+fact_pattern:
+  campaign_start_date: "2026-06-01"
+  product_launch_date: "2026-09-15"
+  reporting_deadline: "2026-12-15"
+  company:
+    name: "Pinnacle Mutual Insurance"
+    type: "Regional mutual insurer"
+    headquarters: "Kansas City, MO"
+    states_currently_operating: ["Missouri", "Kansas", "Nebraska", "Iowa", "Oklahoma"]
+    am_best_rating: "A- (Excellent)"
+    annual_premium_volume: "$1.2 billion"
+    description: >
+      Pinnacle Mutual is a well-established regional insurer known for conservative
+      underwriting and strong agent relationships. The company has operated in the
+      Midwest for 75 years and is making its first geographic expansion in over a
+      decade. Pinnacle has a reputation for reliability but is perceived as
+      old-fashioned compared to insurtech competitors. The SmartDrive launch
+      represents both a product innovation and a geographic expansion, making it
+      a high-visibility initiative within the organization.
+
+  product:
+    name: "SmartDrive"
+    type: "Usage-based auto insurance (UBI)"
+    target_demographic: "Safe drivers aged 25-45"
+    target_state: "Colorado"
+    description: >
+      SmartDrive uses a smartphone-based telematics app (no OBD plug-in required)
+      to track driving behavior including speed, braking, acceleration, cornering,
+      and phone distraction. Drivers who maintain safe scores receive premium
+      discounts of up to 30%. The product includes a gamified safe-driving dashboard,
+      monthly driving reports, and milestone rewards. SmartDrive is designed to
+      appeal to tech-comfortable drivers who believe they deserve lower rates based
+      on their actual driving behavior.
+    pricing_tiers:
+      - name: "SmartDrive Basic"
+        description: "Entry tier with standard coverage and up to 15% safe-driving discount"
+        annual_premium_range: "$1,200 - $1,800"
+      - name: "SmartDrive Plus"
+        description: "Enhanced tier with broader coverage and up to 25% safe-driving discount"
+        annual_premium_range: "$1,600 - $2,400"
+      - name: "SmartDrive Elite"
+        description: "Premium tier with comprehensive coverage and up to 30% safe-driving discount"
+        annual_premium_range: "$2,000 - $3,200"
+    commission_structure:
+      new_business: "15% first year"
+      renewal: "12% renewal"
+      volume_bonus: "Additional 2% for 20+ policies per quarter"
+      launch_incentive: "Extra $50 per policy for first 90 days"
+
+  budget:
+    total: 500000
+    currency: "USD"
+    allocation:
+      digital_advertising: 175000
+      content_creation: 75000
+      agency_enablement: 60000
+      email_marketing: 35000
+      social_media: 50000
+      events_sponsorships: 40000
+      print_collateral: 25000
+      analytics_tools: 20000
+      contingency: 20000
+
+  key_challenges: >
+    The trainee faces multiple challenges: entering a competitive Colorado market
+    dominated by national carriers with established brand recognition; overcoming
+    consumer skepticism about telematics and data privacy; motivating independent
+    agents who already have relationships with competing carriers; differentiating
+    from well-funded insurtech UBI competitors like Root and Metromile; maintaining
+    brand consistency while adapting messaging for a new market; complying with
+    Colorado Division of Insurance advertising regulations; and demonstrating
+    measurable ROI to justify continued investment in geographic expansion.
+
+phases:
+  market_research:
+    name: "Market Research & Analysis"
+    description: "Analyze the Colorado auto insurance market, competitive landscape, and target customer segments"
+    available_personas:
+      - carlos-mendez
+      - emma-wright
+    available_evidence:
+      - market_analysis
+      - competitive_intel
+      - customer_personas
+    required_actions:
+      - "Analyze Colorado auto insurance market size, growth trends, and key demographics"
+      - "Identify and profile top competitors in the Colorado UBI/telematics space"
+      - "Define primary and secondary target customer segments with demographic and psychographic profiles"
+      - "Assess consumer attitudes toward telematics and data privacy in Colorado"
+      - "Identify regulatory requirements for insurance advertising in Colorado"
+      - "Evaluate channel preferences and media consumption patterns of the target demographic"
+      - "Synthesize findings into actionable market insights for strategy development"
+    learning_objectives:
+      - "Demonstrate ability to gather and synthesize market data into actionable marketing insights"
+      - "Identify market opportunities and threats that inform positioning strategy"
+
+  strategy_development:
+    name: "Strategy Development"
+    description: "Define product positioning, messaging framework, value proposition, and channel strategy"
+    available_personas:
+      - lisa-morgan
+      - carlos-mendez
+      - emma-wright
+    available_evidence:
+      - market_analysis
+      - product_spec
+      - customer_personas
+      - brand_guidelines
+      - competitive_intel
+    required_actions:
+      - "Develop a clear positioning statement that differentiates SmartDrive from competitors"
+      - "Create a messaging hierarchy with primary, secondary, and supporting messages for each audience"
+      - "Define the value proposition for each target segment (consumers and agents)"
+      - "Select and prioritize marketing channels with rationale based on audience reach and cost efficiency"
+      - "Create a campaign timeline with key milestones from pre-launch through post-launch"
+      - "Define KPIs and success metrics for each channel and the overall campaign"
+      - "Develop a content strategy that maps content types to customer journey stages"
+      - "Present strategy to VP of Marketing for approval"
+    learning_objectives:
+      - "Develop a cohesive marketing strategy grounded in market research and business objectives"
+      - "Align channel selection and budget allocation with target audience behavior"
+
+  content_creation:
+    name: "Content Creation"
+    description: "Develop campaign materials across digital, print, and agency channels"
+    available_personas:
+      - lisa-morgan
+      - emma-wright
+      - jennifer-kim
+    available_evidence:
+      - brand_guidelines
+      - product_spec
+      - customer_personas
+      - budget_allocation
+    required_actions:
+      - "Create digital ad copy and concepts for search, display, and social platforms"
+      - "Develop landing page wireframe and copy for SmartDrive Colorado launch"
+      - "Write email nurture sequences for prospects and agent communications"
+      - "Create social media content calendar with post concepts for 90 days"
+      - "Develop agent sales kit including product one-pager, FAQ, and objection handlers"
+      - "Create consumer-facing educational content about UBI and safe driving benefits"
+      - "Ensure all materials comply with Colorado Division of Insurance advertising rules"
+      - "Conduct consumer focus group feedback on key messaging and creative concepts"
+    learning_objectives:
+      - "Create compelling, compliant marketing materials that resonate with target audiences"
+      - "Incorporate consumer feedback to refine messaging before launch"
+
+  agency_enablement:
+    name: "Agency Enablement"
+    description: "Train and equip independent agency partners to sell SmartDrive in Colorado"
+    available_personas:
+      - raj-patel
+      - carlos-mendez
+      - lisa-morgan
+    available_evidence:
+      - product_spec
+      - competitive_intel
+      - brand_guidelines
+    required_actions:
+      - "Develop agency training program covering product features, pricing, and competitive advantages"
+      - "Create agent-facing materials including rate comparisons, commission details, and sales scripts"
+      - "Present product and commission structure to key agency principals"
+      - "Address agent concerns about product viability, telematics adoption, and customer privacy"
+      - "Establish co-op marketing program with guidelines for agency-level advertising"
+      - "Set up agent portal access with quoting tools and marketing asset library"
+      - "Create incentive program to motivate early adoption and high-volume production"
+    learning_objectives:
+      - "Design an agency enablement strategy that overcomes resistance and motivates adoption"
+      - "Handle stakeholder objections with data-driven responses"
+
+  campaign_launch:
+    name: "Campaign Launch"
+    description: "Execute the coordinated multi-channel launch of SmartDrive in Colorado"
+    available_personas:
+      - lisa-morgan
+      - emma-wright
+      - raj-patel
+    available_evidence:
+      - budget_allocation
+      - brand_guidelines
+      - product_spec
+    required_actions:
+      - "Execute digital advertising campaign across Google Ads, Facebook/Instagram, and programmatic display"
+      - "Launch email campaigns to segmented prospect lists and agent distribution"
+      - "Activate social media content calendar and community management plan"
+      - "Coordinate agency launch event or webinar for Colorado agents"
+      - "Deploy landing pages with tracking pixels and conversion funnels"
+      - "Initiate PR outreach for earned media coverage of Colorado market entry"
+      - "Monitor real-time campaign performance and address any launch-day issues"
+      - "Ensure all live assets are compliant and brand-consistent"
+    learning_objectives:
+      - "Execute a coordinated multi-channel launch with attention to timing and consistency"
+      - "Manage real-time issues and stakeholder communication during launch"
+
+  performance_tracking:
+    name: "Performance Tracking & Optimization"
+    description: "Monitor KPIs, analyze results, and optimize campaign spend for maximum ROI"
+    available_personas:
+      - emma-wright
+      - lisa-morgan
+    available_evidence:
+      - budget_allocation
+      - market_analysis
+    required_actions:
+      - "Monitor daily and weekly KPIs across all channels (impressions, clicks, leads, quotes, binds)"
+      - "Analyze conversion funnel performance from awareness through policy bind"
+      - "Identify top-performing and underperforming channels and creative assets"
+      - "Recommend and implement budget reallocation based on performance data"
+      - "Track customer acquisition cost (CAC) against target benchmarks"
+      - "Monitor agency production metrics and identify support needs"
+      - "A/B test ad copy, landing pages, and email subject lines for optimization"
+      - "Prepare weekly performance dashboards for leadership review"
+    learning_objectives:
+      - "Analyze multi-channel campaign data to identify optimization opportunities"
+      - "Make data-driven budget reallocation decisions to maximize ROI"
+
+  reporting:
+    name: "Campaign Reporting & ROI Analysis"
+    description: "Compile campaign results, calculate ROI, and present findings to leadership"
+    available_personas:
+      - lisa-morgan
+      - emma-wright
+      - carlos-mendez
+    available_evidence:
+      - budget_allocation
+      - market_analysis
+      - product_spec
+    required_actions:
+      - "Compile comprehensive campaign performance data across all channels"
+      - "Calculate marketing ROI including customer acquisition cost and lifetime value projections"
+      - "Analyze campaign performance against original KPI targets"
+      - "Identify key learnings including what worked, what did not, and why"
+      - "Benchmark results against industry standards for insurance product launches"
+      - "Develop recommendations for ongoing marketing and future state expansions"
+      - "Create executive presentation for VP of Marketing and senior leadership"
+      - "Outline Q2 optimization plan based on campaign learnings"
+    learning_objectives:
+      - "Calculate and present marketing ROI with supporting data and methodology"
+      - "Translate campaign data into strategic recommendations for leadership"

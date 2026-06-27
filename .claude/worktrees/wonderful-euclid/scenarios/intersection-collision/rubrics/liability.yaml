@@ -1,0 +1,252 @@
+# Liability Determination Phase Rubric
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Evaluates the trainee's liability analysis and determination
+
+phase: liability
+phase_name: Liability Determination
+description: >
+  Evaluates the trainee's ability to analyze the evidence, apply California
+  comparative negligence law, assess each party's degree of fault, and
+  make a well-reasoned liability determination for the intersection collision.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of liability principles, traffic law, and comparative negligence
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated thorough understanding of California's pure comparative negligence system (Li v. Yellow Cab Co.)
+          - Correctly applied California Vehicle Code Section 21801(a) - duty of left-turning driver to yield to approaching traffic
+          - Understood the distinction between protected green arrow (right of way for left turner) and unprotected green (must yield)
+          - Applied the concept of last clear chance and how it factors into comparative negligence analysis
+          - Recognized that both parties may bear some percentage of fault depending on signal phase evidence
+          - Understood how California Vehicle Code Section 21453 (red light) applies if one party entered on red
+          - Correctly analyzed the physical evidence (point of impact, skid marks) in the context of liability
+          - Demonstrated understanding of how California's pure comparative negligence allows recovery even at 99% fault
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Applied California comparative negligence correctly
+          - Understood the left-turn-yield rule and its exceptions (protected arrow)
+          - Considered physical evidence in the liability analysis
+          - Made a reasonable fault allocation based on available evidence
+          - Understood the general framework of comparative fault analysis
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Understood comparative negligence conceptually but applied it incorrectly
+          - Did not differentiate between protected and unprotected left turns
+          - Relied too heavily on one piece of evidence without considering the totality
+          - Made a fault allocation that was not well-supported by the evidence
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not understand or apply comparative negligence
+          - Applied an all-or-nothing liability determination (contributory negligence approach)
+          - Failed to consider California Vehicle Code provisions
+          - Made a liability determination unsupported by evidence
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of evidence analysis supporting the liability determination
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Systematically analyzed each piece of evidence and its weight in the liability determination
+          - Cross-referenced dashcam footage timing with signal phase data (if obtained) to determine which phase was active
+          - Analyzed skid mark evidence (32 feet from Vehicle B, none from Vehicle A) to assess each driver's pre-impact actions
+          - Evaluated the point of impact location (18 feet west of center) and what it indicates about the timing and angle of Vehicle A's turn
+          - Assessed Linda Park's statement critically, weighing her observation that Vehicle B had the green against her admission that she wasn't watching the signal beforehand
+          - Considered the credibility issue with Linda Park's potential connection to James Torres
+          - Compared both drivers' statements against the physical evidence for consistency
+          - Identified which facts are established and which remain disputed
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Analyzed the key evidence items and their relevance to liability
+          - Considered both drivers' statements and the witness account
+          - Reviewed physical evidence (skid marks, point of impact)
+          - Identified the key disputed fact (signal phase)
+          - Weighed evidence appropriately in the analysis
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Analyzed some evidence but missed key items
+          - Did not critically evaluate witness credibility
+          - Over-relied on one piece of evidence (e.g., only the witness statement)
+          - Failed to identify or address the remaining factual disputes
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not systematically analyze the available evidence
+          - Ignored physical evidence in favor of statements only
+          - Failed to address the central disputed fact (signal phase)
+          - Made liability determination without adequate evidentiary basis
+
+  - name: communication
+    weight: 0.20
+    description: Quality of liability decision communication to all parties
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Communicated the liability determination to both parties clearly and professionally
+          - Explained the basis for the fault allocation, citing specific evidence and applicable law
+          - When communicating with Sarah, explained how the comparative negligence percentage affects her claim and recovery
+          - When communicating with James (or his attorney), explained the liability position clearly and the basis for any comparative fault assigned to him
+          - Handled disagreement or pushback from either party professionally and without changing the determination based on pressure alone
+          - Provided the liability determination in writing with clear reasoning
+          - Explained the insured's right to dispute the determination and the process for doing so
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Communicated the liability determination to both parties
+          - Provided a clear explanation of the fault allocation
+          - Handled initial reactions professionally
+          - Provided written documentation of the determination
+          - Explained comparative negligence impact on damages
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Communicated the determination but explanation was unclear or incomplete
+          - Did not adequately explain the basis for the fault allocation
+          - Handled pushback poorly (either caving to pressure or being dismissive)
+          - Written determination lacked sufficient detail
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to clearly communicate the liability determination
+          - Did not explain the basis or applicable law
+          - Was unprofessional when handling disagreement
+          - Did not provide written documentation
+
+  - name: judgment
+    weight: 0.20
+    description: Quality and soundness of the liability determination
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Made a well-reasoned liability determination that accounts for all available evidence and the remaining ambiguity
+          - If signal timing data confirms Elm Avenue had green (Phase 3), correctly assigned majority fault to Vehicle A for failing to yield on an unprotected left turn, with potential minor comparative fault to Vehicle B if speed or inattention contributed
+          - If signal timing data confirms protected left arrow (Phase 1), correctly assigned majority fault to Vehicle B for running the red
+          - If signal timing data is inconclusive, made a reasonable determination based on the balance of evidence (witness statement, physical evidence, dashcam analysis)
+          - Assigned specific fault percentages with clear justification for each point (e.g., Vehicle A 70% / Vehicle B 30%)
+          - Considered secondary factors such as Vehicle A's failure to brake (no skid marks) and Vehicle B's speed
+          - Recognized this is a close case and documented the reasoning thoroughly to withstand potential litigation review
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Made a reasonable liability determination supported by the evidence
+          - Assigned specific fault percentages with general justification
+          - Considered the primary and secondary factors
+          - Recognized the case complexity and documented reasoning
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Made a liability determination that was reasonable but not fully supported
+          - Fault percentages were assigned without clear justification
+          - Overlooked secondary contributing factors
+          - Did not adequately address the ambiguity in the evidence
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Made an unreasonable liability determination unsupported by evidence
+          - Applied arbitrary fault percentages
+          - Ignored key evidence or gave it inappropriate weight
+          - Failed to document reasoning or provide justification
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with liability determination procedures
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Completed a formal liability analysis memorandum for the file
+          - Documented the evidence considered, the weight given to each item, and the legal basis for the determination
+          - Obtained supervisor review for the liability determination as required for disputed liability claims
+          - Issued liability determination within California's regulatory timeline
+          - Sent written liability position letters to all parties
+          - Set diary for any outstanding evidence that could change the determination (e.g., pending signal timing data)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Completed liability analysis documentation
+          - Obtained necessary approvals
+          - Issued timely determination
+          - Sent required communications to parties
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Documentation was incomplete or lacked detail
+          - Missed supervisor review requirement
+          - Determination was issued late
+          - Required communications were delayed
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No formal liability analysis documentation
+          - Did not obtain required approvals
+          - Significant delays in determination
+          - Failed to communicate determination to parties
+
+  - name: fraud_awareness
+    weight: 0.05
+    description: Awareness of fraud indicators in the liability context
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Considered whether the conflicting signal claims could indicate staged accident or coached statements
+          - Analyzed the witness Linda Park's potential relationship with James Torres and assessed whether it affects her credibility on the signal observation
+          - Reviewed the dashcam footage gap critically - while accepting the forensic finding of hardware fault, documented it as a factor
+          - Considered the totality of the evidence for consistency rather than relying on any single account
+          - Documented all credibility assessments for the file
+          - Determined that the evidence does not support a staged accident conclusion but noted the credibility concerns
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Considered the witness credibility issue
+          - Analyzed statements for internal consistency
+          - Documented credibility assessments
+          - Reached appropriate conclusions about fraud indicators
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not fully consider witness credibility issues
+          - Did not analyze statements for consistency
+          - Documentation of credibility assessment was minimal
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not consider any credibility issues
+          - Accepted all statements at face value without analysis
+          - No documentation of credibility or fraud analysis

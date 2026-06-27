@@ -1,0 +1,263 @@
+# Risk Assessment Phase Rubric
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Evaluates the trainee's property risk evaluation and hazard identification
+
+phase: risk_assessment
+phase_name: Risk Assessment
+description: >
+  Evaluates the trainee's ability to systematically assess the physical risk
+  characteristics of the property including construction, condition, hazards,
+  exposures, protection systems, and adjacent occupancies to form a comprehensive
+  risk profile.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of property risk evaluation, construction classes, protection systems, and hazard assessment
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly classified the building as ISO Construction Class 4 (Masonry Non-Combustible) and understood its fire resistance characteristics
+          - Accurately assessed the flat roof's condition, remaining useful life, and the implications for water damage exposure in Central Texas
+          - Understood the significance of the wet pipe sprinkler system and how it affects both fire risk mitigation and potential water damage from accidental discharge
+          - Properly evaluated the ISO Protection Class 3 and its components (fire department response, hydrant distance, water supply)
+          - Recognized that the repair area with soldering and heat guns introduces a hot work hazard that requires specific controls
+          - Understood how the 2-hour CMU fire wall between units mitigates but does not eliminate the restaurant fire exposure
+          - Assessed the wind and hail exposure for a flat-roof commercial building in Travis County, TX
+          - Evaluated the building's electrical, plumbing, and HVAC systems relative to their age and condition
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Correctly classified construction and protection class
+          - Assessed roof condition and water damage exposure appropriately
+          - Evaluated sprinkler and alarm systems
+          - Recognized the restaurant fire exposure
+          - Identified the repair area hazard
+          - Assessed building systems condition
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Errors in construction or protection class classification
+          - Incomplete assessment of roof exposure
+          - Did not fully evaluate the sprinkler system's dual role (protection and water damage risk)
+          - Underestimated the restaurant fire exposure
+          - Missed the repair area hazard assessment
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Could not correctly classify construction or protection class
+          - No assessment of roof condition or water damage exposure
+          - Did not evaluate fire protection systems
+          - Failed to identify adjacent occupancy exposures
+          - No understanding of building systems assessment
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of risk evaluation using inspection report, photos, and supporting documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Reviewed the loss control inspection report in detail and followed up on all findings and recommendations
+          - Cross-referenced the inspection findings with the application data to verify consistency
+          - Investigated the restaurant exposure beyond the inspection report by requesting the hood cleaning certificate and verifying NFPA 96 compliance
+          - Assessed the vacant unit exposure by contacting building management for security and maintenance information
+          - Evaluated the repair area hazard in detail, identifying all heat-producing equipment and confirming safety controls
+          - Reviewed the photo documentation systematically, noting the water-stained ceiling tiles and fire lane obstruction
+          - Assessed the fire lane access issue and its potential impact on fire department response
+          - Inquired about the building's catastrophe exposure (wind, hail, tornado) for the Travis County location
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Reviewed the inspection report and identified key findings
+          - Cross-referenced inspection data with the application
+          - Investigated the restaurant and vacant unit exposures
+          - Assessed the repair area hazard
+          - Reviewed photo documentation
+          - Identified the water stain concern
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Reviewed the inspection report superficially
+          - Did not cross-reference inspection findings with application data
+          - Did not investigate adjacent occupancy exposures in depth
+          - Missed 1-2 significant findings in the photo documentation
+          - Did not follow up on inspection recommendations
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not meaningfully review the inspection report
+          - No cross-referencing of data sources
+          - Failed to investigate adjacent exposures
+          - Did not review photo documentation
+          - No follow-up on any findings
+
+  - name: communication
+    weight: 0.20
+    description: Quality of communication during risk assessment, including interactions with the inspector, agent, and mentor
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Asked the loss control inspector targeted follow-up questions about ambiguous findings (repair area equipment, water stains, vacant unit)
+          - Communicated risk assessment findings to the agent clearly, explaining what concerns were identified and what additional information is needed
+          - If consulting the senior underwriter, presented the risk assessment in an organized manner with clear identification of favorable and unfavorable factors
+          - Used proper technical terminology when discussing construction, protection, and hazard classifications
+          - Documented risk assessment conclusions in a clear, structured format suitable for the underwriting file
+          - Communicated any loss control recommendations that would be required as conditions of coverage
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Asked appropriate follow-up questions of the inspector
+          - Communicated findings clearly to the agent
+          - Presented risk assessment to mentor in an organized manner
+          - Used appropriate terminology
+          - Documented conclusions adequately
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Limited follow-up with the inspector
+          - Communication with the agent lacked clarity on risk concerns
+          - Risk assessment presentation was disorganized
+          - Documentation was incomplete
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No follow-up with the inspector
+          - Did not communicate risk concerns to the agent
+          - Could not articulate the risk assessment
+          - No documentation of findings
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of risk evaluation conclusions and their impact on underwriting decisions
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Reached a balanced conclusion that the risk is acceptable with conditions, identifying specific mitigants for each concern
+          - Correctly weighted the favorable factors (sprinklers, alarm, new roof, updated systems, Protection Class 3) against unfavorable factors (restaurant, prior claim, flat roof, vacant unit)
+          - Determined that the restaurant exposure is manageable due to the 2-hour fire wall, current hood cleaning, and sprinkler protection
+          - Concluded that the prior water damage claim is mitigated by the roof replacement, additional drains, and quarterly maintenance
+          - Identified the repair area as requiring a hot work condition but not a declination factor
+          - Recognized the vacant unit as a temporary concern that should be addressed through loss control conditions
+          - Developed a list of risk conditions that should be attached to any quote offered
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Reached a reasonable risk assessment conclusion
+          - Balanced favorable and unfavorable factors appropriately
+          - Identified key conditions for coverage
+          - Recognized the risk as manageable with appropriate terms
+          - Identified the primary risk drivers
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Risk assessment was either too favorable (ignoring concerns) or too conservative (overweighting negatives)
+          - Did not balance favorable and unfavorable factors
+          - Conditions identified were incomplete or inappropriate
+          - Failed to synthesize multiple risk factors into a coherent assessment
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Risk assessment conclusion was fundamentally flawed
+          - Could not balance competing risk factors
+          - No conditions identified
+          - Either recommended declination of a writeable risk or accepted a risk without recognizing significant concerns
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with risk assessment procedures and documentation requirements
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Followed the company's risk assessment checklist systematically
+          - Documented all risk factors with supporting evidence from the inspection and application
+          - Created a risk assessment summary suitable for the underwriting file
+          - Attached loss control recommendations as conditions with specific timelines
+          - Updated the submission diary with risk assessment completion and next steps
+          - Filed the inspection report and photo documentation in the underwriting file
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Followed the risk assessment process
+          - Documented key findings
+          - Created an adequate risk summary
+          - Attached relevant conditions
+          - Updated the diary
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Incomplete adherence to the assessment process
+          - Documentation gaps
+          - Risk summary was incomplete
+          - Did not attach conditions
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not follow the risk assessment process
+          - No documentation
+          - No risk summary created
+          - No conditions or diary updates
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Identification of hidden or non-obvious risk factors during assessment
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Recognized that the flat roof, even though replaced 5 years ago, has elevated hail exposure in Central Texas that could lead to future claims
+          - Identified the potential for sprinkler system accidental discharge to cause significant water damage to high-value electronics inventory
+          - Noted that the fire lane obstruction by delivery trucks could delay fire department response and increase loss severity
+          - Considered the business interruption exposure if a fire at the restaurant affected TechVault through smoke, water, or access denial
+          - Recognized that the dry cleaner two units away presents a potential environmental contamination exposure if solvents migrate
+          - Assessed whether the vacant unit's boarded windows and debris accumulation present a moral hazard concern
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified the hail exposure for the flat roof
+          - Recognized sprinkler discharge risk to electronics
+          - Noted the fire lane issue
+          - Considered the restaurant fire's secondary effects (smoke, water)
+          - Identified at least one non-obvious risk factor
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified only obvious risk factors
+          - Did not consider secondary loss scenarios
+          - Missed the hail or sprinkler discharge exposure
+          - Did not assess the vacant unit's implications
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to identify risk factors beyond those explicitly stated in the application
+          - No awareness of secondary loss scenarios
+          - No consideration of catastrophe exposure
+          - Treated the risk assessment as a checklist exercise without critical thinking

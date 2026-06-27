@@ -1,0 +1,261 @@
+# Pricing Phase Rubric
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Evaluates the trainee's premium development and rating methodology
+
+phase: pricing
+phase_name: Premium Development
+description: >
+  Evaluates the trainee's ability to develop an accurate and competitive
+  commercial property premium using base rates, rating factors, experience
+  modification, and schedule credits and debits with documented rationale
+  for each component.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of commercial property rating methodology, schedule rating, and premium development
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly determined the base rate using ISO Construction Class 4, Protection Class 3, and retail electronics occupancy
+          - Applied the appropriate territory factor for Austin, TX (Travis County) including wind/hail loading
+          - Calculated building and BPP premiums separately using the correct rate basis (per $100 of coverage)
+          - Applied appropriate schedule credits for sprinkler system (-15% to -20%), monitored alarm (-5% to -10%), and updated building systems (-5%)
+          - Applied appropriate schedule debits for adjacent restaurant exposure (+10% to +15%), prior water damage loss (+5% to +10%), and flat roof (+3% to +5%)
+          - Calculated the experience modification based on loss history analysis
+          - Developed the business income premium using the appropriate rating methodology
+          - Applied minimum premium requirements and verified the developed premium is within market range ($0.85-$1.10 per $100)
+          - Calculated the equipment breakdown premium as an add-on
+          - Understood the interplay between deductible selection and premium (higher deductible = lower premium)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Determined the correct base rate components
+          - Applied territory factor appropriately
+          - Calculated building and BPP premiums
+          - Applied reasonable schedule credits and debits
+          - Developed a premium within the competitive range
+          - Included business income and equipment breakdown premiums
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Errors in base rate determination or territory factor
+          - Schedule credits and debits were not well-calibrated
+          - Premium was significantly above or below market range
+          - Missed one or more coverage components in the premium build
+          - Did not understand the deductible-premium relationship
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Could not determine the base rate
+          - No understanding of schedule rating
+          - Premium calculation was fundamentally flawed
+          - Missed critical coverage components
+          - No awareness of market pricing
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of premium development research and verification
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Verified the replacement cost appraisal against the requested coverage limits and identified the coinsurance adequacy issue
+          - Researched market rates for comparable retail electronics risks in the Austin area
+          - Reviewed the expiring premium ($14,200) and the renewal quote ($16,750) to understand the competitive landscape
+          - Considered the competing quote ($15,400 with $5,000 deductible and water sublimit) and how the company's quote compares on an apples-to-apples basis
+          - Verified that the BPP limit ($800,000) adequately covers peak seasonal inventory
+          - Assessed the business income limit ($500,000) against the financial statements and calculated whether it is adequate for the likely recovery period
+          - Reviewed the building valuation to confirm the limit-to-value ratio meets coinsurance requirements
+          - Developed multiple deductible scenarios ($2,500, $5,000, $10,000) with corresponding premium options
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Verified coverage limits against the appraisal
+          - Researched market rates
+          - Considered the expiring and competing premiums
+          - Verified BPP limit adequacy
+          - Developed the premium build methodically
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not verify limits against the appraisal
+          - No market research
+          - Did not consider competitive dynamics
+          - Premium was developed without adequate supporting analysis
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No verification of coverage limits
+          - No research on market rates
+          - Premium appeared to be an arbitrary number
+          - No supporting analysis for the developed premium
+
+  - name: communication
+    weight: 0.20
+    description: Quality of communication regarding pricing decisions and rationale
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Prepared a clear premium development worksheet showing base rate, each modification factor, and the resulting premium by coverage
+          - Could articulate the rationale for every schedule credit and debit if questioned by the agent or supervisor
+          - Presented the premium in context of the market (expiring premium, competing quotes, market range)
+          - Explained the coinsurance adequacy issue to the agent and recommended the appropriate limit
+          - Provided deductible options with premium differentials to give the agent negotiating tools
+          - If consulting the senior underwriter, presented the pricing with clear justification for the final number
+          - Documented the entire premium build in the underwriting file
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Prepared a premium worksheet
+          - Could explain the rationale for major credits and debits
+          - Presented the premium in competitive context
+          - Provided at least one deductible option
+          - Documented the pricing in the file
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Premium worksheet was incomplete
+          - Could not fully justify the schedule modifications
+          - Did not present the premium in competitive context
+          - No deductible options offered
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No premium worksheet
+          - Could not explain the pricing methodology
+          - No competitive context
+          - No documentation
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of pricing decisions balancing profitability and competitiveness
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Developed a premium that is both profitable (adequate rate for the risk) and competitive (within market range and competitive with the expiring premium)
+          - Target premium in the range of $13,500-$15,500 (reflects adequate rate with schedule modifications, competitive with expiring and market)
+          - Balanced schedule credits (sprinkler, alarm, updated systems) against debits (restaurant, prior loss, flat roof) with appropriate weighting
+          - Recognized that over-pricing will lose the account and under-pricing will create an unprofitable policy
+          - Considered the long-term value of the agent relationship and the account's growth potential
+          - Built in margin for negotiation without starting at rock-bottom
+          - Identified that the deductible is a key negotiating lever (higher deductible can reduce premium significantly on a property-heavy risk)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Premium is within a reasonable range
+          - Credits and debits are balanced
+          - Competitive considerations are factored in
+          - Negotiation margin is built in
+          - Deductible options are considered
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Premium is outside the competitive range (too high or too low)
+          - Credits and debits are not well-balanced
+          - Competitive dynamics are not considered
+          - No negotiation margin or too much built in
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Premium is grossly inappropriate
+          - No balancing of credits and debits
+          - Pricing shows no awareness of market conditions
+          - No consideration of competitiveness or profitability
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with rating procedures and documentation requirements
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Followed the company's rating manual and schedule rating plan
+          - Documented every credit and debit with specific rationale referencing risk factors
+          - Maintained a complete premium development worksheet in the file
+          - Verified that the total schedule modification is within the allowed range per the rating plan
+          - Confirmed the premium meets minimum premium requirements
+          - Obtained required approvals if any rating factors exceed standard authority
+          - Updated the diary with pricing completion
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Followed the rating manual
+          - Documented credits and debits with rationale
+          - Maintained a premium worksheet
+          - Verified minimum premium requirements
+          - Updated the diary
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Deviated from the rating manual without justification
+          - Documentation of credits/debits was incomplete
+          - Premium worksheet had gaps
+          - Did not verify minimum premium
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Did not follow the rating manual
+          - No documentation of pricing rationale
+          - No premium worksheet
+          - Failed to follow basic rating procedures
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of pricing adequacy relative to the risk profile
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Assessed whether the developed premium generates adequate rate per $100 of coverage relative to the risk's hazard profile
+          - Considered the catastrophe loading for wind and hail in Travis County and whether the base rate adequately reflects this exposure
+          - Evaluated whether the business income premium adequately reflects the extended period of indemnity
+          - Considered the potential for adverse selection (why is the agent shopping this account? Is the current carrier's rate increase a signal?)
+          - Assessed the premium in the context of the company's overall commercial property portfolio results
+          - Recognized that the prior carrier's 18% increase may reflect market-wide rate trends rather than risk-specific concerns
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Assessed rate adequacy relative to hazard profile
+          - Considered catastrophe loading
+          - Evaluated business income premium adequacy
+          - Considered why the account is being shopped
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not assess rate adequacy
+          - Overlooked catastrophe exposure in pricing
+          - Did not consider adverse selection
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No assessment of pricing adequacy
+          - No catastrophe consideration
+          - No critical thinking about why the account is available

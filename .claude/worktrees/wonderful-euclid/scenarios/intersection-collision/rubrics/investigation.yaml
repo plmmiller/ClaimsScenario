@@ -1,0 +1,264 @@
+# Investigation Phase Rubric
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Evaluates the trainee's investigation of the collision facts and evidence gathering
+
+phase: investigation
+phase_name: Investigation
+description: >
+  Evaluates the trainee's ability to conduct a thorough investigation of the
+  intersection collision, gather and analyze evidence, obtain statements,
+  and develop a clear factual record to support liability and damage determinations.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of investigation techniques, evidence types, and accident reconstruction principles
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated strong understanding of intersection collision investigation methodology
+          - Knew to request signal timing data from Sacramento DOT and understood how to interpret phase cycles
+          - Understood the significance of skid mark measurements (32 feet from Vehicle B, none from Vehicle A) and what they indicate about pre-impact behavior
+          - Recognized the importance of the point of impact location (18 feet west of center) for reconstructing vehicle paths
+          - Understood how dashcam footage angle and timing can establish or eliminate signal phase scenarios
+          - Knew to request the complete police report including supplemental reports
+          - Demonstrated knowledge of how protected vs. unprotected left-turn signals affect duty to yield under California Vehicle Code
+          - Understood the 3-phase signal system and the implications of the dashcam showing red for southbound Oak Street
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Understood basic intersection collision investigation requirements
+          - Knew to obtain police report, witness statements, and dashcam footage
+          - Recognized the importance of signal timing data
+          - Understood the significance of physical evidence (skid marks, point of impact)
+          - Applied appropriate investigation techniques
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Understood the need for basic evidence gathering but missed key technical aspects
+          - Did not recognize the significance of skid mark evidence
+          - Failed to understand the implications of the dashcam angle for resolving the signal dispute
+          - Had limited knowledge of signal phase analysis
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Lacked basic understanding of collision investigation techniques
+          - Did not know what evidence to gather or how to interpret physical evidence
+          - Failed to recognize the importance of signal timing data
+          - Could not connect evidence types to the disputed facts
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Completeness and quality of the investigation conducted
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Obtained recorded statements from both Sarah Mitchell and James Torres
+          - Secured the third-party dashcam footage from the delivery truck and analyzed it frame by frame
+          - Requested and obtained signal timing data from Sacramento Department of Transportation
+          - Obtained Linda Park's formal written statement and conducted a thorough follow-up interview
+          - Requested the complete police report and all supplemental reports
+          - Photographed or obtained photos of the scene, including signal locations, sight lines, and road markings
+          - Obtained repair estimates for both vehicles and validated damage patterns against the collision narrative
+          - Requested medical records and bills for James Torres (third-party BI claim)
+          - Confirmed Sarah's medical treatment under Med Pay
+          - Cross-referenced all evidence sources for consistency (statements vs. physical evidence vs. dashcam)
+          - Identified and documented all evidence gaps (dashcam cuts out, witness wasn't watching signal)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Obtained statements from both drivers and the witness
+          - Secured dashcam footage and police report
+          - Requested signal timing data
+          - Obtained damage estimates and medical records
+          - Documented key findings and evidence gaps
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Obtained basic statements but missed follow-up on key discrepancies
+          - Secured some but not all available evidence
+          - Did not request signal timing data or was slow to pursue it
+          - Failed to cross-reference evidence sources
+          - Investigation had notable gaps
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to obtain statements from key parties
+          - Did not pursue available evidence (dashcam, police report)
+          - Did not request signal timing data
+          - Investigation was superficial and left critical questions unanswered
+          - Failed to document evidence or findings
+
+  - name: communication
+    weight: 0.20
+    description: Quality of communication during the investigation with all parties
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Maintained professional and neutral communication with both first-party insured and third-party claimant
+          - When communicating with James Torres, properly identified themselves, the company, and the purpose of the contact
+          - Used effective interview techniques (open-ended questions, active listening, appropriate follow-up)
+          - Did not make premature liability statements to either party
+          - Provided regular status updates to Sarah Mitchell during the investigation
+          - Communicated with the witness (Linda Park) professionally and obtained a quality statement
+          - If James Torres retained an attorney, communicated only through proper channels
+          - Documented all communications thoroughly in the claim file
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Maintained professional communication with all parties
+          - Used appropriate interview techniques
+          - Avoided premature liability statements
+          - Provided periodic updates to the insured
+          - Documented key communications
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Communication was generally professional but made minor errors in approach
+          - Interview technique was adequate but could have elicited more information
+          - Updates to the insured were infrequent or incomplete
+          - Documentation of communications was sparse
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Communication was unprofessional or biased toward one party
+          - Made premature liability admissions or accusations
+          - Failed to properly identify themselves when contacting the third party
+          - Did not provide updates to the insured
+          - Little or no documentation of communications
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of decisions made during the investigation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly prioritized evidence gathering based on time sensitivity (witness statement, dashcam footage)
+          - Made appropriate decisions about when to accept or challenge the dashcam's ambiguity
+          - Recognized that the dashcam showing red for southbound Oak Street means either Phase 1 (protected left arrow) or Phase 3 (Elm Ave green) was active, and that signal timing data is the key to resolving the dispute
+          - Determined the appropriate scope of investigation proportional to the claim value and complexity
+          - Made sound decisions about when additional investigation (e.g., accident reconstruction expert) was or was not warranted
+          - Recognized the significance of Vehicle A having no skid marks (did not brake before impact)
+          - Correctly assessed the weight and credibility of each piece of evidence
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Prioritized investigation tasks appropriately
+          - Made sound decisions about evidence significance
+          - Determined appropriate investigation scope
+          - Recognized key factual disputes and focused investigation accordingly
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Prioritization of investigation tasks was not optimal
+          - Gave too much or too little weight to certain evidence
+          - Investigation scope was too narrow or unnecessarily broad
+          - Did not focus adequately on resolving the signal dispute
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to prioritize time-sensitive evidence gathering
+          - Made poor decisions about evidence significance
+          - Investigation scope was grossly inappropriate
+          - Reached conclusions without adequate evidence
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with investigation procedures and regulatory requirements
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Maintained a detailed investigation log with dates, actions, and findings
+          - Followed company investigation guidelines and documented each step
+          - Met all California regulatory timelines for investigation updates and communication
+          - Properly maintained chain of custody for evidence (dashcam footage)
+          - Used appropriate forms and templates for recorded statements
+          - Set and met diary dates for each investigation milestone
+          - Complied with California fair claims settlement practices during investigation
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Maintained investigation notes and documented key activities
+          - Followed company investigation guidelines
+          - Met regulatory timelines
+          - Properly handled evidence
+          - Used appropriate diary management
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Investigation documentation was incomplete
+          - Missed one or more regulatory timelines
+          - Evidence handling was adequate but not thoroughly documented
+          - Diary management was inconsistent
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Poor or nonexistent investigation documentation
+          - Failed to follow company guidelines
+          - Missed regulatory timelines
+          - Evidence was not properly secured or documented
+
+  - name: fraud_awareness
+    weight: 0.05
+    description: Awareness of fraud indicators during the investigation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Conducted investigation with appropriate professional skepticism while remaining objective
+          - Noted the conflicting signal claims and pursued objective evidence (signal timing, dashcam) to resolve the dispute
+          - Recognized that the witness (Linda Park) may know James Torres (nephew's coworker) and documented this as a potential credibility issue
+          - Verified both parties' identities, license information, and insurance status
+          - Checked for prior claims history for both parties
+          - Noted the dashcam power failure at the critical moment while accepting the forensic analysis that it was a hardware fault
+          - Documented all potential concerns for SIU referral consideration without making premature conclusions
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Noted the conflicting statements and pursued corroborating evidence
+          - Recognized the witness credibility issue (potential relationship with James)
+          - Verified party identities and checked claims history
+          - Maintained appropriate skepticism without bias
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not identify the witness-claimant relationship issue
+          - Did not check prior claims history
+          - Either too suspicious (treating all parties as fraudulent) or too trusting (accepting all statements at face value)
+          - Missed documenting potential concerns
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to recognize any potential credibility issues
+          - Did not verify party information or check claims history
+          - Showed no awareness of potential fraud indicators
+          - Did not document concerns or consider SIU referral

@@ -1,0 +1,253 @@
+# FNOL (First Notice of Loss) Phase Rubric
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Evaluates the trainee's handling of the initial claim intake
+
+phase: fnol
+phase_name: First Notice of Loss
+description: >
+  Evaluates the trainee's ability to conduct a thorough and professional
+  first notice of loss intake, gathering all essential information about
+  the intersection collision while establishing rapport with the insured.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of FNOL requirements, coverage triggers, and initial claim setup
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly identified all applicable coverages triggered by the loss (collision, liability, med pay, rental reimbursement)
+          - Recognized this as a potential comparative negligence scenario requiring thorough documentation from the outset
+          - Properly classified the claim type (two-vehicle intersection collision with disputed liability)
+          - Set up both first-party and third-party claim files simultaneously
+          - Identified the need for signal timing data and third-party dashcam early in the process
+          - Noted California's pure comparative negligence standard and its implications for claim handling
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Identified primary coverages (collision, liability) and set up claim correctly
+          - Recognized disputed liability and flagged for investigation
+          - Properly classified claim type and severity
+          - Created appropriate claim file with correct policy information
+          - Understood basic comparative negligence implications
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Identified collision coverage but missed one or more applicable coverages (e.g., med pay, rental)
+          - Set up claim file with minor errors or incomplete information
+          - Did not immediately recognize the comparative negligence implications
+          - Failed to flag disputed liability for early investigation
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to identify applicable coverages or misidentified coverage types
+          - Did not properly set up claim file or missed critical policy information
+          - Did not recognize the disputed liability situation
+          - Made errors in claim classification that could affect downstream handling
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness and technique of FNOL questioning and information gathering
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Asked all essential FNOL questions including date, time, location, parties, injuries, vehicle info, plus probing follow-ups about road conditions, traffic signals, and witness availability
+          - Used open-ended questions to elicit detailed narrative from the insured before narrowing to specifics
+          - Asked about the traffic signal phase and whether Sarah had a protected arrow vs. unprotected green
+          - Inquired about dashcam availability in both vehicles and potential third-party cameras
+          - Asked about prior vehicle damage and pre-existing medical conditions for both parties
+          - Gathered witness Linda Park's contact information and availability for a statement
+          - Asked about the intersection layout, turn lane configuration, and signal timing
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Gathered all required FNOL information with appropriate questioning technique
+          - Asked about traffic signal status and witness information
+          - Obtained both parties' insurance and vehicle information
+          - Inquired about injuries and medical treatment for both parties
+          - Used a mix of open and closed questions appropriately
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Missed 1-2 key pieces of information such as witness details or signal status
+          - Relied primarily on leading questions or yes/no questions
+          - Did not probe for details about the traffic signal dispute
+          - Gathered basic information but lacked depth in questioning
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to gather critical facts including parties involved, signal status, or injury details
+          - Used primarily yes/no questions that limited the quality of information obtained
+          - Did not ask about witnesses or traffic control devices
+          - Missed fundamental FNOL data points that will require follow-up calls
+
+  - name: communication
+    weight: 0.20
+    description: Quality of interaction with the insured during FNOL intake
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Expressed genuine empathy for Sarah's situation and inquired about her well-being before diving into claim details
+          - Clearly explained the claims process, next steps, and expected timeline
+          - Set appropriate expectations about the investigation process given disputed liability
+          - Provided clear information about Sarah's collision coverage, deductible, and rental car options
+          - Used professional but warm tone throughout; avoided jargon or explained technical terms
+          - Confirmed understanding by summarizing key facts back to the insured
+          - Provided direct contact information and explained how to reach the claims team
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Showed empathy and professionalism throughout the interaction
+          - Explained next steps and general timeline clearly
+          - Provided coverage information and answered basic questions
+          - Maintained appropriate tone and pacing
+          - Summarized key information at the end of the call
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Showed limited empathy or rushed through the interaction
+          - Provided incomplete explanation of next steps or timeline
+          - Used excessive jargon without explanation
+          - Did not confirm understanding or summarize key facts
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Lacked empathy or was dismissive of the insured's concerns
+          - Failed to explain the claims process or next steps
+          - Used confusing or overly technical language
+          - Did not provide contact information or follow-up expectations
+          - Was argumentative, rushed, or unprofessional in tone
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of initial decisions and prioritization during FNOL
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Correctly prioritized injury follow-up for both parties given reported injuries
+          - Established appropriate initial reserves based on the information gathered
+          - Recognized the need for early assignment of a field investigator given disputed liability
+          - Identified the importance of obtaining the police report and dashcam footage quickly
+          - Made appropriate decisions about rental car authorization under Sarah's policy
+          - Recognized the time-sensitive nature of obtaining witness statement from Linda Park
+          - Flagged the claim for supervisor review due to injury severity and disputed liability
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Prioritized injury claims and vehicle damage appropriately
+          - Set reasonable initial reserves
+          - Identified the need for police report and investigation
+          - Made sound initial decisions about next steps
+          - Recognized the claim's moderate complexity
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Made generally appropriate decisions but missed prioritization of time-sensitive items
+          - Set reserves that were significantly too high or too low
+          - Did not recognize the urgency of securing witness statement or dashcam footage
+          - Made minor errors in initial claim setup decisions
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to prioritize injury investigation or time-sensitive evidence gathering
+          - Set grossly inappropriate reserves
+          - Did not recognize the need for further investigation
+          - Made decisions that could prejudice the claim outcome
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with company procedures and regulatory requirements during FNOL
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Followed all FNOL intake procedures in correct order
+          - Properly documented the call with complete and accurate notes
+          - Issued claim number and provided all required disclosures to the insured
+          - Initiated all required notices (third-party carrier, lienholder, state reporting if applicable)
+          - Set appropriate diary dates for follow-up actions
+          - Complied with California fair claims settlement practices requirements including acknowledgment timeline
+          - Documented the insured's statement verbatim where possible
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Followed FNOL procedures with minor deviations
+          - Documented the call adequately
+          - Issued claim number and made required disclosures
+          - Set diary dates for key follow-up items
+          - Met regulatory acknowledgment requirements
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Missed 1-2 procedural steps in the FNOL process
+          - Documentation was incomplete or disorganized
+          - Failed to set appropriate diary dates
+          - Missed a required disclosure or notice
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to follow basic FNOL procedures
+          - Documentation was severely lacking or inaccurate
+          - Did not issue claim number or provide required disclosures
+          - Missed regulatory requirements that could expose the company to penalties
+
+  - name: fraud_awareness
+    weight: 0.05
+    description: Awareness of potential fraud indicators during initial intake
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Noted the conflicting statements about the traffic signal as a flag requiring thorough investigation (not necessarily fraud, but requiring verification)
+          - Asked appropriate background questions without being accusatory
+          - Documented statements carefully for later comparison with physical evidence
+          - Noted the need to verify policy status and premium payment history
+          - Recognized that conflicting narratives at FNOL are common and do not necessarily indicate fraud but require careful documentation
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Recognized the conflicting signal claims as requiring investigation
+          - Documented statements accurately for later verification
+          - Maintained professional, non-accusatory demeanor while gathering information
+          - Understood the difference between disputed facts and fraud indicators
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not specifically note the conflicting signal claims as requiring follow-up
+          - Documentation was not detailed enough to support later fraud investigation if needed
+          - Either too suspicious or too credulous in approach
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Failed to recognize any potential issues requiring investigation
+          - Did not document statements with sufficient detail
+          - Was either accusatory toward the insured or completely uncritical of the narrative
+          - Showed no awareness of the importance of careful documentation in disputed claims

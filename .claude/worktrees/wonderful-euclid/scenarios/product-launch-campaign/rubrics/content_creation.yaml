@@ -1,0 +1,264 @@
+# Content Creation Phase Rubric
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Evaluates the trainee's development of campaign materials and creative assets
+
+phase: content_creation
+phase_name: Content Creation
+description: >
+  Evaluates the trainee's ability to develop compelling, compliant, and brand-
+  consistent campaign materials across digital, email, social, print, and
+  agency channels, including incorporating consumer feedback from focus groups.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of content marketing, creative development, and insurance advertising requirements
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated strong understanding of multi-channel content creation including platform-specific requirements (Google Ads character limits, Facebook image ratios, email rendering)
+          - Applied the messaging hierarchy from the strategy phase consistently across all creative assets
+          - Developed content mapped to specific stages of the customer journey (awareness, consideration, decision)
+          - Created landing page copy following conversion rate optimization principles (clear headline, benefit-driven copy, strong CTA, trust signals)
+          - Understood and applied Colorado Division of Insurance advertising disclosure requirements to all consumer-facing materials
+          - Developed agent-facing materials (sales kit, objection handlers) that equip agents with product knowledge and competitive talking points
+          - Created email nurture sequences with appropriate segmentation and personalization
+          - Applied A/B testing methodology to creative development with clear hypotheses
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Created content across required channels with consistent messaging
+          - Applied platform-specific requirements correctly
+          - Developed a landing page with effective conversion elements
+          - Included required regulatory disclosures
+          - Created usable agent-facing materials
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Content was created for some channels but lacked consistency in messaging
+          - Platform-specific requirements were not fully addressed
+          - Landing page lacked key conversion elements
+          - Regulatory disclosures were missing or incomplete
+          - Agent materials were insufficient
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Content was minimal or of poor quality
+          - Messaging was inconsistent across channels
+          - No attention to platform requirements or compliance
+          - Landing page was ineffective
+          - Agent materials were not developed
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of creative research, consumer testing, and feedback incorporation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Conducted consumer focus group testing on key messaging concepts and creative executions before finalizing
+          - Incorporated Jennifer Kim's feedback on privacy messaging, brand trust concerns, and landing page effectiveness
+          - Analyzed focus group reactions to identify which messages resonated most strongly (privacy control, no rate increase, transparent scoring)
+          - Tested multiple creative concepts and selected the strongest performers based on consumer feedback
+          - Reviewed competitor creative (Progressive, Root, Allstate) to ensure SmartDrive's content is differentiated in tone and approach
+          - Validated all product claims with Carlos Mendez before production to ensure actuarial accuracy
+          - Reviewed all content against brand guidelines for visual identity, typography, color, and voice compliance
+          - Tested email deliverability and rendering across platforms before deployment
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Conducted focus group testing and incorporated feedback
+          - Validated product claims with the actuary
+          - Reviewed content against brand guidelines
+          - Tested creative concepts before finalizing
+          - Reviewed competitor creative for differentiation
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Limited or no consumer testing of creative concepts
+          - Did not validate product claims with the actuary
+          - Brand guideline adherence was inconsistent
+          - Content was developed without competitive reference
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No consumer testing or feedback incorporated
+          - Product claims were not validated
+          - Brand guidelines were ignored
+          - Content was developed in isolation without reference to strategy or research
+
+  - name: communication
+    weight: 0.20
+    description: Quality of creative communication with stakeholders and team management
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Managed the creative development process effectively, coordinating between Emma Wright (digital execution), Carlos Mendez (product accuracy), and Lisa Morgan (strategic alignment)
+          - Presented creative concepts to Lisa Morgan with clear rationale connecting creative decisions to strategy and research findings
+          - Facilitated the focus group with Jennifer Kim effectively, asking open-ended questions and capturing actionable feedback
+          - Communicated creative briefs clearly to freelancers or agency partners with specific brand, messaging, and compliance requirements
+          - Managed the compliance review process efficiently, resolving regulatory feedback without unnecessary delay
+          - Provided constructive creative direction that improved the quality of output without micromanaging execution
+          - Communicated timeline and milestone expectations clearly to all contributors
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Coordinated the creative process across team members
+          - Presented creative concepts with reasonable rationale
+          - Conducted focus group feedback sessions effectively
+          - Communicated with freelancers/vendors adequately
+          - Managed the compliance review process
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Coordination between team members was weak
+          - Creative presentations lacked clear strategic rationale
+          - Focus group facilitation was superficial
+          - Creative briefs were vague or incomplete
+          - Compliance review created unnecessary delays
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No coordination of the creative process
+          - Creative work was not presented or reviewed
+          - No consumer feedback gathered
+          - No creative briefs or vendor communication
+          - Compliance review was skipped entirely
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of creative decisions including messaging, design, and content prioritization
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Made strong creative decisions that balanced emotional appeal (privacy, trust, fairness) with rational benefits (savings, transparency)
+          - Prioritized content development based on campaign timeline and launch needs (landing page and digital ads first, agent materials in parallel, social content calendar ahead of launch)
+          - Adapted messaging based on focus group feedback without losing the strategic positioning
+          - Made sound decisions about which Jennifer Kim feedback to incorporate and which to note but not act on
+          - Addressed the brand trust challenge (unknown carrier) with appropriate trust signals (A- rating, 75-year history, local agent)
+          - Balanced the "up to 30%" savings claim with honest average discount disclosure as recommended by Carlos Mendez
+          - Created content that works across the customer journey without being repetitive
+          - Made appropriate tradeoffs between content quality and production timeline
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Creative decisions supported the positioning strategy
+          - Content was prioritized appropriately for the launch timeline
+          - Focus group feedback was incorporated reasonably
+          - Trust messaging was addressed
+          - Product claims were balanced and accurate
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Creative decisions were not clearly aligned with strategy
+          - Content prioritization was misguided (e.g., print before digital)
+          - Focus group feedback was either ignored or over-applied
+          - Trust messaging was weak or absent
+          - Product claims were inaccurate or misleading
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Creative decisions contradicted the positioning strategy
+          - No content prioritization
+          - Consumer feedback was completely ignored
+          - No trust-building content for an unknown brand
+          - Product claims were non-compliant
+
+  - name: process_adherence
+    weight: 0.10
+    description: Following content development processes including brand review, compliance, and approval workflows
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Submitted all consumer-facing content through the compliance review process before production
+          - All materials included required Colorado Division of Insurance disclosures
+          - Followed brand guidelines for visual identity, typography, color, and voice across all assets
+          - Maintained a content asset tracker with status, approvals, and versions
+          - Obtained sign-off from Lisa Morgan on final creative before production
+          - Ensured all photography and imagery met brand guidelines (authentic, Colorado-specific, diverse)
+          - Created a content library organized by channel and customer journey stage
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Content went through compliance review
+          - Required disclosures were included
+          - Brand guidelines were generally followed
+          - Key approvals were obtained
+          - Content was organized and trackable
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Compliance review was incomplete or skipped for some assets
+          - Some disclosures were missing
+          - Brand guideline adherence was inconsistent
+          - Approvals were not documented
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No compliance review process
+          - Required disclosures missing from consumer materials
+          - Brand guidelines not followed
+          - No approval process
+          - Content was disorganized
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of brand, compliance, and reputational risks in content creation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Ensured all savings claims include required disclaimers and average discount disclosure to avoid regulatory action
+          - Reviewed all content for potential misrepresentation of telematics data collection practices
+          - Verified that no competitive references in consumer-facing materials violate comparative advertising rules
+          - Ensured focus group feedback was gathered with proper consent and cannot be attributed as testimonials without release
+          - Reviewed landing page for accessibility compliance and mobile optimization
+          - Assessed email content for CAN-SPAM and state-specific requirements
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Included required disclaimers on savings claims
+          - Reviewed content for compliance with advertising rules
+          - Ensured proper consent for consumer research
+          - Addressed basic accessibility and email compliance
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Some compliance elements were missed
+          - Did not review all content for regulatory compliance
+          - Consent processes were informal or undocumented
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No awareness of advertising compliance requirements
+          - Content contained potentially misleading claims
+          - No consent processes for consumer research
+          - Regulatory risks were ignored

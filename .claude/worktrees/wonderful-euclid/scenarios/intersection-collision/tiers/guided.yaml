@@ -1,0 +1,163 @@
+# Guided Tier Configuration
+# Intersection Collision Scenario - Oak Street & Elm Avenue
+# Beginner-friendly mode with full assistance and no complications
+
+tier: guided
+tier_name: Guided
+description: >
+  Entry-level difficulty designed for new adjusters or those learning the claims
+  process. All personas are cooperative, evidence is clearly presented with no
+  ambiguity, and the system provides hints and prompts throughout each phase.
+
+settings:
+  hints_enabled: true
+  phase_transition_hints: true
+  explicit_prompts: true
+  time_pressure: false
+  max_score_multiplier: 0.75  # Guided tier caps at 75% of max possible score
+
+hints:
+  fnol:
+    - "Remember to ask about the traffic signal status for both vehicles."
+    - "Don't forget to ask about witnesses at the scene."
+    - "Check if either vehicle had a dashcam."
+    - "Make sure to gather insurance information for both parties."
+    - "Ask about the severity of injuries and whether anyone was transported to the hospital."
+  coverage:
+    - "Review the declarations page carefully for all applicable coverages."
+    - "Check the policy effective dates against the date of loss."
+    - "Look at the billing history section for any policy status changes."
+    - "Med Pay coverage applies regardless of who was at fault."
+    - "Rental reimbursement coverage has specific daily and total limits."
+  investigation:
+    - "The police report contains key physical evidence like skid marks and point of impact."
+    - "The witness statement should be obtained quickly while memory is fresh."
+    - "Request the signal timing data from the city's Department of Transportation."
+    - "The dashcam footage from the delivery truck may help resolve the signal dispute."
+    - "Compare both drivers' statements against the physical evidence."
+  liability:
+    - "California uses pure comparative negligence -- both parties can share fault."
+    - "A left-turning driver generally must yield to oncoming through traffic unless they have a protected green arrow."
+    - "Consider what the physical evidence (skid marks, point of impact) tells you about each driver's actions."
+    - "The witness statement partially supports Vehicle B but has limitations."
+    - "Document your reasoning for the fault percentage you assign to each party."
+  damages:
+    - "Review both repair estimates line by line against market rates."
+    - "Check whether the medical treatment is reasonable for the diagnosed injury."
+    - "Don't forget to evaluate lost wages based on medical work restrictions."
+    - "The supplement request from the body shop needs to be reviewed for reasonableness."
+    - "General damages (pain and suffering) should be evaluated based on the nature and duration of injuries."
+  negotiation:
+    - "Prepare your settlement evaluation before entering negotiations."
+    - "Your first-party insured's collision claim should be paid promptly, subject to the deductible."
+    - "The third-party settlement should reflect the liability percentage you determined."
+    - "Research comparable verdicts to support your valuation."
+    - "Document all offers and counteroffers in the claim file."
+  resolution:
+    - "Pursue subrogation against the at-fault party's insurer for deductible recovery."
+    - "Confirm all payments have been issued and releases obtained before closing."
+    - "Notify the lienholder of the claim outcome."
+    - "Send closing letters to all parties."
+    - "Zero out reserves on closed exposures while keeping subrogation reserves open."
+
+phase_transition_prompts:
+  fnol_to_coverage: >
+    Great work gathering the initial claim information. Now it's time to analyze
+    the policy to determine what coverages apply. Review the declarations page
+    and check for any coverage issues before proceeding.
+  coverage_to_investigation: >
+    You've confirmed coverage is in place. Now begin your investigation by
+    gathering evidence: obtain the police report, witness statement, dashcam
+    footage, and signal timing data to determine what happened at the intersection.
+  investigation_to_liability: >
+    You've gathered the key evidence. Now analyze everything together to determine
+    each party's degree of fault. Remember California's pure comparative negligence
+    standard and the left-turn-yield rule.
+  liability_to_damages: >
+    You've made your liability determination. Now evaluate all the damages: vehicle
+    repairs for both cars, medical expenses, lost wages, and pain and suffering.
+    Review each item for reasonableness.
+  damages_to_negotiation: >
+    You've completed your damage evaluation. Now prepare to negotiate settlements.
+    Handle Sarah's first-party collision claim and then negotiate the third-party
+    claims with James Torres.
+  negotiation_to_resolution: >
+    Settlements have been reached. Now close the claim properly: issue final payments,
+    obtain releases, file subrogation, and complete all closing documentation.
+
+persona_overrides:
+  sarah_mitchell:
+    demeanor: cooperative
+    provides_information: readily
+    emotional_state: concerned_but_calm
+    notes: >
+      Sarah is cooperative throughout the process. She answers all questions
+      directly and provides requested documents promptly. She is understandably
+      worried about her car and her neck injury but is patient with the process.
+
+  james_torres:
+    demeanor: cooperative
+    provides_information: readily
+    emotional_state: concerned_but_calm
+    represented_by_attorney: false
+    notes: >
+      James is cooperative and communicates directly with the adjuster. He is
+      concerned about his knee injury and vehicle but is reasonable in his
+      expectations. He provides medical records and employment documentation
+      promptly when requested.
+
+  linda_park:
+    demeanor: cooperative
+    provides_information: readily
+    credibility_issues: none
+    relationship_to_torres: not_disclosed
+    notes: >
+      Linda provides a consistent, clear witness statement. She is straightforward
+      about what she saw and what she didn't see. Her potential connection to
+      James Torres is not present in this tier -- she is a purely independent
+      witness.
+
+  mike_reeves:
+    demeanor: professional
+    estimate_accuracy: fair
+    supplement_justified: true
+    notes: >
+      Mike's Auto Body provides fair, market-rate estimates. The supplement
+      request is fully justified by the documented hidden damage. No inflation
+      or questionable charges.
+
+  dr_patel:
+    treatment_approach: conservative_appropriate
+    billing_accuracy: standard
+    notes: >
+      Dr. Patel's treatment recommendations are clearly appropriate and well-
+      documented. Physical therapy duration is within normal clinical guidelines.
+      All billing is at standard rates.
+
+complications: []
+
+evidence_presentation:
+  police_report:
+    clarity: high
+    ambiguity: none
+    notes: "All facts clearly stated. Signal timing data is included and clearly shows which phase was active."
+  dashcam_footage:
+    clarity: high
+    ambiguity: none
+    notes: "In guided tier, the dashcam does NOT have the camera glitch. Full footage through impact is available, clearly showing the signal phases."
+  witness_statement:
+    clarity: high
+    ambiguity: none
+    notes: "Linda's statement is consistent and clear. No credibility issues. She clearly states what she saw and did not see."
+  medical_records:
+    clarity: high
+    ambiguity: none
+    notes: "Medical records clearly document the injury, treatment, and causation. Billing is straightforward."
+  repair_estimates:
+    clarity: high
+    ambiguity: none
+    notes: "Both estimates are at market rates. Supplement is clearly documented with photos."
+  policy_declarations:
+    clarity: high
+    ambiguity: none
+    notes: "In guided tier, the policy lapse is not present. The policy has been continuously in force since inception."

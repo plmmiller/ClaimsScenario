@@ -1,0 +1,257 @@
+# Performance Tracking Phase Rubric
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Evaluates the trainee's campaign monitoring, analysis, and optimization
+
+phase: performance_tracking
+phase_name: Performance Tracking & Optimization
+description: >
+  Evaluates the trainee's ability to monitor campaign KPIs, analyze multi-channel
+  performance data, identify optimization opportunities, make data-driven budget
+  reallocation decisions, and maintain stakeholder reporting cadence.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of marketing analytics, attribution, KPI frameworks, and optimization methodology
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated strong understanding of multi-channel attribution models and their limitations for insurance marketing (long consideration cycle, offline conversions)
+          - Correctly calculated and interpreted key metrics including CPL, CPA, CAC, ROAS, conversion rates at each funnel stage, and customer lifetime value projections
+          - Understood the full conversion funnel from impression to click to landing page to quote start to quote complete to policy bind, and could diagnose issues at each stage
+          - Applied statistical significance principles to A/B test results before making optimization decisions
+          - Understood the relationship between leading indicators (impressions, clicks, CTR) and lagging indicators (quotes, binds, CAC) and used leading indicators for real-time optimization
+          - Recognized the impact of the 90-day monitoring period on campaign metrics (binds happen but discount satisfaction is delayed)
+          - Applied cohort analysis to track customer progression through the monitoring period and predict churn risk
+          - Understood how to attribute agent-channel conversions in a multi-touch model where digital marketing drives awareness but agents close the sale
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Calculated and interpreted key performance metrics correctly
+          - Understood the conversion funnel and could identify bottlenecks
+          - Applied basic optimization principles to campaign management
+          - Understood attribution challenges in multi-channel campaigns
+          - Used leading and lagging indicators appropriately
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Calculated basic metrics but misinterpreted some indicators
+          - Funnel analysis was incomplete
+          - Optimization decisions were not data-driven
+          - Did not understand attribution limitations
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Could not calculate or interpret key performance metrics
+          - No funnel analysis conducted
+          - No understanding of optimization methodology
+          - Reported vanity metrics without actionable interpretation
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Thoroughness of performance analysis and data investigation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Monitored daily and weekly KPIs across all channels with consistent cadence
+          - Analyzed conversion funnel performance at each stage to identify drop-off points (e.g., high CTR but low landing page conversion indicates page issues, not targeting issues)
+          - Segmented performance data by audience, geography, creative, and device to identify optimization opportunities
+          - Compared actual performance against KPI targets from the strategy phase and identified variances with root cause analysis
+          - Tracked agency production metrics alongside digital metrics to assess the complete campaign impact
+          - Conducted A/B tests on ad copy, landing pages, and email subject lines with proper test design (sample size, control group, single variable)
+          - Analyzed competitive activity (Root Insurance ad spend changes, new competitor creative) and assessed its impact on SmartDrive performance
+          - Investigated anomalies in data (sudden CPL spikes, conversion drops, traffic source shifts) to determine whether they are real signals or data artifacts
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Monitored KPIs with regular cadence
+          - Analyzed funnel performance and identified key bottlenecks
+          - Compared performance against targets
+          - Conducted some A/B testing
+          - Tracked both digital and agency metrics
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Monitoring was inconsistent or focused on surface-level metrics
+          - Funnel analysis was incomplete
+          - Did not compare against targets or identify variances
+          - No A/B testing conducted
+          - Agency metrics were not tracked alongside digital
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No systematic monitoring of campaign performance
+          - No funnel analysis
+          - No comparison against targets
+          - No testing or optimization activities
+          - Agency channel performance was ignored
+
+  - name: communication
+    weight: 0.20
+    description: Quality of performance reporting and stakeholder communication
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Created weekly performance dashboards that led with insights and recommendations rather than raw data
+          - Communicated performance to Lisa Morgan in her preferred format (headline first, then supporting data, then recommended actions)
+          - Translated technical metrics (CTR, CPL, CPA) into business outcomes (leads generated, quotes started, projected policies, projected ROI)
+          - Proactively flagged underperformance with specific diagnosis and recommended corrective actions before Lisa had to ask
+          - Communicated optimization recommendations with expected impact (e.g., "Reallocating $5K from display to social should reduce CPL by 15% based on current performance")
+          - Kept Emma Wright aligned on optimization priorities and execution timeline
+          - Provided agency partners with production reports and identified high-performing and underperforming agencies
+          - Escalated significant issues (budget pacing ahead of plan, channel underperformance, competitive threats) promptly with proposed solutions
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Produced regular performance reports
+          - Communicated key findings to Lisa Morgan
+          - Translated metrics into business language
+          - Flagged underperformance with recommendations
+          - Kept the team aligned on priorities
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Reports were irregular or data-heavy without insights
+          - Communication to leadership was reactive rather than proactive
+          - Metrics were presented without business context
+          - Underperformance was not flagged promptly
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No regular performance reporting
+          - No communication to leadership about performance
+          - Data was not translated into actionable insights
+          - Issues were not escalated
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of optimization decisions including budget reallocation and tactical adjustments
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Made data-driven budget reallocation decisions that shifted spend from underperforming channels to high-performers (e.g., moving budget from expensive search keywords to high-converting social video)
+          - Identified and acted on quick optimization wins (pausing low-CTR ad creative, expanding high-performing audience segments, adjusting bid strategies)
+          - Made sound decisions about when to optimize versus when to allow more data to accumulate (did not over-react to daily fluctuations)
+          - Balanced short-term performance optimization with brand-building objectives (did not slash all awareness spend when CPL was high)
+          - Recognized when underperformance was a creative issue versus a targeting issue versus a landing page issue and prescribed the correct fix
+          - Made appropriate decisions about using the $20K contingency fund based on clear justification and expected ROI
+          - Adjusted agency support resources based on production data (more support for high-potential underperformers, recognition for top producers)
+          - Recommended strategic pivots when data warranted them (e.g., shifting emphasis from display to video based on engagement data)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Made reasonable budget reallocation decisions
+          - Acted on clear optimization opportunities
+          - Balanced short-term and long-term objectives
+          - Diagnosed performance issues correctly
+          - Made appropriate use of contingency budget
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Budget reallocation was not based on clear data
+          - Over-reacted to short-term fluctuations
+          - Did not balance performance and brand-building
+          - Misdiagnosed performance issues
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No budget optimization conducted
+          - No response to underperformance
+          - Made changes without data support
+          - Unable to diagnose performance issues
+
+  - name: process_adherence
+    weight: 0.10
+    description: Following performance tracking procedures and maintaining proper documentation
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Maintained a consistent weekly reporting cadence with standardized dashboard format
+          - Documented all optimization decisions with rationale and expected impact
+          - Tracked budget spend versus plan with weekly reconciliation
+          - Maintained a testing log documenting all A/B tests, hypotheses, results, and actions taken
+          - Followed the budget reallocation approval process (within 10% authority, VP approval for larger shifts)
+          - Archived performance data for the post-campaign ROI analysis
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Maintained regular reporting cadence
+          - Documented key optimization decisions
+          - Tracked budget versus plan
+          - Maintained basic testing records
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Reporting cadence was inconsistent
+          - Optimization decisions were not documented
+          - Budget tracking was not maintained
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No reporting cadence
+          - No documentation of decisions
+          - No budget tracking
+          - No testing records
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of performance-related risks including budget, competitive, and compliance risks
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Monitored budget pacing to prevent overspend or underspend and flagged deviations early
+          - Tracked competitive activity and assessed whether competitor actions (Root increasing spend, Progressive launching new creative) were affecting SmartDrive's performance
+          - Monitored for compliance issues in live advertising (ad platform policy violations, regulatory complaints)
+          - Assessed the risk of optimizing too aggressively toward one channel and losing diversification
+          - Recognized the risk of chasing vanity metrics (impressions, clicks) at the expense of downstream conversion quality
+          - Monitored customer sentiment and feedback during the campaign for brand risk indicators
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Monitored budget pacing
+          - Tracked competitive activity
+          - Checked for compliance issues in live ads
+          - Maintained channel diversification
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Budget pacing was not actively monitored
+          - Competitive monitoring was limited
+          - Compliance was not checked during campaign
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No budget pacing awareness
+          - No competitive monitoring
+          - No compliance monitoring
+          - No risk awareness during performance tracking

@@ -1,0 +1,294 @@
+id: intersection-collision
+title: "Two-Vehicle Intersection Collision"
+description: >
+  A two-vehicle collision at a signalized intersection involving a left-turning
+  insured vehicle and a straight-proceeding third-party vehicle. Both drivers
+  claim the other ran a red light. The adjuster must navigate conflicting
+  statements, assess comparative fault under California law, evaluate soft-tissue
+  and orthopedic injury claims, and negotiate a resolution. This scenario covers
+  the full claims lifecycle from first notice of loss through settlement.
+version: "1.0"
+difficulty_range:
+  - guided
+  - standard
+  - advanced
+estimated_duration:
+  guided: 30
+  standard: 45
+  advanced: 60
+jurisdiction: "California"
+
+learning_objectives:
+  - "Conduct a thorough first notice of loss intake, capturing all critical facts from the insured"
+  - "Verify coverage applicability including policy status, vehicle identification, and driver eligibility"
+  - "Plan and execute a multi-source investigation using recorded statements, witness interviews, police reports, and physical evidence"
+  - "Apply California comparative fault principles to determine liability allocation in a disputed intersection collision"
+  - "Evaluate bodily injury damages including soft-tissue and orthopedic claims, medical causation, and treatment reasonableness"
+  - "Negotiate a fair settlement balancing indemnity exposure, litigation risk, and claimant expectations"
+
+fact_pattern:
+  incident_date: "2026-03-15"
+  incident_time: "14:35"
+  location:
+    intersection: "Oak Street and Elm Avenue"
+    city: "Sacramento"
+    state: "CA"
+    zip: "95814"
+    description: >
+      A four-way signalized intersection in a commercial district. Oak Street
+      runs north-south with two lanes in each direction and a dedicated left-turn
+      lane. Elm Avenue runs east-west with two lanes in each direction. The
+      intersection is controlled by a standard traffic signal with protected
+      left-turn arrows during peak hours. At the time of the accident the signal
+      was operating in permissive left-turn mode.
+  weather: "Clear skies, dry pavement, daytime conditions, approximately 72 degrees Fahrenheit"
+  traffic_conditions: "Moderate mid-afternoon traffic"
+
+  vehicle_a:
+    year: 2022
+    make: "Toyota"
+    model: "Camry"
+    color: "Silver"
+    vin: "4T1R11AK3NU500237"
+    license_plate: "8ABC123"
+    owner: "Sarah Mitchell"
+    driver_persona: "sarah-mitchell"
+    action: "Making a left turn from southbound Oak Street onto eastbound Elm Avenue"
+    damage_description: >
+      Significant front-end and passenger-side damage. The front bumper is
+      crushed inward, the right fender is buckled, the hood is creased on the
+      passenger side, and the right headlight assembly is destroyed. Airbags
+      did not deploy. Estimated repair cost range $6,500 to $8,200.
+    insurance:
+      carrier: "Pacific Coast Insurance"
+      policy_number: "PCI-2024-4478291"
+      policy_type: "Personal auto"
+      coverages:
+        - "Liability: 100/300/100"
+        - "Collision: $500 deductible"
+        - "Comprehensive: $250 deductible"
+        - "Uninsured/Underinsured Motorist: 100/300"
+        - "Medical Payments: $5,000"
+
+  vehicle_b:
+    year: 2020
+    make: "Honda"
+    model: "Accord"
+    color: "Dark Blue"
+    vin: "1HGCV1F34LA800415"
+    license_plate: "7XYZ456"
+    owner: "James Torres"
+    driver_persona: "james-torres"
+    action: "Proceeding straight through the intersection eastbound on Elm Avenue"
+    damage_description: >
+      Moderate front-end damage concentrated on the driver side. The front
+      bumper cover is split, the left fender is dented, the driver-side
+      headlight is cracked, and the hood has a crease along the left side.
+      Airbags did not deploy. Estimated repair cost range $5,800 to $7,500.
+    insurance:
+      carrier: "Golden State Auto Insurance"
+      policy_number: "GSA-2023-7712044"
+      policy_type: "Personal auto"
+      note: "Third-party claim against Pacific Coast Insurance"
+
+  injuries:
+    - person: "Sarah Mitchell"
+      persona: "sarah-mitchell"
+      type: "soft-tissue"
+      description: >
+        Neck stiffness and upper back soreness reported at the scene. Evaluated
+        at Mercy General Hospital ER same day. Diagnosed with cervical strain.
+        Prescribed muscle relaxants and advised to follow up with primary care.
+        Reports intermittent headaches in the days following the accident.
+      treatment:
+        - "ER visit day of accident"
+        - "Primary care follow-up at 5 days"
+        - "Prescribed 4 weeks of physical therapy, 2 sessions per week"
+    - person: "James Torres"
+      persona: "james-torres"
+      type: "orthopedic"
+      description: >
+        Left knee pain with difficulty bearing weight reported at the scene.
+        Transported by ambulance to UC Davis Medical Center. X-rays negative
+        for fracture. MRI performed three days later reveals a medial meniscus
+        tear. Referred to orthopedic specialist Dr. Anita Patel for evaluation
+        and treatment planning.
+      treatment:
+        - "ER visit and X-rays day of accident"
+        - "MRI at 3 days post-accident"
+        - "Orthopedic consultation at 7 days"
+        - "Recommended arthroscopic surgery with 6-8 weeks recovery"
+        - "Post-surgical physical therapy, 12 weeks"
+
+  key_dispute: >
+    Both drivers claim the other ran a red light. Sarah Mitchell states she had
+    a green left-turn arrow. James Torres states he had a solid green light to
+    proceed straight. The intersection was in permissive left-turn mode at the
+    time, meaning a protected green arrow was not available. One eyewitness
+    (Linda Park) was present but is uncertain about the exact signal state.
+    No traffic camera or dashcam footage is available.
+
+phases:
+  fnol:
+    name: "First Notice of Loss"
+    description: "Receive and document the initial claim report from the insured"
+    available_personas:
+      - sarah-mitchell
+    available_evidence: []
+    required_actions:
+      - "Record insured's account of the accident"
+      - "Capture date, time, location, and weather conditions"
+      - "Document vehicle and driver information for both parties"
+      - "Identify injuries and medical treatment received"
+      - "Determine if other passengers or witnesses are involved"
+      - "Set initial diary and assign claim number"
+    learning_objectives:
+      - "Demonstrate active listening and open-ended questioning techniques"
+      - "Identify red flags and inconsistencies early in the claim"
+
+  coverage:
+    name: "Coverage Verification"
+    description: "Confirm that the policy is active and applicable to this loss"
+    available_personas:
+      - sarah-mitchell
+    available_evidence:
+      - policy_declarations
+      - vehicle_registration
+    required_actions:
+      - "Verify policy is in force on the date of loss"
+      - "Confirm the vehicle is a listed vehicle on the policy"
+      - "Confirm the driver is a covered driver"
+      - "Identify applicable coverages and limits"
+      - "Check for any policy exclusions or conditions"
+      - "Document coverage determination"
+    learning_objectives:
+      - "Accurately interpret policy declarations and coverage terms"
+      - "Identify all potentially applicable coverages for first-party and third-party claims"
+
+  investigation:
+    name: "Investigation"
+    description: "Gather evidence and recorded statements to establish the facts of loss"
+    available_personas:
+      - sarah-mitchell
+      - james-torres
+      - linda-park
+    available_evidence:
+      - police_report
+      - scene_photos
+      - scene_diagram
+      - recorded_statement_sarah
+      - recorded_statement_james
+      - witness_statement_linda
+    required_actions:
+      - "Obtain recorded statement from insured (Sarah Mitchell)"
+      - "Obtain recorded statement from claimant (James Torres)"
+      - "Interview witness (Linda Park)"
+      - "Review police report and scene diagram"
+      - "Analyze physical evidence and point of impact"
+      - "Determine traffic signal operation mode at time of loss"
+      - "Identify any additional evidence sources (traffic cameras, dashcams, cell records)"
+    learning_objectives:
+      - "Conduct effective recorded statements that elicit key facts"
+      - "Identify and resolve conflicting accounts using physical evidence"
+      - "Evaluate witness credibility and reliability"
+
+  liability:
+    name: "Liability Assessment"
+    description: "Determine fault allocation based on evidence gathered"
+    available_personas:
+      - sarah-mitchell
+      - james-torres
+    available_evidence:
+      - police_report
+      - scene_photos
+      - scene_diagram
+      - recorded_statement_sarah
+      - recorded_statement_james
+      - witness_statement_linda
+      - california_vehicle_code
+    required_actions:
+      - "Analyze all statements for consistency and credibility"
+      - "Apply California Vehicle Code section 21801 (left-turn yield duty)"
+      - "Consider comparative fault under California pure comparative negligence"
+      - "Document liability rationale with supporting evidence"
+      - "Determine liability split percentage"
+      - "Communicate liability decision to all parties"
+    learning_objectives:
+      - "Apply comparative fault principles to a disputed intersection accident"
+      - "Construct a well-supported liability argument using available evidence"
+
+  damages:
+    name: "Damages Evaluation"
+    description: "Assess property damage and bodily injury claims"
+    available_personas:
+      - sarah-mitchell
+      - james-torres
+      - mikes-auto-body
+      - dr-patel
+    available_evidence:
+      - vehicle_a_estimate
+      - vehicle_b_estimate
+      - medical_records_sarah
+      - medical_records_james
+      - medical_bills_sarah
+      - medical_bills_james
+      - mri_report_james
+    required_actions:
+      - "Review and approve or negotiate vehicle repair estimates"
+      - "Evaluate rental car exposure for both parties"
+      - "Obtain and review all medical records and bills"
+      - "Assess medical causation and treatment reasonableness"
+      - "Calculate special damages (medical expenses, lost wages, property damage)"
+      - "Evaluate general damages (pain and suffering)"
+      - "Set appropriate reserves"
+    learning_objectives:
+      - "Evaluate property damage estimates for accuracy and reasonableness"
+      - "Assess bodily injury claims including medical causation and treatment necessity"
+      - "Calculate total claim exposure and set accurate reserves"
+
+  negotiation:
+    name: "Negotiation"
+    description: "Negotiate resolution of the property damage and bodily injury claims"
+    available_personas:
+      - sarah-mitchell
+      - james-torres
+      - attorney-davis
+    available_evidence:
+      - vehicle_a_estimate
+      - vehicle_b_estimate
+      - medical_records_james
+      - medical_bills_james
+      - demand_letter
+    required_actions:
+      - "Resolve first-party property damage claim with insured"
+      - "Present liability position to third-party claimant or attorney"
+      - "Evaluate third-party demand against documented damages"
+      - "Develop negotiation strategy with target and authority ranges"
+      - "Conduct settlement negotiations"
+      - "Document all offers and counteroffers"
+    learning_objectives:
+      - "Develop and execute a negotiation strategy based on claim valuation"
+      - "Handle negotiations with both unrepresented claimants and attorneys"
+      - "Balance fair settlement with indemnity cost management"
+
+  resolution:
+    name: "Resolution"
+    description: "Finalize the claim with appropriate documentation and payments"
+    available_personas:
+      - sarah-mitchell
+      - james-torres
+      - attorney-davis
+    available_evidence:
+      - settlement_agreement
+      - release_form
+      - payment_authorization
+    required_actions:
+      - "Obtain signed release from claimant or attorney"
+      - "Process property damage payments"
+      - "Process bodily injury settlement payment"
+      - "Close subrogation file or initiate subrogation if applicable"
+      - "Complete claim file documentation"
+      - "Conduct final quality review"
+    learning_objectives:
+      - "Execute proper claim closure procedures including releases and documentation"
+      - "Identify subrogation potential and take appropriate action"

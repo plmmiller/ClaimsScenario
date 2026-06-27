@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page { margin: 0.75in; size: letter; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #1a1a1a;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1e3a5f;
+    border-bottom: 3px solid #1e3a5f;
+    padding-bottom: 8px;
+    margin-top: 30px;
+  }
+  h2 {
+    font-size: 16pt;
+    color: #2563eb;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 28px;
+  }
+  h3 {
+    font-size: 13pt;
+    color: #374151;
+    margin-top: 20px;
+  }
+  h4 {
+    font-size: 11pt;
+    color: #4b5563;
+    margin-top: 16px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 10pt;
+  }
+  th {
+    background-color: #f0f4ff;
+    color: #1e3a5f;
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid #d1d5db;
+  }
+  td {
+    padding: 7px 10px;
+    border: 1px solid #d1d5db;
+    vertical-align: top;
+  }
+  tr:nth-child(even) { background-color: #f9fafb; }
+  strong { color: #1e3a5f; }
+  code {
+    background-color: #f3f4f6;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 10pt;
+  }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  hr { border: none; border-top: 2px solid #e5e7eb; margin: 24px 0; }
+  p { margin: 8px 0; }
+  blockquote {
+    border-left: 3px solid #2563eb;
+    padding-left: 12px;
+    color: #4b5563;
+    margin: 12px 0;
+  }
+</style>
+</head>
+<body>
+<h1 id="insurance-training-simulation-platform">Insurance Training Simulation Platform</h1>
+
+<h2 id="evaluation-guide">Evaluation Guide</h2>
+
+<hr />
+
+<h2 id="what-is-this">What Is This?</h2>
+
+<p>The Insurance Training Simulation Platform is an AI-powered interactive training tool that teaches and assesses insurance professionals through realistic, conversational simulations. Powered by Anthropic's Claude, the platform places users in the role of an insurance professional and presents them with lifelike scenarios featuring multiple AI-driven personas (claimants, witnesses, agents, attorneys, etc.). Users must navigate each scenario by asking questions, reviewing documents, making decisions, and resolving the case — just as they would in a real-world setting.</p>
+
+<p>The platform currently supports three scenario types spanning different insurance disciplines:</p>
+
+<ol>
+<li><strong>Auto Claims Adjusting</strong> — Handle a two-vehicle intersection collision from first notice of loss through resolution</li>
+<li><strong>Commercial Property Underwriting</strong> — Assess risk, price, and bind a commercial property insurance policy</li>
+<li><strong>Insurance Marketing</strong> — Plan and execute a product launch campaign for a usage-based auto insurance product</li>
+</ol>
+
+<hr />
+
+<h2 id="getting-started">Getting Started</h2>
+
+<h3 id="creating-an-account">Creating an Account</h3>
+
+<ol>
+<li>Navigate to the application URL</li>
+<li>Click <strong>Register</strong> and enter your full name, email address, and a password (minimum 6 characters)</li>
+<li>After registration, you will be redirected to the main dashboard</li>
+</ol>
+
+<h3 id="logging-in">Logging In</h3>
+
+<ol>
+<li>Enter your email and password on the login page</li>
+<li>Click <strong>Sign In</strong> to access the dashboard</li>
+</ol>
+
+<hr />
+
+<h2 id="starting-a-simulation">Starting a Simulation</h2>
+
+<p>From the dashboard, click <strong>New Simulation</strong> (or navigate to <strong>Scenarios</strong> in the sidebar). You will configure four settings before launching:</p>
+
+<h3 id="1-choose-a-scenario">1. Choose a Scenario</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Scenario</th>
+  <th>Discipline</th>
+  <th>What You Do</th>
+  <th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Two-Vehicle Intersection Collision</strong></td>
+  <td>Claims</td>
+  <td>Investigate a disputed collision, determine liability, assess damages, and negotiate a settlement</td>
+  <td>30-60 min</td>
+</tr>
+<tr>
+  <td><strong>Commercial Property Underwriting</strong></td>
+  <td>Underwriting</td>
+  <td>Review a submission for a retail electronics store, assess risks, price the policy, negotiate terms, and bind coverage</td>
+  <td>30-60 min</td>
+</tr>
+<tr>
+  <td><strong>SmartDrive Product Launch Campaign</strong></td>
+  <td>Marketing</td>
+  <td>Conduct market research, develop strategy, create content, enable agents, launch and track a campaign</td>
+  <td>30-60 min</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="2-select-a-mode">2. Select a Mode</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Mode</th>
+  <th>Coaching</th>
+  <th>Scoring Visibility</th>
+  <th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Learning</strong></td>
+  <td>Real-time coaching tips and hints appear throughout the simulation</td>
+  <td>Scores are shown as you go</td>
+  <td>Building foundational skills; first-time users</td>
+</tr>
+<tr>
+  <td><strong>Assessment</strong></td>
+  <td>No coaching or hints provided</td>
+  <td>Scores are hidden until the final report</td>
+  <td>Evaluating readiness; certification testing</td>
+</tr>
+<tr>
+  <td><strong>Hybrid</strong></td>
+  <td>Coaching during the first 3 phases, then transitions to silent assessment</td>
+  <td>Visible early, then hidden</td>
+  <td>Balanced skill-building with evaluation</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="3-select-an-experience-level">3. Select an Experience Level</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Level</th>
+  <th>Language Style</th>
+  <th>Pacing</th>
+  <th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Beginner</strong></td>
+  <td>Simple language; insurance terms are explained when used</td>
+  <td>Patient and slower-paced</td>
+  <td>New hires; those new to the discipline</td>
+</tr>
+<tr>
+  <td><strong>Intermediate</strong></td>
+  <td>Standard industry language; only uncommon terms explained</td>
+  <td>Moderate pacing</td>
+  <td>Professionals with some experience</td>
+</tr>
+<tr>
+  <td><strong>Experienced</strong></td>
+  <td>Full technical jargon; no term explanations</td>
+  <td>Fast-paced; personas may push back on unnecessary questions</td>
+  <td>Senior professionals</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="4-select-a-difficulty">4. Select a Difficulty</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Difficulty</th>
+  <th>Persona Behavior</th>
+  <th>Evidence</th>
+  <th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Guided</strong></td>
+  <td>Cooperative and forthcoming</td>
+  <td>Clear and straightforward</td>
+  <td>Simplified; transition hints provided</td>
+</tr>
+<tr>
+  <td><strong>Standard</strong></td>
+  <td>Realistic; information shared only when asked</td>
+  <td>Some ambiguity; requires thorough investigation</td>
+  <td>True-to-life complexity</td>
+</tr>
+<tr>
+  <td><strong>Advanced</strong></td>
+  <td>Uncooperative parties; attorney involvement</td>
+  <td>Conflicting evidence; fraud indicators</td>
+  <td>High complexity with coverage disputes</td>
+</tr>
+</tbody>
+</table>
+
+<p>Click <strong>Start Simulation</strong> to begin.</p>
+
+<hr />
+
+<h2 id="the-simulation-experience">The Simulation Experience</h2>
+
+<h3 id="chat-interface">Chat Interface</h3>
+
+<p>The simulation takes place in a real-time chat interface. You type messages as the insurance professional, and the AI responds in character as different personas relevant to the scenario.</p>
+
+<p><strong>Layout:</strong>
+- <strong>Left sidebar</strong> — Session information, phase progress tracker, and a list of documents you have accessed
+- <strong>Center</strong> — The main conversation area where you interact with personas
+- <strong>Right panel</strong> (when opened) — Progress tracker showing task checklist or running scores</p>
+
+<h3 id="interacting-with-personas">Interacting with Personas</h3>
+
+<p>Each scenario features multiple AI-driven characters. For example, in the auto claims scenario you may speak with:</p>
+
+<ul>
+<li><strong>Sarah Mitchell</strong> — The insured driver reporting the accident</li>
+<li><strong>James Torres</strong> — The other driver (claimant)</li>
+<li><strong>Linda Park</strong> — An eyewitness</li>
+<li><strong>Mike's Auto Body</strong> — The repair shop providing damage estimates</li>
+<li><strong>Dr. Patel</strong> — The treating physician</li>
+<li><strong>Attorney Davis</strong> — Legal representation for the claimant</li>
+</ul>
+
+<p>The AI automatically switches between personas based on the conversation context. Each persona has a unique colored avatar and their name and role are displayed with their messages.</p>
+
+<h3 id="message-types">Message Types</h3>
+
+<p>You will see several types of messages during a simulation, each visually distinct:</p>
+
+<ul>
+<li><strong>Your messages</strong> — Blue bubbles on the right side</li>
+<li><strong>Persona responses</strong> — White bubbles on the left with persona name and avatar</li>
+<li><strong>Documents</strong> — Amber-highlighted panels showing evidence files (police reports, policy declarations, medical records, etc.)</li>
+<li><strong>Coaching tips</strong> (Learning mode) — Green panels with a lightbulb icon offering guidance</li>
+<li><strong>Score events</strong> (Learning mode) — Purple panels showing how specific actions were scored</li>
+<li><strong>Phase transitions</strong> — Blue banners indicating you have moved to a new phase</li>
+</ul>
+
+<h3 id="phase-progression">Phase Progression</h3>
+
+<p>Each scenario has 7 phases that you progress through sequentially. The sidebar shows your current position:</p>
+
+<p><strong>Claims Phases:</strong>
+FNOL &gt; Coverage Verification &gt; Investigation &gt; Liability Assessment &gt; Damage Assessment &gt; Negotiation &gt; Resolution</p>
+
+<p><strong>Underwriting Phases:</strong>
+Submission Review &gt; Risk Assessment &gt; Loss History &gt; Pricing &amp; Rating &gt; Terms &amp; Conditions &gt; Negotiation &gt; Binding</p>
+
+<p><strong>Marketing Phases:</strong>
+Market Research &gt; Strategy Development &gt; Content Creation &gt; Agency Enablement &gt; Campaign Launch &gt; Performance Tracking &gt; Reporting</p>
+
+<p>Completed phases show a green indicator, the current phase shows blue, and upcoming phases show gray.</p>
+
+<h3 id="progress-tracker">Progress Tracker</h3>
+
+<p>Click the <strong>Progress</strong> button (Learning/Hybrid mode) or <strong>Score</strong> button (Assessment mode) in the top-right of the chat header to open the progress panel:</p>
+
+<p><strong>In Learning/Hybrid Mode:</strong>
+- Overall phase progress bar (e.g., 3/7 phases completed)
+- A checklist of required tasks for the current phase with completion status
+- Running dimension scores (if scoring events have occurred)</p>
+
+<p><strong>In Assessment Mode:</strong>
+- Overall phase progress bar
+- Running score breakdown by dimension with progress bars
+- Overall score and performance level</p>
+
+<p>Click <strong>Refresh Progress</strong> at the bottom of the panel to update the data.</p>
+
+<hr />
+
+<h2 id="scoring-system">Scoring System</h2>
+
+<h3 id="six-competency-dimensions">Six Competency Dimensions</h3>
+
+<p>Your performance is evaluated across six weighted dimensions:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Dimension</th>
+  <th>Weight</th>
+  <th>What It Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Technical Knowledge</strong></td>
+  <td>25%</td>
+  <td>Understanding of insurance concepts, policy language, regulations, and industry standards</td>
+</tr>
+<tr>
+  <td><strong>Investigation Quality</strong></td>
+  <td>20%</td>
+  <td>Thoroughness in gathering facts, asking the right questions, and reviewing evidence</td>
+</tr>
+<tr>
+  <td><strong>Communication</strong></td>
+  <td>20%</td>
+  <td>Clarity, professionalism, and effectiveness when interacting with all parties</td>
+</tr>
+<tr>
+  <td><strong>Judgment &amp; Decision-Making</strong></td>
+  <td>20%</td>
+  <td>Quality of decisions, soundness of rationale, and appropriate use of evidence</td>
+</tr>
+<tr>
+  <td><strong>Process Adherence</strong></td>
+  <td>10%</td>
+  <td>Following proper procedures, documentation standards, and workflow requirements</td>
+</tr>
+<tr>
+  <td><strong>Fraud/Risk Awareness</strong></td>
+  <td>5%</td>
+  <td>Identifying red flags, inconsistencies, and potential fraud or risk indicators</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="scoring-scale">Scoring Scale</h3>
+
+<p>Each scored action receives a rating from 1 to 4:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Score</th>
+  <th>Level</th>
+  <th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>4</td>
+  <td><strong>Exemplary</strong></td>
+  <td>Exceeds expectations; demonstrates expert-level competency</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><strong>Proficient</strong></td>
+  <td>Meets expectations; demonstrates solid working knowledge</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><strong>Developing</strong></td>
+  <td>Partially meets expectations; shows understanding but has gaps</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td><strong>Needs Improvement</strong></td>
+  <td>Does not meet expectations; significant gaps in knowledge or execution</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="overall-score">Overall Score</h3>
+
+<p>Your overall score is the weighted average of all dimension scores, reported on the same 1.0-4.0 scale. Performance level thresholds:</p>
+
+<ul>
+<li><strong>3.5 - 4.0</strong> — Exemplary</li>
+<li><strong>2.5 - 3.4</strong> — Proficient</li>
+<li><strong>1.5 - 2.4</strong> — Developing</li>
+<li><strong>Below 1.5</strong> — Needs Improvement</li>
+</ul>
+
+<hr />
+
+<h2 id="performance-report">Performance Report</h2>
+
+<p>After completing a simulation, click <strong>View Report</strong> from the dashboard or the session page. The report includes:</p>
+
+<ol>
+<li><strong>Overall Score</strong> — Your weighted score and performance level with color-coded badge</li>
+<li><strong>Dimension Breakdown</strong> — Individual scores for all six competency dimensions with visual progress bars</li>
+<li><strong>Strengths</strong> — Your highest-performing areas with specific examples from the simulation</li>
+<li><strong>Areas for Improvement</strong> — Dimensions where performance was lower, with actionable feedback</li>
+<li><strong>Phase-by-Phase Narrative</strong> — A summary of your actions and decisions in each phase</li>
+<li><strong>Recommendations</strong> — Targeted suggestions for professional development</li>
+</ol>
+
+<hr />
+
+<h2 id="managing-sessions">Managing Sessions</h2>
+
+<h3 id="dashboard">Dashboard</h3>
+
+<p>The dashboard displays all your simulation sessions with status indicators:</p>
+
+<ul>
+<li><strong>Active</strong> (green) — Click to resume the simulation</li>
+<li><strong>Paused</strong> (yellow) — Session is paused; click to resume</li>
+<li><strong>Completed</strong> (blue) — Click to view the performance report</li>
+<li><strong>Abandoned</strong> (gray) — Session was abandoned</li>
+</ul>
+
+<h3 id="deleting-a-session">Deleting a Session</h3>
+
+<p>Click the trash icon on any session card and confirm the deletion. This permanently removes the session, all messages, and any associated report.</p>
+
+<hr />
+
+<h2 id="admin-features">Admin Features</h2>
+
+<p>Users with administrator access see an additional <strong>Admin</strong> section in the sidebar with:</p>
+
+<ul>
+<li><strong>Analytics Dashboard</strong> — Platform-wide metrics including total sessions, completion rates, average scores, and distribution charts for modes and difficulty levels</li>
+<li><strong>User Management</strong> — View all registered users and their roles</li>
+</ul>
+
+<hr />
+
+<h2 id="tips-for-evaluators">Tips for Evaluators</h2>
+
+<p>When evaluating the platform, consider trying the following:</p>
+
+<ol>
+<li><strong>Start with Learning mode on Guided difficulty</strong> to see the full coaching experience and understand what a complete simulation flow looks like</li>
+<li><strong>Try Assessment mode on Standard difficulty</strong> to experience the testing workflow and see a realistic performance report</li>
+<li><strong>Test all three scenarios</strong> to see how the platform adapts to different insurance disciplines</li>
+<li><strong>Compare experience levels</strong> — Start one session as Beginner and another as Experienced to see how the AI adapts its language and pacing</li>
+<li><strong>Use the Progress Tracker</strong> during a session to see real-time task tracking and scoring</li>
+<li><strong>Complete at least one full simulation</strong> to generate a performance report and review the scoring output</li>
+<li><strong>Try asking unexpected questions</strong> or making intentional mistakes to see how the AI responds and scores those interactions</li>
+<li><strong>Check the Help page</strong> (sidebar) for the built-in user documentation</li>
+</ol>
+
+<h3 id="key-questions-for-evaluation">Key Questions for Evaluation</h3>
+
+<ul>
+<li>Does the AI respond realistically and stay in character?</li>
+<li>Are the coaching tips helpful and contextually appropriate?</li>
+<li>Do the phase transitions feel natural and well-timed?</li>
+<li>Is the scoring fair and does the feedback match the actions taken?</li>
+<li>Is the performance report actionable and detailed enough?</li>
+<li>Does the difficulty scaling feel meaningfully different across tiers?</li>
+<li>Would this tool be effective for training new adjusters, underwriters, or marketing professionals?</li>
+</ul>
+
+<hr />
+
+<h2 id="technical-requirements">Technical Requirements</h2>
+
+<ul>
+<li>Modern web browser (Chrome, Firefox, Safari, or Edge)</li>
+<li>Internet connection</li>
+<li>No software installation required</li>
+</ul>
+
+<hr />
+
+<p><em>For questions or issues, contact the development team or refer to the in-app Help page.</em></p>
+
+</body>
+</html>

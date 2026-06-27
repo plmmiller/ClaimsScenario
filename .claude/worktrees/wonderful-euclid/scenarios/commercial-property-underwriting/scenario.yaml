@@ -1,0 +1,316 @@
+id: commercial-property-underwriting
+title: "Commercial Property Underwriting - Retail Electronics Store"
+description: >
+  A commercial property underwriting scenario where a trainee underwrites a
+  mid-size retail electronics store applying for a commercial property insurance
+  policy. The business occupies a 15,000 sq ft unit in a strip mall in Austin, TX.
+  The risk presents several complexities: the building is 25 years old with a flat
+  roof (replaced 5 years ago), it is adjacent to a restaurant (fire and grease
+  exposure), the applicant has a prior water damage claim from 3 years ago, and the
+  requested coverage amount is $2,000,000. The trainee must assess the risk, develop
+  pricing using rating factors and schedule modifications, determine appropriate
+  terms and conditions, negotiate with the agent, and ultimately decide whether to
+  write the policy, decline, or offer with restrictions.
+version: "1.0"
+difficulty_range:
+  - guided
+  - standard
+  - advanced
+estimated_duration:
+  guided: 30
+  standard: 45
+  advanced: 60
+jurisdiction: "Texas"
+
+learning_objectives:
+  - "Conduct a thorough review of a commercial property insurance application and identify missing or incomplete information"
+  - "Evaluate property-level hazards including building construction, age, roof condition, occupancy exposures, and protection class"
+  - "Analyze loss history and prior claims to identify patterns, severity trends, and underwriting concerns"
+  - "Develop accurate premium pricing using base rates, rating factors, experience modification, and schedule credits or debits"
+  - "Determine appropriate coverage terms, sublimits, exclusions, deductibles, and endorsements for a complex commercial property risk"
+  - "Negotiate coverage terms and pricing with an experienced insurance agent while balancing competitiveness with underwriting discipline"
+  - "Execute proper binding procedures including documenting the underwriting file, issuing the binder, and setting up the policy"
+
+fact_pattern:
+  submission_date: "2026-03-20"
+  effective_date_requested: "2026-04-15"
+  location:
+    address: "8742 Research Boulevard, Suite 120"
+    city: "Austin"
+    state: "TX"
+    zip: "78758"
+    county: "Travis"
+    description: >
+      A single-story strip mall built in 2001. The insured space is a 15,000 sq ft
+      end-unit in a 45,000 sq ft strip center. The strip mall has a flat built-up
+      roof that was replaced on the insured unit in 2021. The building is concrete
+      block and steel frame construction (ISO Construction Class 4 - masonry
+      non-combustible). The insured unit is adjacent to a sit-down restaurant on the
+      east side, with a dry cleaner two units down. The strip mall has a shared
+      parking lot with approximately 200 spaces. The area is a commercial corridor
+      with moderate traffic.
+  protection_class: "3"
+  fire_district: "Austin Fire Department - Station 31, 1.2 miles"
+  hydrant_distance: "350 feet"
+
+  applicant:
+    business_name: "TechVault Electronics"
+    dba: "TechVault"
+    legal_entity: "TechVault Electronics LLC"
+    owner: "David Chen"
+    owner_persona: "david-chen"
+    years_in_business: 8
+    annual_revenue: "$4,200,000"
+    employees: 22
+    operations: >
+      Retail electronics store selling consumer electronics, computers, gaming
+      systems, accessories, and smart home devices. Offers on-site repair services
+      for computers and smartphones in a dedicated workbench area (approximately
+      800 sq ft). Does not sell or store flammable materials, batteries in bulk, or
+      lithium battery packs beyond standard retail inventory. Operates Monday through
+      Saturday 10 AM to 9 PM and Sunday 12 PM to 6 PM. Inventory turns approximately
+      8 times per year.
+
+  building:
+    year_built: 2001
+    stories: 1
+    total_area_sqft: 15000
+    construction: "Masonry non-combustible (ISO Class 4)"
+    roof_type: "Flat built-up (modified bitumen)"
+    roof_age: "Replaced 2021 (5 years old)"
+    electrical: "Updated to NEC standards during 2021 renovation"
+    plumbing: "Original copper supply lines, PVC drain. Two restrooms, one break room sink, one repair station sink."
+    hvac: "Four commercial rooftop HVAC units, installed 2021"
+    sprinkler: "Wet pipe automatic sprinkler system throughout. Inspected annually - last inspection October 2025, passed."
+    alarm: "Monitored fire and burglar alarm (Central Station). Smoke detectors, heat detectors in repair area."
+    updates:
+      - "2021: Roof replacement (full tear-off and re-roof with modified bitumen)"
+      - "2021: HVAC replacement (4 units)"
+      - "2021: Electrical panel upgrade and LED lighting retrofit"
+      - "2018: Tenant build-out for TechVault occupancy (flooring, walls, fixtures)"
+
+  coverage_requested:
+    building_coverage: "$1,200,000"
+    bpp_coverage: "$800,000"
+    total_coverage: "$2,000,000"
+    valuation: "Replacement cost"
+    coinsurance: "80%"
+    deductible_requested: "$2,500"
+    business_income: "$500,000 with 12-month extended period of indemnity"
+    inland_marine: "Not requested"
+    equipment_breakdown: "Requested"
+
+  prior_insurance:
+    carrier: "Lone Star Commercial Insurance"
+    policy_number: "LSCI-CP-2023-44891"
+    expiring_premium: "$14,200"
+    years_with_carrier: 3
+    reason_for_change: "Agent shopping for better rate and broader coverage"
+
+  adjacent_exposures:
+    - tenant: "Casa Verde Mexican Restaurant"
+      position: "Adjacent east"
+      hazard: >
+        Full-service restaurant with commercial kitchen, deep fryers, open-flame
+        grill, and grease exhaust hood system. Grease trap located on shared exterior
+        wall. Represents significant fire exposure to the insured premises. Restaurant
+        has been in operation for 12 years with no fire loss history. Annual hood
+        cleaning certificate on file.
+    - tenant: "SparkleClean Dry Cleaners"
+      position: "Two units east (separated by restaurant)"
+      hazard: >
+        Dry cleaning operation using perchloroethylene solvent. Potential environmental
+        contamination exposure. Not directly adjacent to insured but shares building
+        structure.
+    - tenant: "Suite 110 - Currently Vacant"
+      position: "Adjacent west"
+      hazard: >
+        Vacant unit (4,500 sq ft), unoccupied for approximately 6 months. Landlord
+        reports unit is secured and utilities are maintained. Vacant units present
+        increased vandalism and fire risk.
+
+  prior_claims:
+    - date: "2023-06-15"
+      type: "Water damage"
+      description: >
+        Water intrusion through the roof during a heavy thunderstorm. Damage to
+        ceiling tiles, drywall, and approximately $18,000 in electronics inventory
+        that was stored on shelving units below the leak point. Root cause was
+        determined to be a clogged roof drain that caused ponding. Total paid:
+        $42,500 (building: $12,500, BPP: $30,000). Roof drain was repaired and
+        additional drains were installed.
+      amount_paid: "$42,500"
+      status: "Closed"
+      subrogation: "None"
+
+  key_underwriting_concerns:
+    - "25-year-old building with flat roof (replaced 5 years ago but flat roofs have shorter lifespan)"
+    - "Adjacent restaurant with commercial cooking creates significant fire exposure"
+    - "Prior water damage claim ($42,500) raises concern about building envelope integrity"
+    - "High-value electronics inventory is susceptible to water, smoke, and theft damage"
+    - "Vacant adjacent unit increases exposure to vandalism and arson"
+    - "Requested coverage amount ($2M) requires verification against replacement cost appraisal"
+    - "Business income exposure of $500,000 with extended period of indemnity adds significant exposure"
+    - "Repair services area introduces soldering and heat gun use"
+
+phases:
+  submission_review:
+    name: "Submission Review"
+    description: "Review the application and supporting documents for completeness and initial assessment"
+    available_personas:
+      - karen-wells
+    available_evidence:
+      - application
+    required_actions:
+      - "Review ACORD application for completeness and accuracy"
+      - "Identify missing or incomplete information on the submission"
+      - "Verify applicant eligibility against company underwriting guidelines"
+      - "Determine the appropriate line of business and coverage forms"
+      - "Request any additional information needed from the agent"
+      - "Set up the underwriting file and assign a submission number"
+    learning_objectives:
+      - "Demonstrate ability to review a commercial property submission systematically"
+      - "Identify gaps in application data that require follow-up with the agent"
+
+  risk_assessment:
+    name: "Risk Assessment"
+    description: "Evaluate property condition, hazards, exposures, and protection"
+    available_personas:
+      - karen-wells
+      - maria-santos
+      - tom-bradshaw
+    available_evidence:
+      - application
+      - inspection-report
+      - photos
+      - building-valuation
+    required_actions:
+      - "Evaluate building construction, age, and condition"
+      - "Assess roof condition and remaining useful life"
+      - "Identify and evaluate adjacent occupancy exposures (restaurant, dry cleaner, vacant unit)"
+      - "Review fire protection systems (sprinklers, alarms, fire department response)"
+      - "Assess theft and crime exposure based on location and inventory type"
+      - "Evaluate the repair services area for fire and liability exposure"
+      - "Determine ISO protection class and construction class"
+      - "Review loss control inspection findings and recommendations"
+    learning_objectives:
+      - "Apply systematic risk evaluation methodology to a commercial property"
+      - "Identify and quantify exposure from adjacent occupancies"
+
+  loss_history:
+    name: "Loss History Analysis"
+    description: "Analyze prior claims, loss runs, and loss trends"
+    available_personas:
+      - karen-wells
+      - tom-bradshaw
+    available_evidence:
+      - loss-runs
+      - application
+      - inspection-report
+    required_actions:
+      - "Review 5-year loss runs from prior carrier"
+      - "Analyze frequency and severity of prior claims"
+      - "Assess the prior water damage claim for root cause and corrective action"
+      - "Calculate loss ratio and determine experience modification"
+      - "Evaluate whether the prior claim indicates an ongoing exposure or isolated incident"
+      - "Document loss history analysis and conclusions"
+    learning_objectives:
+      - "Interpret loss run reports and calculate meaningful loss metrics"
+      - "Distinguish between isolated incidents and systemic risk patterns"
+
+  pricing:
+    name: "Premium Development"
+    description: "Develop premium using rating factors, experience modification, and schedule credits or debits"
+    available_personas:
+      - karen-wells
+      - tom-bradshaw
+    available_evidence:
+      - application
+      - loss-runs
+      - building-valuation
+      - inspection-report
+    required_actions:
+      - "Determine base rate by construction class, protection class, and occupancy"
+      - "Apply territory rating factor for Austin, TX (Travis County)"
+      - "Calculate experience modification based on loss history"
+      - "Apply schedule credits for favorable risk characteristics (sprinklers, alarm, updated roof)"
+      - "Apply schedule debits for unfavorable risk characteristics (adjacent restaurant, flat roof, prior claim)"
+      - "Develop building and BPP premiums separately"
+      - "Calculate business income premium"
+      - "Apply minimum premium requirements"
+      - "Compare developed premium to expiring premium and market benchmarks"
+    learning_objectives:
+      - "Build a commercial property premium from base rates through final premium"
+      - "Apply appropriate schedule modifications with documented rationale"
+
+  terms_conditions:
+    name: "Terms and Conditions"
+    description: "Determine coverage terms, exclusions, endorsements, sublimits, and deductibles"
+    available_personas:
+      - karen-wells
+      - tom-bradshaw
+    available_evidence:
+      - application
+      - inspection-report
+      - building-valuation
+      - financial-statements
+    required_actions:
+      - "Select appropriate policy form (BOP vs. CPP vs. standalone)"
+      - "Determine deductible based on risk profile and applicant request"
+      - "Set sublimits for high-exposure perils (water damage, theft, equipment breakdown)"
+      - "Identify necessary endorsements (equipment breakdown, ordinance or law, utility services)"
+      - "Consider exclusions or limitations for specific exposures (adjacent restaurant fire)"
+      - "Determine coinsurance percentage and verify adequate limit to value"
+      - "Set business income coverage terms and waiting period"
+      - "Document all terms with underwriting rationale"
+    learning_objectives:
+      - "Structure policy terms that adequately address identified risk exposures"
+      - "Balance coverage breadth with underwriting discipline"
+
+  negotiation:
+    name: "Negotiation"
+    description: "Present the quote to the agent and negotiate terms and pricing"
+    available_personas:
+      - karen-wells
+      - david-chen
+    available_evidence:
+      - application
+      - building-valuation
+      - financial-statements
+      - loss-runs
+    required_actions:
+      - "Prepare and present the quote letter to the agent"
+      - "Explain the pricing rationale, including credits and debits"
+      - "Address agent and applicant concerns about premium and terms"
+      - "Negotiate deductible options and their impact on premium"
+      - "Consider alternative program structures if the initial quote is not competitive"
+      - "Determine final terms that balance profitability with competitiveness"
+      - "Document all negotiation discussions and final agreed terms"
+    learning_objectives:
+      - "Present an underwriting position professionally and defend pricing decisions"
+      - "Negotiate effectively while maintaining underwriting standards"
+
+  binding:
+    name: "Binding"
+    description: "Issue binder, document the underwriting file, and set up the policy"
+    available_personas:
+      - karen-wells
+      - david-chen
+    available_evidence:
+      - application
+      - building-valuation
+      - inspection-report
+      - loss-runs
+      - financial-statements
+    required_actions:
+      - "Verify all required documentation is in the underwriting file"
+      - "Confirm final premium calculation and payment terms"
+      - "Issue the insurance binder with all agreed terms and conditions"
+      - "Set up the policy in the management system"
+      - "Communicate binding confirmation to the agent"
+      - "Schedule any required post-binding inspections or follow-ups"
+      - "Set diary for renewal review and loss control re-inspection"
+      - "Complete the underwriting file documentation and sign-off"
+    learning_objectives:
+      - "Execute proper binding procedures for a commercial property policy"
+      - "Ensure the underwriting file is complete, documented, and audit-ready"

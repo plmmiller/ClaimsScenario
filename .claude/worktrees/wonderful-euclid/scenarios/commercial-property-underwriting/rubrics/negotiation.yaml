@@ -1,0 +1,257 @@
+# Negotiation Phase Rubric
+# Commercial Property Underwriting Scenario - TechVault Electronics
+# Evaluates the trainee's negotiation of quote terms and premium with the agent
+
+phase: negotiation
+phase_name: Negotiation
+description: >
+  Evaluates the trainee's ability to present the quote to the insurance agent,
+  defend pricing and terms decisions, respond to pushback and competing offers,
+  negotiate effectively, and reach a mutually acceptable outcome that balances
+  profitability with competitiveness.
+
+dimensions:
+  - name: technical_knowledge
+    weight: 0.25
+    description: Understanding of negotiation principles, market dynamics, and underwriting flexibility
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Demonstrated strong understanding of the competitive dynamics (expiring premium, competing quote, market range) and positioned the quote accordingly
+          - Knew which terms are negotiable (deductible, sublimit levels, some schedule modifications) and which are not (minimum rate adequacy, loss control conditions)
+          - Understood the premium impact of deductible changes and could calculate them quickly to facilitate live negotiation
+          - Recognized that the competing quote at $15,400 with a $5,000 deductible and water sublimit is not an apples-to-apples comparison
+          - Knew the company's minimum acceptable rate and the floor below which the risk should not be written
+          - Understood the agent's perspective and motivations (retain the client, demonstrate value, earn commission)
+          - Could articulate the value proposition beyond price (coverage breadth, claims service, stability)
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Understood competitive dynamics
+          - Knew which terms are negotiable
+          - Could explain deductible-premium relationships
+          - Recognized the competing quote comparison issues
+          - Understood the agent's perspective
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Limited awareness of competitive dynamics
+          - Unclear about which terms are negotiable
+          - Could not articulate premium impacts of term changes
+          - Did not recognize the competing quote comparison issue
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No understanding of market dynamics
+          - Did not know what was negotiable
+          - Could not respond to competitive pressure
+          - No understanding of the agent's perspective
+
+  - name: investigation_quality
+    weight: 0.20
+    description: Preparation for negotiation and analysis of agent/applicant positions
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Prepared a negotiation strategy before the meeting, including target premium, walk-away point, and concession plan
+          - Analyzed the competing quote to identify its strengths and weaknesses (lower premium but higher deductible and sublimits)
+          - Prepared talking points for each anticipated objection (premium level, water damage sublimit, restaurant loading)
+          - Had alternative scenarios ready (deductible options, modified sublimits, payment plan)
+          - Researched the agent's book of business and relationship potential for future accounts
+          - Anticipated that the insured (David Chen) would push back on premium and prepared a response
+          - Prepared a comparison chart showing the company's quote vs. the expiring policy vs. the competing quote on a coverage-equivalent basis
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Prepared a negotiation strategy with target and limits
+          - Analyzed the competing quote
+          - Had responses ready for key objections
+          - Prepared alternative scenarios
+          - Researched the agent relationship
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Entered negotiation without adequate preparation
+          - Did not analyze the competing quote
+          - Was caught off guard by objections
+          - No alternative scenarios prepared
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No negotiation preparation
+          - No analysis of competitive position
+          - No strategy or plan
+          - Completely reactive during negotiations
+
+  - name: communication
+    weight: 0.20
+    description: Quality of negotiation communication with the agent and applicant
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Presented the quote professionally with a clear explanation of the premium components, coverage terms, and conditions
+          - Defended pricing decisions with specific data and rationale (not just "that's the rate")
+          - Responded to the agent's pushback on the restaurant loading with factual analysis of the exposure and mitigation
+          - Handled the competing quote comparison by highlighting coverage differences rather than attacking the competitor
+          - Maintained a collaborative tone throughout, positioning the negotiation as a problem-solving exercise
+          - If the insured (David Chen) was involved, communicated at an appropriate level without excessive jargon
+          - Documented the negotiation discussions and any agreed modifications
+          - Confirmed final agreed terms in writing promptly after the negotiation
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Presented the quote clearly
+          - Defended pricing with rationale
+          - Responded to pushback professionally
+          - Handled the competing quote comparison
+          - Maintained collaborative tone
+          - Documented discussions
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Quote presentation was unclear or disorganized
+          - Could not adequately defend pricing decisions
+          - Became defensive when challenged
+          - Did not handle the competing quote comparison well
+          - Tone shifted to adversarial during pushback
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Could not present the quote coherently
+          - No defense of pricing
+          - Combative or dismissive of the agent's concerns
+          - No documentation
+          - Damaged the agent relationship
+
+  - name: judgment
+    weight: 0.20
+    description: Quality of negotiation decisions and final outcome
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Reached a final premium and terms that are both profitable and competitive
+          - Made strategic concessions (e.g., slightly reduced restaurant loading, increased water damage sublimit) while holding firm on rate adequacy
+          - Used the deductible as a negotiating lever to find a premium point acceptable to both parties
+          - Did not give away schedule credits without receiving something in return (e.g., higher deductible, loss control conditions)
+          - Recognized the right time to make a final offer and close the negotiation
+          - Final terms reflect the risk profile appropriately and are defensible to both the supervisor and the agent
+          - If negotiations reached an impasse, escalated appropriately to the supervisor rather than walking away or caving
+          - Maintained the agent relationship regardless of outcome
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Reached a reasonable final premium and terms
+          - Made appropriate concessions
+          - Used deductible as a negotiating tool
+          - Closed the negotiation effectively
+          - Maintained the agent relationship
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Final premium was either too high (lost the account) or too low (inadequate rate)
+          - Made excessive concessions under pressure
+          - Did not use available negotiating levers
+          - Failed to close or dragged the negotiation out unnecessarily
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Negotiation failed due to poor approach
+          - Gave away premium without justification
+          - Was inflexible to the point of losing a writeable account
+          - Damaged the agent relationship
+          - Outcome was neither profitable nor competitive
+
+  - name: process_adherence
+    weight: 0.10
+    description: Compliance with negotiation and quoting procedures
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Followed the company's quoting and negotiation procedures
+          - Obtained authority for any premium or terms that exceeded standard guidelines before committing
+          - Documented all negotiation discussions, offers, counteroffers, and final agreed terms
+          - Issued a revised quote letter reflecting final negotiated terms
+          - Updated the underwriting file with the negotiation outcome
+          - Set diary for binding if the quote is accepted
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Followed quoting procedures
+          - Obtained necessary authority
+          - Documented negotiations
+          - Issued revised quote
+          - Updated the file
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Committed to terms without verifying authority
+          - Documentation was incomplete
+          - Did not issue revised quote
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - Violated authority guidelines
+          - No documentation
+          - No formal quote issued
+          - Failed to follow procedures
+
+  - name: risk_awareness
+    weight: 0.05
+    description: Awareness of risk implications of negotiated terms
+    scoring_levels:
+      exemplary:
+        score: 4
+        label: Exemplary
+        indicators:
+          - Assessed whether any negotiated concessions (reduced sublimits, reduced debits) materially change the risk profile of the policy
+          - Considered whether the final premium is adequate to cover expected losses and contribute to the company's combined ratio target
+          - Evaluated whether removing or reducing the water damage sublimit (if negotiated) creates unacceptable exposure given the prior loss
+          - Recognized that winning the account at an inadequate rate is worse than losing it
+          - Considered the precedent that significant concessions might set for future negotiations with this agent
+      proficient:
+        score: 3
+        label: Proficient
+        indicators:
+          - Assessed the impact of concessions on risk profile
+          - Considered premium adequacy
+          - Evaluated sublimit changes critically
+          - Recognized the importance of rate adequacy
+      developing:
+        score: 2
+        label: Developing
+        indicators:
+          - Did not consider the risk implications of concessions
+          - No assessment of premium adequacy after negotiation
+          - Made concessions without understanding their impact
+      needs_improvement:
+        score: 1
+        label: Needs Improvement
+        indicators:
+          - No awareness of how negotiated terms affect risk
+          - Made concessions that materially undermined the policy's risk management
+          - No consideration of premium adequacy

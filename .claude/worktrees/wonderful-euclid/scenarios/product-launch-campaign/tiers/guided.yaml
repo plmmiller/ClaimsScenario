@@ -1,0 +1,169 @@
+# Guided Tier Configuration
+# Product Launch Campaign Scenario - SmartDrive Colorado Launch
+# Beginner-friendly mode with full assistance and no complications
+
+tier: guided
+tier_name: Guided
+description: >
+  Entry-level difficulty designed for trainees new to insurance marketing or
+  product launch campaigns. All personas are cooperative, market data is clearly
+  presented with no ambiguity, stakeholders provide helpful guidance, and the
+  system provides hints and prompts throughout each phase.
+
+settings:
+  hints_enabled: true
+  phase_transition_hints: true
+  explicit_prompts: true
+  time_pressure: false
+  max_score_multiplier: 0.75  # Guided tier caps at 75% of max possible score
+
+hints:
+  market_research:
+    - "Start by reviewing the market analysis document for Colorado auto insurance market size and demographics."
+    - "Identify the key UBI competitors: Progressive Snapshot, Root Insurance, Allstate Drivewise, and Nationwide SmartRide."
+    - "Pay attention to consumer attitudes toward telematics -- privacy is the top concern at 67%."
+    - "The 25-45 age demographic represents 41% of Colorado licensed drivers."
+    - "Check the regulatory requirements for Colorado insurance advertising."
+  strategy_development:
+    - "Your positioning should differentiate SmartDrive from competitors. Consider the privacy-first gap in the market."
+    - "Map your channel selection to the target audience's media consumption patterns."
+    - "The budget is $500K -- allocate it across the categories defined in the budget document."
+    - "Define specific KPIs for each channel. Use the benchmarks from the market analysis."
+    - "Create a timeline that includes a pre-launch awareness phase before the September 15 launch."
+  content_creation:
+    - "Start with the landing page and digital ads -- these are critical path for launch."
+    - "Make sure all savings claims include the required Colorado DOI disclaimers."
+    - "Use the focus group with Jennifer Kim to test your key messages before finalizing."
+    - "The agent sales kit should include a product one-pager, competitive comparison, and objection handlers."
+    - "Check all content against the brand guidelines for color, typography, and voice."
+  agency_enablement:
+    - "Raj Patel is the most influential agency principal. Win him over first."
+    - "Lead with the commission structure and total economics, not just the product features."
+    - "Agents need pre-built marketing assets they can customize with their agency name."
+    - "The co-op marketing program should be simple -- minimal paperwork, clear reimbursement."
+    - "Create an incentive for the first 90 days to drive early adoption."
+  campaign_launch:
+    - "Create a pre-launch checklist covering all channels, assets, and tracking."
+    - "Test all landing pages and tracking before going live."
+    - "Notify all agency partners of the launch date and what to expect."
+    - "Monitor performance hourly on launch day and daily for the first week."
+    - "Send a post-launch update to Lisa Morgan within 24 hours."
+  performance_tracking:
+    - "Monitor cost per lead (CPL) and compare against your target for each channel."
+    - "If a channel is underperforming, diagnose whether it's a creative, targeting, or landing page issue."
+    - "You can reallocate up to 10% of budget between channels without VP approval."
+    - "Track agency production alongside digital metrics -- they tell different parts of the story."
+    - "Prepare weekly performance dashboards with insights, not just data."
+  reporting:
+    - "Lead your presentation with the headline result: total policies, premium volume, and ROI."
+    - "Compare actual performance against every KPI target you set in the strategy phase."
+    - "Include a channel-by-channel breakdown showing which performed best and worst."
+    - "Calculate customer acquisition cost (CAC) and compare to the projected customer lifetime value."
+    - "End with clear, prioritized recommendations for the next quarter."
+
+phase_transition_prompts:
+  market_research_to_strategy_development: >
+    Great work completing the market research. You've identified the key
+    competitors, target demographics, and consumer attitudes. Now use those
+    insights to develop your positioning, messaging, channel strategy, and
+    budget allocation. Remember to address the privacy gap in the market.
+  strategy_development_to_content_creation: >
+    Your strategy is approved. Now bring it to life by creating the campaign
+    materials. Start with the landing page and digital ads, then develop the
+    agent sales kit and email sequences. Remember to test key messages with
+    the focus group and ensure all materials comply with Colorado regulations.
+  content_creation_to_agency_enablement: >
+    Your campaign materials are ready. Now train and equip the agency partners
+    to sell SmartDrive. Focus on winning over Raj Patel first -- his influence
+    matters. Lead with the economics and provide ready-to-use sales tools.
+  agency_enablement_to_campaign_launch: >
+    Agents are trained and equipped. Time to launch! Run through your pre-launch
+    checklist, verify all tracking is working, and coordinate the multi-channel
+    activation. Monitor closely on launch day.
+  campaign_launch_to_performance_tracking: >
+    The campaign is live! Now monitor performance closely. Track your KPIs daily,
+    identify what's working and what isn't, and make data-driven optimization
+    decisions. Prepare weekly reports for Lisa Morgan.
+  performance_tracking_to_reporting: >
+    You've been tracking and optimizing the campaign. Now compile your results
+    into a comprehensive report for leadership. Calculate ROI, compare against
+    targets, and present clear recommendations for the next phase.
+
+persona_overrides:
+  lisa_morgan:
+    demeanor: supportive
+    provides_information: readily
+    emotional_state: encouraging
+    notes: >
+      Lisa is supportive and encouraging throughout the process. She provides
+      clear direction on her expectations and offers constructive feedback on
+      deliverables. She shares strategic context proactively and approves
+      well-structured proposals with helpful suggestions for improvement.
+
+  raj_patel:
+    demeanor: cooperative
+    provides_information: readily
+    emotional_state: open_minded
+    notes: >
+      Raj is open-minded about SmartDrive and asks reasonable questions about
+      the commission structure and product features. He provides helpful feedback
+      about what Colorado consumers care about and what his producers need to
+      sell the product. He commits to a reasonable initial sales target.
+
+  emma_wright:
+    demeanor: eager_and_helpful
+    provides_information: proactively
+    emotional_state: enthusiastic
+    notes: >
+      Emma is proactive and helpful. She anticipates the trainee's needs and
+      offers platform-specific recommendations. She provides clear data and
+      explains metrics in accessible terms. She manages digital platforms
+      efficiently and delivers on schedule.
+
+  carlos_mendez:
+    demeanor: approachable
+    provides_information: readily
+    emotional_state: supportive
+    notes: >
+      Carlos provides product information clearly and translates actuarial
+      concepts into marketing-friendly language. He reviews materials promptly
+      and provides specific, constructive feedback. He proactively shares
+      competitive rate comparisons.
+
+  jennifer_kim:
+    demeanor: engaged_and_constructive
+    provides_information: openly
+    emotional_state: interested
+    notes: >
+      Jennifer provides clear, specific focus group feedback. She responds
+      positively to messaging that addresses privacy concerns directly. She
+      offers helpful suggestions and identifies which messages resonate most
+      strongly without being overly critical.
+
+complications: []
+
+evidence_presentation:
+  market_analysis:
+    clarity: high
+    ambiguity: none
+    notes: "All market data is clearly presented with unambiguous competitive positioning."
+  product_spec:
+    clarity: high
+    ambiguity: none
+    notes: "Product features, pricing, and commission structure are straightforward."
+  customer_personas:
+    clarity: high
+    ambiguity: none
+    notes: "Customer personas are well-defined with clear channel and messaging preferences."
+  budget_allocation:
+    clarity: high
+    ambiguity: none
+    notes: "Budget is clearly allocated by category with no competing priorities."
+  brand_guidelines:
+    clarity: high
+    ambiguity: none
+    notes: "Brand guidelines are comprehensive and easy to follow."
+  competitive_intel:
+    clarity: high
+    ambiguity: none
+    notes: "Competitive information is detailed and clearly organized."
